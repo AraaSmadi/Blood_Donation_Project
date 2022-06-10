@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class blood_doner_needed extends Model
 {
     use HasFactory;
+  
+
 }

@@ -14,7 +14,7 @@ class CreateBloodDonersTable extends Migration
     public function up()
     {
         Schema::create('blood_doners', function (Blueprint $table) {
-            $table->increments("b_d_id"); 
+            $table->id(); 
             $table->string("b_d_name"); 
             $table->string("b_d_gender"); 
             $table->biginteger("b_d_phone"); 
@@ -23,8 +23,14 @@ class CreateBloodDonersTable extends Migration
             $table->string("b_d_reprt");  
             $table->biginteger("b_d_age"); 
             $table->boolean("status"); 
-            $table->integer('b_d_blood_type')->unsigned();
-            $table->foreign("b_d_blood_type")->referances('id')->on('blood_types')->ondelete('CASCADE'); 
+           // $table->unsignedBigInteger('b_d_blood_type');
+           //$table->foreign('b_d_blood_type')->references('id')->id;
+
+           $table->foreignId('b_d_blood_type')
+           ->constrained('blood_types')
+           ->onUpdate('cascade')
+           ->onDelete('cascade');
+
             $table->timestamps();
         });
     }
