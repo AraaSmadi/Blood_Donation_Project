@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRequestActivesTable extends Migration
+class CreateRequestDonersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,15 @@ class CreateRequestActivesTable extends Migration
      */
     public function up()
     {
-        Schema::create('request_actives', function (Blueprint $table) {
+        Schema::create('request_doners', function (Blueprint $table) {
             $table->id();
+            $table->string('request_date');
+            $table->boolean("status");
+            $table->foreignId('b_d_n_id')
+           ->constrained('blood_doner_neededs')
+           ->onUpdate('cascade')
+           ->onDelete('cascade');
+            
             $table->timestamps();
         });
     }
@@ -26,6 +33,6 @@ class CreateRequestActivesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('request_actives');
+        Schema::dropIfExists('request_doners');
     }
 }

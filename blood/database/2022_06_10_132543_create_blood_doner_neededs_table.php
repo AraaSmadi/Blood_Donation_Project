@@ -14,7 +14,18 @@ class CreateBloodDonerNeededsTable extends Migration
     public function up()
     {
         Schema::create('blood_doner_neededs', function (Blueprint $table) {
-            $table->id();
+            $table->id(); 
+            $table->string("b_d_n_name"); 
+            $table->string("b_d_n_gender"); 
+            $table->biginteger("b_d_n_phone"); 
+            $table->string("b_d_n_address"); 
+            $table->string("b_d_n_email");  
+            $table->biginteger("b_d_n_age"); 
+            $table->foreignId('b_d_blood_type')
+           ->constrained('blood_types')
+           ->onUpdate('cascade')
+           ->onDelete('cascade');
+
             $table->timestamps();
         });
     }
