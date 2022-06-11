@@ -1,6 +1,9 @@
-@include('layout.navbar')
-
-
+@extends('layout.main')
+@section('title')
+    title of the page 
+@endsection
+@section('content')
+    
     <!-- Carousel Start -->
     <div class="container-fluid p-0 wow fadeIn" data-wow-delay="0.1s">
         <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
@@ -453,4 +456,5 @@
     <!-- Testimonial End -->
 
 
-   @include('layout.footer')
+@endsection
+

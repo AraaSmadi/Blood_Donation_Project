@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\BloodDonerController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::resource('doner', BloodDonerController::class);
 
 Route::get('/', function () {
     return view('index');
@@ -28,8 +29,6 @@ Route::get('/team', function () {
 Route::get('/testimonial', function () {
     return view('testimonial');
 });
-
-
 Route::get('/courses', function () {
     return view('courses');
 });

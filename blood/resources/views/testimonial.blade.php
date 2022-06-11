@@ -1,7 +1,9 @@
-@include('layout.navbar')
-
-
-    <!-- Page Header Start -->
+@extends('layout.main')
+@section('title')
+    title of the page 
+@endsection
+@section('content')
+        <!-- Page Header Start -->
     <div class="container-fluid page-header py-6 my-6 mt-0 wow fadeIn" data-wow-delay="0.1s">
         <div class="container text-center">
             <h1 class="display-4 text-white animated slideInDown mb-4">Testimonial</h1>
@@ -71,4 +73,6 @@
     <!-- Testimonial End -->
 
 
-@include('layout.footer')
+
+@endsection
+

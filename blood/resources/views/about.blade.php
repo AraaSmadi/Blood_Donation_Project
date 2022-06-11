@@ -1,5 +1,8 @@
-@include('layout.navbar')
-
+@extends('layout.main')
+@section('title')
+    title of the page 
+@endsection
+@section('content')
 
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-6 my-6 mt-0 wow fadeIn" data-wow-delay="0.1s">
@@ -143,7 +146,8 @@
             </div>
         </div>
     </div>
-    <!-- Team End -->
+    <!-- Team End -->    
+@endsection
 
 
-   @include('layout.footer')
+

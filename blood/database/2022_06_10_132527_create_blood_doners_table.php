@@ -20,17 +20,14 @@ class CreateBloodDonersTable extends Migration
             $table->biginteger("b_d_phone"); 
             $table->string("b_d_address"); 
             $table->string("b_d_email");  
+            $table->string("b_d_password");  
             $table->string("b_d_reprt");  
             $table->biginteger("b_d_age"); 
             $table->boolean("status"); 
-           // $table->unsignedBigInteger('b_d_blood_type');
-           //$table->foreign('b_d_blood_type')->references('id')->id;
-
-           $table->foreignId('b_d_blood_type')
-           ->constrained('blood_types')
-           ->onUpdate('cascade')
-           ->onDelete('cascade');
-
+            $table->foreignId('b_d_blood_type')
+            ->constrained('blood_types')
+            ->onUpdate('cascade')
+            ->onDelete('cascade');
             $table->timestamps();
         });
     }
