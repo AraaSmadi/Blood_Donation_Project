@@ -13,12 +13,10 @@
 @section('navbar')
 @include('dashbord.layout.nav')
 @endsection
-@section('table')
-@include('dashbord.layout.table_')
+@section('tables')
+@include('dashbord.layout.table')
 @endsection
 
 @section('copyright')
 @include('dashbord.layout.copyright')
 @endsection
-
-
