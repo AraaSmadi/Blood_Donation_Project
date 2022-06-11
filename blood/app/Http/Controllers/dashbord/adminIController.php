@@ -49,7 +49,7 @@ class adminIController extends Controller
     public function show(User $user)
     {
         $users=User::all();
-        return view('dashbord.contentindex',compact('users'));
+        return view('dashbord.allContent',compact('users'));
     }
 
     /**

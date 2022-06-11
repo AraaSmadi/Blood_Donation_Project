@@ -4,7 +4,9 @@
    @yield('slidbar')
    @yield('navbar')
    @yield('statistics')
-   @yield('content_3')
+   @yield('tables')
+   @yield('widgets')
+   @yield('copyright')
 
 
    @include('dashbord.layout.footer')
