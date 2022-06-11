@@ -20,7 +20,7 @@ Route::resource('patient', BloodDonerNeededController::class);
 Route::get('patient2', [BloodTypeController::class, 'show']);
 
 Route::get('/', function () {
-    return view('registration_patient.register');
+    return view('index');
 });
 
 Route::get('/feature', function () {
