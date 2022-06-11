@@ -14,9 +14,10 @@ use App\Http\Controllers\BloodTypeController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::resource('doner', BloodDonerController::class);
 Route::resource('patient', BloodDonerNeededController::class);
-Route::get('patient2',[BloodTypeController::class , 'show']);
+Route::get('patient2', [BloodTypeController::class, 'show']);
 
 Route::get('/', function () {
     return view('registration_patient.register');
@@ -51,4 +52,3 @@ Route::get('/about', function () {
 Route::get('/404', function () {
     return view('404');
 });
-
