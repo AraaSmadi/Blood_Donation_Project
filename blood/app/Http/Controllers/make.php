@@ -2,11 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\blood_type;
-use App\Http\Requests\Storeblood_typeRequest;
-use App\Http\Requests\Updateblood_typeRequest;
+use Illuminate\Http\Request;
 
-class BloodTypeController extends Controller
+class make extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +13,7 @@ class BloodTypeController extends Controller
      */
     public function index()
     {
-        
+        //
     }
 
     /**
@@ -31,10 +29,10 @@ class BloodTypeController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\Storeblood_typeRequest  $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Storeblood_typeRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -42,10 +40,10 @@ class BloodTypeController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\blood_type  $blood_type
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(blood_type $blood_type)
+    public function show($id)
     {
         //
     }
@@ -53,10 +51,10 @@ class BloodTypeController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\blood_type  $blood_type
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(blood_type $blood_type)
+    public function edit($id)
     {
         //
     }
@@ -64,11 +62,11 @@ class BloodTypeController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\Updateblood_typeRequest  $request
-     * @param  \App\Models\blood_type  $blood_type
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Updateblood_typeRequest $request, blood_type $blood_type)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -76,10 +74,10 @@ class BloodTypeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\blood_type  $blood_type
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(blood_type $blood_type)
+    public function destroy($id)
     {
         //
     }
