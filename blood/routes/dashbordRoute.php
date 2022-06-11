@@ -13,7 +13,17 @@ Route::get('/admin',[adminIController::class,'index']);
 Route::get('/admin',[adminIController::class,'show']);
 //
 Route::get('/chart',[adminIController::class,'show1']);
-Route::get('/chart',[adminIController::class,'show2']);
+//Route::get('/chart',[adminIController::class,'show2']);
+Route::get('/widget',[adminIController::class,'']);
+Route::get('/form',[adminIController::class,'']);
+Route::get('/button',[adminIController::class,'']);
+Route::get('/blank',[adminIController::class,'']);
+Route::get('/typography',[adminIController::class,'']);
+Route::get('/table',[adminIController::class,'']);
+
+
+
+
 
 // Route::resource('/chart',[adminIController::class]);
 

@@ -56,19 +56,19 @@ class adminIController extends Controller
     }
 
 
-    // public function show1(blood_doner $user1)
-    // {
-    //     $users1=blood_doner::all();
-    //     return view('dashbord.chart',compact('users1'));
-    // }
+     public function show1(blood_doner $user1)
+     {
+       $users1=blood_doner::all();
+       return view('dashbord.chart',compact('users1'));
+   }
 
 
 
-    public function show2(blood_doner_needed $user2)
-    {
-        $users2=blood_doner_needed::all();
-        return view('dashbord.chart',compact('users2'));
-    }
+   // public function show2(blood_doner_needed $user2)
+   // {
+   //     $users2=blood_doner_needed::all();
+    //    return view('dashbord.chart',compact('users2'));
+   // }
 
     /**
      * Show the form for editing the specified resource.
