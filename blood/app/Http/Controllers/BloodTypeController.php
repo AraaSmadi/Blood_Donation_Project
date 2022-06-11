@@ -47,7 +47,7 @@ class BloodTypeController extends Controller
      */
     public function show(blood_type $blood_type)
     {
-        //
+       
     }
 
     /**

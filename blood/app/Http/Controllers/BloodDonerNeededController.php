@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+
+use Illuminate\Http\Request;
 use App\Models\blood_doner_needed;
 use App\Http\Requests\Storeblood_doner_neededRequest;
 use App\Http\Requests\Updateblood_doner_neededRequest;
-use GuzzleHttp\Psr7\Request;
-use Illuminate\Support\Facades\Redirect;
 
+use App\Models\blood_type;
+use Illuminate\Support\Facades\Redirect;
+use Validator;
 class BloodDonerNeededController extends Controller
 {
 
@@ -20,7 +23,9 @@ class BloodDonerNeededController extends Controller
 
     public function index()
     {
-        //
+        $type = blood_type::all();
+        return view('registration_patient.register' , compact('type'));
+        return view('registration_patient.register');
     }
 
     /**
@@ -28,17 +33,9 @@ class BloodDonerNeededController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $req)
+    public function create()
     {
-$patient = new blood_doner_needed ;
-$patient->b_d_n_name =$req->Name ;
-$patient->b_d_n_phone =$req->phone ;
-$patient->b_d_n_address =$req->Address ;
-$patient->b_d_n_age =$req->age ;
-$patient->b_d_n_name =$req->Name ;
-$patient->b_d_n_name =$req->Name ;
-$patient->save();
-return Redirect('index');
+        return view('registration_patient.register');
     }
 
     /**
@@ -47,9 +44,21 @@ return Redirect('index');
      * @param  \App\Http\Requests\Storeblood_doner_neededRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Storeblood_doner_neededRequest $request)
+    public function store(request $req)
     {
-        //
+        $patient =$req->all();
+        blood_doner_needed::create( $patient);
+        $input = Validator::make($req->all(), [
+            'b_d_n_name'=>'required|max:255',
+            'b_d_n_gender'=>'required|max:255',
+            'b_d_n_phone'=>'required|max:255',
+            'b_d_n_address'=>'required|max:255',
+            'b_d_n_email'=>'required|max:255',
+            'b_d_n_password'=>'required|max:255',
+            'b_d_n_age'=>'required|max:255',
+            'b_d_blood_type'=>'required|max:255'
+         ])->validate();
+        return redirect('');
     }
 
     /**

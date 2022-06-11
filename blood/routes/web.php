@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BloodDonerController;
+use App\Http\Controllers\BloodDonerNeededController;
+use App\Http\Controllers\BloodTypeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +15,8 @@ use App\Http\Controllers\BloodDonerController;
 |
 */
 Route::resource('doner', BloodDonerController::class);
+Route::resource('patient', BloodDonerNeededController::class);
+Route::get('patient2',[BloodTypeController::class , 'show']);
 
 Route::get('/', function () {
     return view('registration_patient.register');
