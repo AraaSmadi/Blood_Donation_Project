@@ -15,7 +15,7 @@ use App\Http\Controllers\BloodDonerController;
 Route::resource('doner', BloodDonerController::class);
 
 Route::get('/', function () {
-    return view('index');
+    return view('registration_patient.register');
 });
 
 Route::get('/feature', function () {

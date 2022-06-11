@@ -5,7 +5,15 @@
 @section('content')
      <div class="container mt-5" style="margin-top: 50px ;">
       <form>
-    <!-- 2 column grid layout with text inputs for the first and last names -->
+    
+  
+    <!-- Text input -->
+    <div class="form-outline mb-4">
+      <input type="text" id="form6Example3" class="form-control" />
+      <label class="form-label" for="form6Example3">Name : </label>
+    </div>
+
+  <!-- 2 column grid layout with text inputs for the first and last names -->
     <div class="row mb-4">
       <div class="col">
         <div class="form-outline">
@@ -20,13 +28,6 @@
         </div>
       </div>
     </div>
-  
-    <!-- Text input -->
-    <div class="form-outline mb-4">
-      <input type="text" id="form6Example3" class="form-control" />
-      <label class="form-label" for="form6Example3">Company name</label>
-    </div>
-  
     <!-- Text input -->
     <div class="form-outline mb-4">
       <input type="text" id="form6Example4" class="form-control" />
