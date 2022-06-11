@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers\dashbord;
 use App\Models\User;
+use App\Models\blood_doner;
+
+use App\Models\blood_doner_needed;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -16,7 +19,7 @@ class adminIController extends Controller
     {
 
 
-        return view('dashbord.indexDD');
+        return view('dashbord.index');
     }
 
     /**
@@ -49,7 +52,22 @@ class adminIController extends Controller
     public function show(User $user)
     {
         $users=User::all();
-        return view('dashbord.allContent',compact('users'));
+        return view('dashbord.index',compact('users'));
+    }
+
+
+    // public function show1(blood_doner $user1)
+    // {
+    //     $users1=blood_doner::all();
+    //     return view('dashbord.chart',compact('users1'));
+    // }
+
+
+
+    public function show2(blood_doner_needed $user2)
+    {
+        $users2=blood_doner_needed::all();
+        return view('dashbord.chart',compact('users2'));
     }
 
     /**
