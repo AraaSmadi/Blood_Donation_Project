@@ -5,14 +5,19 @@ namespace App\Http\Controllers;
 use App\Models\blood_doner_needed;
 use App\Http\Requests\Storeblood_doner_neededRequest;
 use App\Http\Requests\Updateblood_doner_neededRequest;
+use GuzzleHttp\Psr7\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class BloodDonerNeededController extends Controller
 {
+
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
         //
@@ -23,9 +28,17 @@ class BloodDonerNeededController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $req)
     {
-        //
+$patient = new blood_doner_needed ;
+$patient->b_d_n_name =$req->Name ;
+$patient->b_d_n_phone =$req->phone ;
+$patient->b_d_n_address =$req->Address ;
+$patient->b_d_n_age =$req->age ;
+$patient->b_d_n_name =$req->Name ;
+$patient->b_d_n_name =$req->Name ;
+$patient->save();
+return Redirect('index');
     }
 
     /**
