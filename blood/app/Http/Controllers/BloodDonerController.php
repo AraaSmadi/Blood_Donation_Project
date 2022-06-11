@@ -15,7 +15,7 @@ class BloodDonerController extends Controller
      */
     public function index()
     {
-        //
+        return view('blood_doner.create');
     }
 
     /**
