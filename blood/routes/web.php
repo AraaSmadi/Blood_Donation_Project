@@ -17,7 +17,9 @@ Route::resource('doner', BloodDonerController::class);
 Route::get('/', function () {
     return view('registration_patient.register');
 });
-
+Route::get('/', function () {
+    return view('registration_patient.login');
+});
 Route::get('/feature', function () {
     return view('feature');
 });
