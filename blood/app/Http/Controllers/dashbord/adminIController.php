@@ -1,7 +1,10 @@
 <?php
 
 namespace App\Http\Controllers\dashbord;
-use App\Models\User;
+
+use App\Models\blood_doner;
+
+use App\Models\blood_doner_needed;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -16,7 +19,7 @@ class adminIController extends Controller
     {
 
 
-        return view('dashbord.indexDD');
+        return view('dashbord.index');
     }
 
     /**
@@ -46,11 +49,41 @@ class adminIController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
+    public function show(blood_doner_needed $user)
     {
-        $users=User::all();
-        return view('dashbord.contentindex',compact('users'));
+        $users=blood_doner_needed::all();
+        $bds=blood_doner::all();
+        return view('dashbord.chart',compact('users','bds'));
+
     }
+    public function show0(blood_doner_needed $user)
+    {
+        $users=blood_doner_needed::all();
+        // $bds=blood_doner::all();
+        return view('dashbord.needed',compact('users'));
+
+    }
+    public function show1(blood_doner_needed $user)
+    {
+        $users=blood_doner_needed::all();
+        $bds=blood_doner::all();
+        return view('dashbord.index',compact('users','bds'));
+
+    }
+
+//      public function show(blood_doner $bd)
+//      {
+
+//     //    return view('dashbord.chart',compact('bds'));
+//    }
+
+
+
+   // public function show2(blood_doner_needed $user2)
+   // {
+   //     $users2=blood_doner_needed::all();
+    //    return view('dashbord.chart',compact('users2'));
+   // }
 
     /**
      * Show the form for editing the specified resource.
