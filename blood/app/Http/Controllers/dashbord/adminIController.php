@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\dashbord;
-use App\Models\User;
+
 use App\Models\blood_doner;
 
 use App\Models\blood_doner_needed;
@@ -49,18 +49,33 @@ class adminIController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
+    public function show(blood_doner_needed $user)
     {
-        $users=User::all();
-        return view('dashbord.index',compact('users'));
+        $users=blood_doner_needed::all();
+        $bds=blood_doner::all();
+        return view('dashbord.chart',compact('users','bds'));
+
+    }
+    public function show0(blood_doner_needed $user)
+    {
+        $users=blood_doner_needed::all();
+        // $bds=blood_doner::all();
+        return view('dashbord.needed',compact('users'));
+
+    }
+    public function show1(blood_doner_needed $user)
+    {
+        $users=blood_doner_needed::all();
+        $bds=blood_doner::all();
+        return view('dashbord.index',compact('users','bds'));
+
     }
 
+//      public function show(blood_doner $bd)
+//      {
 
-     public function show1(blood_doner $user1)
-     {
-       $users1=blood_doner::all();
-       return view('dashbord.chart',compact('users1'));
-   }
+//     //    return view('dashbord.chart',compact('bds'));
+//    }
 
 
 
