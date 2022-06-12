@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BloodDonerController;
 use App\Http\Controllers\BloodDonerNeededController;
 use App\Http\Controllers\BloodTypeController;
-<<<<<<< HEAD
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,10 +15,8 @@ use App\Http\Controllers\BloodTypeController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-=======
-use App\Http\Controllers\logindoner;
 
->>>>>>> 3515fbd6724cfeddf8e66ae1bd40a5cd39075221
+use App\Http\Controllers\logindoner;
 
 Route::resource('doner', BloodDonerController::class);
 Route::get('login',[BloodDonerController::class, 'login']);
@@ -29,10 +27,10 @@ Route::post('check',[BloodDonerController::class, 'check']);
 
 Route::resource('patient', BloodDonerNeededController::class);
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 3515fbd6724cfeddf8e66ae1bd40a5cd39075221
+
+
+
 
 Route::resource('doner', BloodDonerController::class);
 Route::resource('patient', BloodDonerNeededController::class);
@@ -41,14 +39,14 @@ Route::resource('patient', BloodDonerNeededController::class);
 
 
 Route::get('patient2', [BloodTypeController::class, 'show']);
-<<<<<<< HEAD
 
 
 
 
 
-=======
-<<<<<<< HEAD
+
+
+
 Route::view('login','registration_patient.login');
 Route::post('login', [BloodDonerNeededController::class, 'Login']);
 // Route::get('/logout', function () {
@@ -57,13 +55,11 @@ Route::post('login', [BloodDonerNeededController::class, 'Login']);
 //     }
 //     return redirect('login');
 // });
-=======
->>>>>>> 07168efd4694a6399724e18bc8361c17ce2e4e9c
 Route::view('reg2','registration_patient.register2');
 Route::post('user', [BloodDonerNeededController::class, 'userLogin']);
 
 
->>>>>>> 3515fbd6724cfeddf8e66ae1bd40a5cd39075221
+
 
 
 Route::get('/', function () {

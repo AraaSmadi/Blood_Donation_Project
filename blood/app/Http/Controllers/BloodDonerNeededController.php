@@ -47,7 +47,7 @@ class BloodDonerNeededController extends Controller
     public function store(Storeblood_doner_neededRequest $req)
     {
 
-         $input = Validator::make($req->all(), [
+         $input =Validator::make($req->all(), [
             'b_d_n_name'=>'required|max:255',
             'b_d_n_gender'=>'required|max:255',
             'b_d_n_phone'=>'required|max:255|unique:blood_doner_neededs',
