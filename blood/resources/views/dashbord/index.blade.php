@@ -23,9 +23,7 @@
 @section('statistics')
 @include('dashbord.layout.statistics')
 @endsection
-@section('tables')
-@include('dashbord.layout.tables')
-@endsection
+
 @section('widgets')
 
 @include('dashbord.layout.widgets')
