@@ -31,12 +31,7 @@
       <input type="text" id="form6Example3" class="form-control"  name="b_d_name"/>
       <label class="form-label" for="form6Example3">Name </label>
     </div>
-    <select class="form-select" aria-label="Default select example">
-      <option selected>Open this select menu</option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
-    </select>
+
 
   <!-- 2 column grid layout with text inputs for the first and last names -->
     <div class="row mb-4">
