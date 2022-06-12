@@ -14,6 +14,11 @@ use App\Http\Controllers\BloodTypeController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+<<<<<<< HEAD
+Route::resource('doner', BloodDonerController::class);
+Route::resource('patient', BloodDonerNeededController::class);
+=======
+>>>>>>> 09c73ffbc580d6534a243cc21a921876cbc9ce2a
 
 Route::resource('doner', BloodDonerController::class);
 Route::resource('patient', BloodDonerNeededController::class);
@@ -30,7 +35,9 @@ Route::post('user', [BloodDonerNeededController::class, 'userLogin']);
 Route::get('/', function () {
     return view('index');
 });
-
+Route::get('/', function () {
+    return view('login');
+});
 Route::get('/feature', function () {
     return view('feature');
 });
