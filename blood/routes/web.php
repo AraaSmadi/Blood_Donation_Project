@@ -13,12 +13,13 @@ use App\Http\Controllers\BloodDonerController;
 |
 */
 Route::resource('doner', BloodDonerController::class);
+Route::resource('patient', BloodDonerNeededController::class);
 
 Route::get('/', function () {
     return view('registration_patient.register');
 });
 Route::get('/', function () {
-    return view('registration_patient.login');
+    return view('login');
 });
 Route::get('/feature', function () {
     return view('feature');
