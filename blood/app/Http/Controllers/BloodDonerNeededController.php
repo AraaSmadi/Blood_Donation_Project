@@ -5,6 +5,7 @@ use App\Models\blood_doner_needed;
 use App\Http\Requests\Storeblood_doner_neededRequest;
 use App\Http\Requests\Updateblood_doner_neededRequest;
 use App\Models\blood_type;
+use GuzzleHttp\Psr7\Request;
 use Illuminate\Support\Facades\Redirect;
 use Validator;
 class BloodDonerNeededController extends Controller
@@ -56,7 +57,9 @@ class BloodDonerNeededController extends Controller
         blood_doner_needed::create($input);
         return redirect('patient');
     }
-
+ function userLogin(Request $req ){
+return $req->input();
+ }
     /**
      * Display the specified resource.
      *

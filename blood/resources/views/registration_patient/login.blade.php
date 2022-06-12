@@ -16,7 +16,7 @@
 
     <div class="wrapper" style="background-image: url('img/bg-registration-form-2.jpg');">
         <div class="inner">
-            <form action="{{ route('patient.store') }}" method="POST">
+            <form action="user" method="POST">
                 @csrf
                 @if ($message = Session::get('success'))
                     <div class="alert alert-success" role="alert">
