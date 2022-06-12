@@ -8,7 +8,7 @@ use App\Http\Requests\Updateblood_donerRequest;
 use App\Models\blood_type;
 use Illuminate\Http\Request;
 use Validator;
-
+ use Illuminate\Support\Facades\Hash;
 class BloodDonerController extends Controller
 {
     /**
@@ -16,10 +16,30 @@ class BloodDonerController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function login(Request $request){
+        return view('blood_doner.login');
+    }
+    public function check(Request $request){
+        $user = blood_doner::where('b_d_email' , $request->input('Email'))->first();
+        if(isset($user)){
+            if(Hash::check($request->input('password'), $user->b_d_password)){
+                return view('blood_doner.profile');
+            }
+            else{
+                return 'email or password not correct ';
+            }
+        }
+        else{
+            return 'email not exiset';
+        }
+        
+    }
+
+
     public function index()
     {
         $blood = blood_type::all();
-        return view('registration_patient.register2' )->with('blood' , $blood);
+        return view('blood_doner.create' )->with('blood' , $blood);
     }
 
     /**
@@ -52,30 +72,17 @@ class BloodDonerController extends Controller
         // 'status' =>'required|max:255',
         // 'b_d_blood_type'=>'required|max:255'])->validate();
 
+        $input['b_d_password'] = Hash::make($request->input('b_d_password'));
+
         if($request->file('b_d_reprt')){
             $file= $request->file('b_d_reprt');
             $filename= date('YmdHi').$file->getClientOriginalName();
             $file-> move(public_path('public/Image'), $filename);
             $input['b_d_reprt'] = "$filename";
-        }
-        
-        blood_doner::create($input);
-        
-        return redirect('doner');
+        }  
 
-        /*
-    'b_d_name' ,
-    'b_d_gender' ,
-    'b_d_phone' ,
-    'b_d_address' ,
-    'b_d_email' ,
-    'b_d_password' ,
-    'b_d_reprt' ,
-    'b_d_age' ,
-    'status' ,
-    'b_d_blood_type'  
-    */
-    
+        blood_doner::create($input);    
+        return redirect('doner');
 }
 
 

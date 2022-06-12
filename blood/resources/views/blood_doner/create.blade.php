@@ -2,7 +2,9 @@
 @section('title')
     title of the page 
 @endsection
+
 @section('content')
+
      <div class="container mt-5" style="margin-top: 50px ;">
 @if (isset($m) )
 
