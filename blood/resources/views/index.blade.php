@@ -1,9 +1,9 @@
 @extends('layout.main')
 @section('title')
-    title of the page 
+    title of the page
 @endsection
 @section('content')
-    
+
     <!-- Carousel Start -->
     <div class="container-fluid p-0 wow fadeIn" data-wow-delay="0.1s">
         <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
@@ -28,9 +28,9 @@
                         <div class="container">
                             <div class="row justify-content-center">
                                 <div class="col-lg-7">
-                                    <h1 class="display-2 text-light mb-5 animated slideInDown">Safe Driving Is Our Top Priority</h1>
-                                    <a href="" class="btn btn-primary py-sm-3 px-sm-5">Learn More</a>
-                                    <a href="" class="btn btn-light py-sm-3 px-sm-5 ms-3">Our Courses</a>
+                                    <h1 class="display-2 text-light mb-5 animated slideInDown">safe blood for all</h1>
+                                    <a href="" class="btn btn-primary py-sm-3 px-sm-5">Donor</a>
+                                    <a href="" class="btn btn-light py-sm-3 px-sm-5 ms-3">Patient</a>
                                 </div>
                             </div>
                         </div>
