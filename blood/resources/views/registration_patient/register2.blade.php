@@ -23,15 +23,95 @@
                 <div class="w-full flex-1 mt-8">
 
 
-                    <div class="my-12 border-b text-center">
+                    <div class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white ">
+                        <form action="{{route('doner.store')}}" method="post" enctype="multipart/form-data" >
+                            @csrf
+            
 
-                    <div class="mx-auto max-w-xs">
+                   
+                            <input type="text" class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white "  name="b_d_name"/>
+                 
+                      
+        
+                              <select class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white " name="b_d_gender" >
+                                  <option value="Male">Male</option>
+                                  <option value="Female">Female</option>
+                              </select>
+                      
+                               
+                       
+                         
+                                <select class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white " name="b_d_blood_type">
+                                  @foreach ($blood as $item)
+                                  
+                                  <option value="{{$item->id}}">{{$item->name}}</option>
+                                  
+                                  @endforeach
+                                   </select>
+                            
+                   
+                      
+                          <!-- Text input -->
+                        
+                            <select class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white " name="b_d_age">
+                              @for ($i = 18; $i < 65 ; $i++)
+                      
+                              <option value="{{$i}}">{{$i}}</option>
+                                  
+                              @endfor
+                          </select>      
+                          </div>
+                      
+                        
+                            <select class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white " name="b_d_address" >
+                              <option value="Irbid">Irbid</option>
+                              <option value="Amman">Amman</option>
+                              <option value="Jarsh">Jarsh</option>
+                              <option value="Blqa">Blqa</option>
+                              <option value="Karak">Karak</option>
+                              <option value="Zarqa">Zarqa</option>
+                              <option value="Maan">Maan</option>
+                              <option value="Mafraq">Mafraq</option>
+                              <option value="Tafelah">Tafelah</option>
+                              <option value="Madaba">Madaba</option>
+                              <option value="Ajloun">Ajloun </option>
+                              <option value="Ajloun">Aqaba </option>
+                          </select>
+              
+                            <input type="text"  class="form-control" placeholder="07xxxxxxxx" name="b_d_phone"/>
+                 
+                          
+                        
+                          <!-- report input -->
+                    
+                            <input type="file"   name="b_d_reprt" class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white "/>
+                        
+                          <!-- Email input -->
+                        
+                            <input type="email"  class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white " name="b_d_email"/>
+                       
+                          
+                          <!-- password input -->
+                            <input type="password"  class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white " name="b_d_password"/>
+               
+                          <input type="hidden"  class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white " name="status" value="0"/>
+
+
+{{-- 
                         <input class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white " type="email" placeholder="User name" />
                         <input class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5" type="email" placeholder="Email" />
                         <input class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5" type="password" placeholder="Password" />
                         <input class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5" type="password" placeholder=" confirm Password" />
+                        <input class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5" type="password" placeholder=" confirm Password" />
+                        <input class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5" type="password" placeholder=" confirm Password" />
+                        <input class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5" type="password" placeholder=" confirm Password" />
+                        <input class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5" type="password" placeholder=" confirm Password" />
+                        <input class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5" type="password" placeholder=" confirm Password" />
+                        <input class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5" type="password" placeholder=" confirm Password" /> --}}
                         <button class="mt-5 tracking-wide font-semibold bg-indigo-500 text-gray-100 w-full py-4 rounded-lg hover:bg-indigo-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none" style="background-color: #e95060">
-                            <svg class="w-6 h-6 -ml-2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        </form> 
+                        
+                        <svg class="w-6 h-6 -ml-2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
                                 <circle cx="8.5" cy="7" r="4" />
                                 <path d="M20 8v6M23 11h-6" />

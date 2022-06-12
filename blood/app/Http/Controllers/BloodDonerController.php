@@ -19,7 +19,7 @@ class BloodDonerController extends Controller
     public function index()
     {
         $blood = blood_type::all();
-        return view('blood_doner.create' )->with('blood' , $blood);
+        return view('registration_patient.register2' )->with('blood' , $blood);
     }
 
     /**
