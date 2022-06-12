@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BloodDonerController;
 use App\Http\Controllers\BloodDonerNeededController;
 use App\Http\Controllers\BloodTypeController;
+use App\Http\Controllers\ContactController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,11 +15,11 @@ use App\Http\Controllers\BloodTypeController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-<<<<<<< HEAD
+
 Route::resource('doner', BloodDonerController::class);
 Route::resource('patient', BloodDonerNeededController::class);
-=======
->>>>>>> 09c73ffbc580d6534a243cc21a921876cbc9ce2a
+
+
 
 Route::resource('doner', BloodDonerController::class);
 Route::resource('patient', BloodDonerNeededController::class);
@@ -52,9 +53,9 @@ Route::get('/testimonial', function () {
 Route::get('/courses', function () {
     return view('courses');
 });
-Route::get('/contact', function () {
-    return view('contact');
-});
+// Route::get('/contact', function () {
+//     return view('contact');
+// });
 
 Route::get('/appointment', function () {
     return view('appointment');
@@ -67,3 +68,10 @@ Route::get('/about', function () {
 Route::get('/404', function () {
     return view('404');
 });
+
+
+//*************** contact ********************** */
+Route::get('/contact',[ContactController::class,'create']);
+Route::post('/contact',[ContactController::class,'store'])->name('add-store');
+//*************** contact ********************** */
+
