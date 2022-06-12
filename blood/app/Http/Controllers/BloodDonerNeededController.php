@@ -5,9 +5,12 @@ use App\Models\blood_doner_needed;
 use App\Http\Requests\Storeblood_doner_neededRequest;
 use App\Http\Requests\Updateblood_doner_neededRequest;
 use App\Models\blood_type;
-use GuzzleHttp\Psr7\Request;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Validator;
+use Illuminate\Support\Facades\Hash;
+use Symfony\Component\Console\Input\Input;
+
 class BloodDonerNeededController extends Controller
 {
 
@@ -43,6 +46,7 @@ class BloodDonerNeededController extends Controller
      */
     public function store(Storeblood_doner_neededRequest $req)
     {
+
          $input = Validator::make($req->all(), [
             'b_d_n_name'=>'required|max:255',
             'b_d_n_gender'=>'required|max:255',
@@ -54,12 +58,39 @@ class BloodDonerNeededController extends Controller
             'b_d_n_age'=>'required|max:255',
             'b_d_blood_type'=>'required|max:255'
          ])->validate();
+        //  $m = new blood_doner_needed;
+
+        // $m->b_d_n_password=$req->b_d_n_password ;
+        // $pass = $req->b_d_n_password;
+        // $hashed = Hash::make($pass);
+        // $input->b_d_n_password =$hashed;
         blood_doner_needed::create($input);
         return redirect('patient');
     }
- function userLogin(Request $req ){
-return $req->input();
- }
+    public function Login(Request $req)
+    {
+        $email=$req->b_d_n_email;
+        $password=$req->b_d_n_password;
+        $user= blood_doner_needed::where('b_d_n_email',$email)->first();
+
+        if(isset($user)){
+
+        if($password === $user('b_d_n_password')){
+            $req->session()->put('b_d_n_email',$user['b_d_n_email']);
+            return redirect('patient');
+        }
+        else
+        {
+            return redirect('login')->with('incorrect_password' , 'Password Incorrect');
+        }
+
+       }else
+       {
+           return "Email Does not Exist";
+       }
+
+
+    }
     /**
      * Display the specified resource.
      *

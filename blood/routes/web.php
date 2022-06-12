@@ -41,15 +41,29 @@ Route::resource('patient', BloodDonerNeededController::class);
 
 
 Route::get('patient2', [BloodTypeController::class, 'show']);
+<<<<<<< HEAD
 
 
 
 
 
+=======
+<<<<<<< HEAD
+Route::view('login','registration_patient.login');
+Route::post('login', [BloodDonerNeededController::class, 'Login']);
+// Route::get('/logout', function () {
+//     if(session()->has('user')){
+//         session()->pull('user');
+//     }
+//     return redirect('login');
+// });
+=======
+>>>>>>> 07168efd4694a6399724e18bc8361c17ce2e4e9c
 Route::view('reg2','registration_patient.register2');
 Route::post('user', [BloodDonerNeededController::class, 'userLogin']);
 
 
+>>>>>>> 3515fbd6724cfeddf8e66ae1bd40a5cd39075221
 
 
 Route::get('/', function () {
