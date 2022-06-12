@@ -18,8 +18,15 @@ use App\Http\Controllers\BloodTypeController;
 Route::resource('doner', BloodDonerController::class);
 Route::resource('patient', BloodDonerNeededController::class);
 Route::get('patient2', [BloodTypeController::class, 'show']);
-Route::view('reg2','registration_patient.register2');
-Route::post('user', [BloodDonerNeededController::class, 'userLogin']);
+Route::view('login','registration_patient.login');
+Route::post('login', [BloodDonerNeededController::class, 'Login']);
+// Route::get('/logout', function () {
+//     if(session()->has('user')){
+//         session()->pull('user');
+//     }
+//     return redirect('login');
+// });
+
 Route::get('/', function () {
     return view('index');
 });
