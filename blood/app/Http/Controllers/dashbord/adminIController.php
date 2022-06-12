@@ -76,11 +76,14 @@ class adminIController extends Controller
     }
     public function show1(blood_doner_needed $user)
     {$name = admin::all()->where('roll', '1');
+
+
         $u = blood_doner::all()->count();
         $d=blood_doner::all();
+        $data=session('d');
         $s=blood_doner_needed::all()->count();
         $a=admin::all()->where('roll', '1')->count();
-        return view('dashbord.index',compact('u','s','a','name','d'));
+        return view('dashbord.index',compact('u','s','a','name','data'));
 
     }
     // public function show2(blood_doner_needed $user)
