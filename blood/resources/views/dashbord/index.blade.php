@@ -1,6 +1,6 @@
 @extends('dashbord.indexDD')
 @section('title','Home page')
-@section('active','active')
+@section('admin','active')
 
 @section('loading')
 @include('dashbord.layout.loading')

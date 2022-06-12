@@ -1,4 +1,4 @@
-  
+
 
 
 <!-- blood_doner_neededs -->
@@ -35,11 +35,11 @@
                         <td>{{$item->b_d_n_phone}}</td>
                         <td>{{$item->b_d_n_address}}</td>
                         <td>{{$item->b_d_n_age}}</td>
-                        <td>{{$item->b_d_n_blood_type}}</td>
+                        <td>{{$item->name}}</td>
 
                         <td>
-                            <a class="btn btn-sm btn-primary" href="">Delete user</a>
-                            <a class="btn btn-sm btn-success" href="">Make Admin</a>
+                            {{-- <a class="btn btn-sm btn-primary" href="">Delete user</a>
+                            <a class="btn btn-sm btn-success" href="">Make Admin</a> --}}
                         </td>
 
                     </tr>
