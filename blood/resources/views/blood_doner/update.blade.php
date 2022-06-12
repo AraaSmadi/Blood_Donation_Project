@@ -24,21 +24,21 @@
         </ul>
       </div><br />
 @endif
-<form action="{{route('doner.store')}}" method="POST" enctype="multipart/form-data">
-@csrf  
+<form action="{{route('doner.update', $user->id)}}" method="POST" enctype="multipart/form-data">
+@csrf 
+@method('PUT') 
     <!-- Text input -->
     <div class="form-outline mb-4">
-      <input type="text" id="form6Example3" class="form-control"  name="b_d_name"/>
+      <input type="text" id="form6Example3" class="form-control"  name="b_d_name" value="{{$user->b_d_name}}"/>
       <label class="form-label" for="form6Example3">Name </label>
     </div>
-
 
   <!-- 2 column grid layout with text inputs for the first and last names -->
     <div class="row mb-4">
       <div class="col">
         <div class="form-outline">
 
-        <select class="form-select" name="b_d_gender" >
+        <select class="form-select" name="b_d_gender" value="{{$user->b_d_gender}}" >
             <option value="Male">Male</option>
             <option value="Female">Female</option>
         </select>
@@ -49,7 +49,7 @@
 
       <div class="col">
         <div class="form-outline">
-          <select class="form-select" name="b_d_blood_type">
+          <select class="form-select" name="b_d_blood_type" value="{{$user->b_d_blood_type}}">
             @foreach ($blood as $item)
             
             <option value="{{$item->id}}">{{$item->name}}</option>
@@ -63,7 +63,7 @@
 
     <!-- Text input -->
     <div class="form-outline mb-4">
-      <select class="form-select" name="b_d_age">
+      <select class="form-select" name="b_d_age" value="{{$user->b_d_age}}">
         @for ($i = 18; $i < 65 ; $i++)
 
         <option value="{{$i}}">{{$i}}</option>
@@ -72,9 +72,9 @@
     </select>      <label class="form-label" for="form6Example4">age</label>
     </div>
 
-    <div class="row mb-4">
+    <div class="row mb-4" >
       <div class="col">
-      <select class="form-select" name="b_d_address" >
+      <select class="form-select" name="b_d_address" value="{{$user->b_d_address}}">
         <option value="Irbid">Irbid</option>
         <option value="Amman">Amman</option>
         <option value="Jarsh">Jarsh</option>
@@ -91,7 +91,7 @@
       <label class="form-label" for="form6Example4">Address</label>
   </div>
   <div class="col">
-      <input type="text" id="form6Example4" class="form-control" placeholder="07xxxxxxxx" name="b_d_phone"/>
+      <input type="text" id="form6Example4" class="form-control" placeholder="07xxxxxxxx" name="b_d_phone" value="{{$user->b_d_phone}}"/>
       <label class="form-label" for="form6Example4">Phone</label>
     </div>
     </div>
@@ -101,20 +101,20 @@
     <!-- report input -->
     <div class="form-outline mb-4">
       <label class="form-label" for="customFile"> No sick reports  </label>
-      <input type="file" class="form-control" id="customFile" name="b_d_reprt"/>
+      <input type="file" class="form-control" id="customFile" name="b_d_reprt" value="{{$user->b_d_reprt}}"/>
     </div>
     <!-- Email input -->
     <div class="form-outline mb-4">
-      <input type="email" id="form6Example5" class="form-control" name="b_d_email"/>
+      <input type="email" id="form6Example5" class="form-control" name="b_d_email" value="{{$user->b_d_email}}"/>
       <label class="form-label" for="form6Example5">Email</label>
     </div>
     
     <!-- password input -->
     <div class="form-outline mb-4">
-      <input type="password" id="form6Example5" class="form-control" name="b_d_password"/>
+      <input type="password" id="form6Example5" class="form-control" name="b_d_password" value="{{$user->b_d_password}}"/>
       <label class="form-label" for="form6Example5">Password</label>
     </div>
-    <input type="hidden" id="form6Example5" class="form-control" name="status" value="0"/>
+    <input type="hidden" id="form6Example5" class="form-control" name="status"  value="{{$user->status}}"/>
 
     <!-- password-confirm  input -->
     {{-- <div class="form-outline mb-4">
