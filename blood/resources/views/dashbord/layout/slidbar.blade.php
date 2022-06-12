@@ -12,10 +12,10 @@
                 </div>
             </div>
             <div class="ms-3">
-                @foreach ($name as $item)
+                {{-- @foreach ($name as $item)
 <h6 class="mb-0">{{$item->name}}</h6>
 
-                @endforeach
+                @endforeach --}}
 
                 <span>Admin</span>
 
@@ -23,7 +23,7 @@
             </div>
         </div>
         <div class="navbar-nav w-100">
-            <a href="/admin" class="nav-item nav-link @yield('active')"><i
+            <a href="/admin" class="nav-item nav-link @yield('admin')"><i
                     class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
             <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i
@@ -34,11 +34,11 @@
                     <a href="/element" class="dropdown-item">Other Elements</a>
                 </div>
             </div>
-            <a href="/widget" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Widgets</a>
-            <a href="/form" class="nav-item nav-link "><i class="fa fa-keyboard me-2"></i>Forms</a>
-            <a href="/table" class="nav-item nav-link "><i class="fa fa-table me-2"></i>Tables</a>
-            <a href="/admindoners" class="nav-item nav-link "><i class="fa fa-chart-bar me-2"></i>Doners</a>
-            <a href="/adminneeded" class="nav-item nav-link "><i class="fa fa-chart-bar me-2"></i>Doner Needed</a>
+            <a href="/widget" class="nav-item nav-link @yield('widget')"><i class="fa fa-th me-2"></i>Widgets</a>
+            <a href="/form" class="nav-item nav-link @yield('widget')"><i class="fa fa-keyboard me-2"></i>Messages</a>
+            <a href="/table" class="nav-item nav-link @yield('widget')"><i class="fa fa-table me-2"></i>Tables</a>
+            <a href="/admindoners" class="nav-item nav-link @yield('admindoners')"><i class="fa fa-chart-bar me-2"></i>Doners</a>
+            <a href="/adminneeded" class="nav-item nav-link @yield('adminneeded')"><i class="fa fa-chart-bar me-2"></i>Doner Needed</a>
             <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i
                         class="far fa-file-alt me-2"></i>Pages</a>
