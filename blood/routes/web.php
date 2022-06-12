@@ -47,7 +47,7 @@ Route::get('patient2', [BloodTypeController::class, 'show']);
 
 
 
-Route::view('login','registration_patient.login');
+//Route::view('login','registration_patient.login');
 Route::post('login', [BloodDonerNeededController::class, 'Login']);
 // Route::get('/logout', function () {
 //     if(session()->has('user')){
