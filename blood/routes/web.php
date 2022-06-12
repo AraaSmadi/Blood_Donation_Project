@@ -4,7 +4,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BloodDonerController;
 use App\Http\Controllers\BloodDonerNeededController;
 use App\Http\Controllers\BloodTypeController;
+<<<<<<< HEAD
+use App\Http\Controllers\ContactController;
+=======
 
+>>>>>>> edcc9688f2e7f31a9800e92edd14822b93fb1db9
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,8 +20,11 @@ use App\Http\Controllers\BloodTypeController;
 |
 */
 
+<<<<<<< HEAD
+=======
 use App\Http\Controllers\logindoner;
 
+>>>>>>> edcc9688f2e7f31a9800e92edd14822b93fb1db9
 Route::resource('doner', BloodDonerController::class);
 Route::get('login',[BloodDonerController::class, 'login']);
 Route::post('check',[BloodDonerController::class, 'check']);
@@ -28,9 +35,12 @@ Route::post('check',[BloodDonerController::class, 'check']);
 Route::resource('patient', BloodDonerNeededController::class);
 
 
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> edcc9688f2e7f31a9800e92edd14822b93fb1db9
 
 Route::resource('doner', BloodDonerController::class);
 Route::resource('patient', BloodDonerNeededController::class);
@@ -82,9 +92,9 @@ Route::get('/testimonial', function () {
 Route::get('/courses', function () {
     return view('courses');
 });
-Route::get('/contact', function () {
-    return view('contact');
-});
+// Route::get('/contact', function () {
+//     return view('contact');
+// });
 
 Route::get('/appointment', function () {
     return view('appointment');
@@ -97,3 +107,10 @@ Route::get('/about', function () {
 Route::get('/404', function () {
     return view('404');
 });
+
+
+//*************** contact ********************** */
+Route::get('/contact',[ContactController::class,'create']);
+Route::post('/contact',[ContactController::class,'store'])->name('add-store');
+//*************** contact ********************** */
+
