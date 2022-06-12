@@ -1,5 +1,5 @@
 @extends('dashbord.indexDD')
-@section('title','chart')
+@section('title','Doners')
 @section('active','active')
 
 @section('loading')
@@ -14,7 +14,7 @@
 @include('dashbord.layout.nav')
 @endsection
 @section('tables')
-@include('dashbord.layout.tables')
+@include('dashbord.layout.doners')
 @endsection
 
 @section('copyright')

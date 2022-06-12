@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\dashbord;
 
 use App\Models\blood_doner;
+use App\Models\admin;
 
 use App\Models\blood_doner_needed;
 use App\Http\Controllers\Controller;
@@ -53,37 +54,27 @@ class adminIController extends Controller
     {
         $users=blood_doner_needed::all();
         $bds=blood_doner::all();
-        return view('dashbord.chart',compact('users','bds'));
+        return view('dashbord.doners',compact('users','bds'));
 
     }
     public function show0(blood_doner_needed $user)
     {
         $users=blood_doner_needed::all();
         // $bds=blood_doner::all();
+
         return view('dashbord.needed',compact('users'));
 
     }
     public function show1(blood_doner_needed $user)
-    {
-        $users=blood_doner_needed::all();
-        $bds=blood_doner::all();
-        return view('dashbord.index',compact('users','bds'));
+    {$name = admin::all()->where('roll', '1');
+        $u = blood_doner::all()->count();
+
+        $s=blood_doner_needed::all()->count();
+        $a=admin::all()->where('roll', '1')->count();
+        return view('dashbord.index',compact('u','s','a','name'));
 
     }
 
-//      public function show(blood_doner $bd)
-//      {
-
-//     //    return view('dashbord.chart',compact('bds'));
-//    }
-
-
-
-   // public function show2(blood_doner_needed $user2)
-   // {
-   //     $users2=blood_doner_needed::all();
-    //    return view('dashbord.chart',compact('users2'));
-   // }
 
     /**
      * Show the form for editing the specified resource.

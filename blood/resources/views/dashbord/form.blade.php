@@ -1,5 +1,5 @@
 @extends('dashbord.indexDD')
-@section('title','chart')
+@section('title','Dddddddoners')
 @section('active','active')
 
 @section('loading')
