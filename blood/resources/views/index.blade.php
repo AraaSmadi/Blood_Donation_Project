@@ -9,24 +9,25 @@
         <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="w-100" src="img/carousel-1.jpg" alt="Image">
+                    <img class="w-100" src="img/slider8.png" alt="Image" style="height: 800px">
                     <div class="carousel-caption">
                         <div class="container">
-                            <div class="row justify-content-center">
+                            <div class="row justify-content-left">
                                 <div class="col-lg-7">
-                                    <h1 class="display-2 text-light mb-5 animated slideInDown">Learn To Drive With Confidence</h1>
-                                    <a href="" class="btn btn-primary py-sm-3 px-sm-5">Learn More</a>
-                                    <a href="" class="btn btn-light py-sm-3 px-sm-5 ms-3">Our Courses</a>
+                                    <h1 class="display-2 text-light mb-5 animated slideInDown">Save a Live Donate Blood
+                                    </h1>
+                                    <a href="" class="btn btn-primary py-sm-3 px-sm-5">Donors</a>
+                                    <a href="" class="btn btn-light py-sm-3 px-sm-5 ms-3">Patients</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100" src="img/carousel-2.jpg" alt="Image">
+                    <img class="w-100" src="img/slider4.jpg" alt="Image">
                     <div class="carousel-caption">
                         <div class="container">
-                            <div class="row justify-content-center">
+                            <div class="row justify-content-left">
                                 <div class="col-lg-7">
                                     <h1 class="display-2 text-light mb-5 animated slideInDown">safe blood for all</h1>
                                     <a href="" class="btn btn-primary py-sm-3 px-sm-5">Donor</a>
@@ -36,23 +37,42 @@
                         </div>
                     </div>
                 </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="img/slider6.png" alt="Image">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row justify-content-left">
+                                <div class="col-lg-7">
+                                    <h1 class="display-2 text-light mb-5 animated slideInDown">safe blood for all</h1>
+                                    <a href="" class="btn btn-primary py-sm-3 px-sm-5">Donor</a>
+                                    <a href="" class="btn btn-light py-sm-3 px-sm-5 ms-3">Patient</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+            {{-- <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button> --}}
         </div>
     </div>
+
     <!-- Carousel End -->
 
 
-    <!-- Facts Start -->
+   {{-- <!-- Facts Start -->
     <div class="container-fluid facts py-5 pt-lg-0">
         <div class="container py-5 pt-lg-0">
             <div class="row gx-0">
@@ -98,10 +118,10 @@
             </div>
         </div>
     </div>
-    <!-- Facts End -->
+    <!-- Facts End --> --}}
 
 
-    <!-- About Start -->
+    {{-- <!-- About Start -->
     <div class="container-xxl py-6">
         <div class="container">
             <div class="row g-5">
@@ -149,7 +169,7 @@
             </div>
         </div>
     </div>
-    <!-- About End -->
+    <!-- About End --> --}}
 
 
     <!-- Courses Start -->
