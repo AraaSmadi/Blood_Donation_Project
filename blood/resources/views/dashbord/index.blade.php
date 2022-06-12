@@ -1,5 +1,5 @@
 @extends('dashbord.indexDD')
-@section('title','Needed')
+@section('title','Home page')
 @section('active','active')
 
 @section('loading')
@@ -10,13 +10,29 @@
 @include('dashbord.layout.slidbar')
 @endsection
 
+
+
+
+
+
+
+
 @section('navbar')
 @include('dashbord.layout.nav')
 @endsection
-@section('tables')
-@include('dashbord.layout.needed')
+@section('statistics')
+@include('dashbord.layout.statistics')
 @endsection
 
+@section('widgets')
+
+@include('dashbord.layout.widgets')
+
+@endsection
 @section('copyright')
+
 @include('dashbord.layout.copyright')
+
+
+
 @endsection
