@@ -49,6 +49,13 @@ class BloodDonerController extends Controller
     }
 
 
+    public function editprofile()
+    {
+        $blood = blood_type::all();
+       
+        $user = blood_doner::where('b_d_email' , Session::get('user_email'))->first();
+        return view('blood_doner.update', compact('user','blood') );
+    }
     public function index()
     {
         $blood = blood_type::all();
@@ -62,6 +69,7 @@ class BloodDonerController extends Controller
      */
     public function create()
     { 
+         
         $blood = blood_type::all();
         return view('blood_doner.create' )->with('blood' , $blood);
     }
@@ -119,9 +127,7 @@ class BloodDonerController extends Controller
      */
     public function edit()
     {
-        $user = blood_doner::where('b_d_email' , Session::get('user_email'))->first();
-        $blood = blood_type::all();
-        return view('blood_doner.update' , compact('user'))->with('blood' , $blood);
+        return redirect("doneredit");
     }
 
     /**
