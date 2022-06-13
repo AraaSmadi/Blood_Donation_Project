@@ -55,6 +55,9 @@ Route::post('/checkAdmin',[adminIController::class,'loginAdmin'])->name('checkAd
 // ***************************// LOGIN ***************************
 
 
+Route::get('/logoutAdmin',[adminIController::class,'logoutAdmin'])->name('logoutAdmin');
+
+
 
 
 

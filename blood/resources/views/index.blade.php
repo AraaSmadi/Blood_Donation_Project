@@ -1,6 +1,6 @@
 @extends('layout.main')
 @section('title')
-    title of the page
+    Home
 @endsection
 @section('content')
     <!-- Carousel Start -->
@@ -8,50 +8,61 @@
         <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="w-100" src="img/slider6.png " alt="Image" style="height: 800px">
+                    <img class="w-100" src="img/V1.PNG " alt="Image" style="height: 730px">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-left">
                                 <div class="col-lg-7">
                                     <h1 class="display-2 text-light mb-5 animated slideInDown">Save a Live Donate Blood
                                     </h1>
-                                    <a href="" class="btn btn-primary py-sm-3 px-sm-5">Donors</a>
-                                    <a href="" class="btn btn-light py-sm-3 px-sm-5 ms-3">Patients</a>
+                                    <a href="{{ route('doner.create') }}" class="btn btn-primary py-sm-3 px-sm-5">Donors</a>
+                                    <a href="{{ route('patient.create') }}" class="btn btn-light py-sm-3 px-sm-5 ms-3">Patients</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100" src="img/slider4.jpg" alt="Image">
+                    <img class="w-100" src="img/V3.PNG" alt="Image" height="730px">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-left">
                                 <div class="col-lg-7">
                                     <h1 class="display-2 text-light mb-5 animated slideInDown">safe blood for all</h1>
-                                    <a href="" class="btn btn-primary py-sm-3 px-sm-5">Donor</a>
-                                    <a href="" class="btn btn-light py-sm-3 px-sm-5 ms-3">Patient</a>
+                                    <a href="{{ route('doner.create') }}" class="btn btn-primary py-sm-3 px-sm-5">Donor</a>
+                                    <a href="{{ route('doner.create') }}" class="btn btn-light py-sm-3 px-sm-5 ms-3">Patient</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100" src="img/slider8.png" alt="Image">
+                    <img class="w-100" src="img/V2.PNG" alt="Image" height="730px">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-center">
                                 <div class="col-lg-7">
                                     <h1 class="display-2 text-light mb-5 animated slideInDown">More Ways you can support us
                                     </h1>
-                                    <a href="" class="btn btn-primary py-sm-3 px-sm-5">Donor</a>
-                                    <a href="" class="btn btn-light py-sm-3 px-sm-5 ms-3">Patient</a>
+                                    <a href="{{ route('doner.create') }}" class="btn btn-primary py-sm-3 px-sm-5">Donor</a>
+                                    <a href="{{ route('patient.create') }}" class="btn btn-light py-sm-3 px-sm-5 ms-3">Patient</a>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
     </div>
 
@@ -232,26 +243,28 @@
     <div class="container-xxl py-6">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <h6 class="text-primary text-uppercase mb-2">Testimonial</h6>
-                <h1 class="display-6 mb-4">What Our Clients Say!</h1>
+
+                <h1 class="display-6 mb-4">What Our Clients Story!</h1>
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="owl-carousel testimonial-carousel">
                         <div class="testimonial-item text-center">
                             <div class="position-relative mb-5">
-                                <img class="img-fluid rounded-circle mx-auto" src="img/testimonial-1.jpg" alt="">
+                                <img class="img-fluid rounded-circle mx-auto" src="img/testimonial-3.jpg" alt="">
                                 <div class="position-absolute top-100 start-50 translate-middle d-flex align-items-center justify-content-center bg-white rounded-circle"
                                     style="width: 60px; height: 60px;">
                                     <i class="fa fa-quote-left fa-2x text-primary"></i>
                                 </div>
                             </div>
-                            <p class="fs-4">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore
-                                dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.
+                            <p class="fs-4"> doctors discovered a huge tumor in her neck. We were devastated to learn that it was a rare, called neuroblastoma.
+
+                                Our first plan of attack was surgery, scheduled for mid-November. Our friend, Amy, worked on securing designated blood donations so that Sadie would have a good supply on hand for her big surgery. Amy contacted her network of friends and in two days six people identified themselves as the preferred blood type
+
                             </p>
                             <hr class="w-25 mx-auto">
-                            <h5>Client Name</h5>
-                            <span>Profession</span>
+                            <h5>Sadie</h5>
+
                         </div>
                         <div class="testimonial-item text-center">
                             <div class="position-relative mb-5">
@@ -261,28 +274,13 @@
                                     <i class="fa fa-quote-left fa-2x text-primary"></i>
                                 </div>
                             </div>
-                            <p class="fs-4">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore
-                                dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.
+                            <p class="fs-4">I have Leukemia cancer of the blood. I remember my first time getting blood. At first, it creeped me out seeing a bag of blood and knowing it would all go into me, but then I thought of how many people get pricked to get that blood I also realized that you did it for me and other kids with a lot worse stuff than me so then I whispered in my head, thank you.
                             </p>
                             <hr class="w-25 mx-auto">
-                            <h5>Client Name</h5>
-                            <span>Profession</span>
+                            <h5>Daniel</h5>
+
                         </div>
-                        <div class="testimonial-item text-center">
-                            <div class="position-relative mb-5">
-                                <img class="img-fluid rounded-circle mx-auto" src="img/testimonial-3.jpg" alt="">
-                                <div class="position-absolute top-100 start-50 translate-middle d-flex align-items-center justify-content-center bg-white rounded-circle"
-                                    style="width: 60px; height: 60px;">
-                                    <i class="fa fa-quote-left fa-2x text-primary"></i>
-                                </div>
-                            </div>
-                            <p class="fs-4">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore
-                                dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.
-                            </p>
-                            <hr class="w-25 mx-auto">
-                            <h5>Client Name</h5>
-                            <span>Profession</span>
-                        </div>
+
                     </div>
                 </div>
             </div>

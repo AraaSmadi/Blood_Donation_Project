@@ -1,8 +1,8 @@
  <!-- Sidebar Start -->
  <div class="sidebar pe-4 pb-3">
     <nav class="navbar bg-secondary navbar-dark">
-        <a href="index.html" class="navbar-brand mx-4 mb-3">
-            <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>DarkPan</h3>
+        <a href="" class="navbar-brand mx-4 mb-3">
+            <h3 class="text-primary"><i class="fa fa-hand-holding-heart  me-2"></i>Life Line</h3>
         </a>
         <div class="d-flex align-items-center ms-4 mb-4">
             <div class="position-relative">
@@ -30,15 +30,22 @@
             <a href="/todotable" class="nav-item nav-link @yield('tableee')"><i class="fa  fa-clipboard me-2"></i>To Do Table</a>
             <a href="/admindoners" class="nav-item nav-link @yield('admindoners')"><i class="fa fa-hand-holding-heart me-2"></i>Doners</a>
             <a href="/adminneeded" class="nav-item nav-link @yield('adminneeded')"><i class="fa fa-users me-2"></i>Doner Needed</a>
-            
+
             <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i
-                        class="far fa-file-alt me-2"></i>Pages</a>
+                        class="far fa-file-alt me-2"></i>Tools</a>
                 <div class="dropdown-menu bg-transparent border-0">
-                    <a href="{{route('loginAdmin')}}" class="dropdown-item">Login In</a>
-                    <a href="{{route('signup')}}" class="dropdown-item">Sign Up</a>
-                    <a href="/404" class="dropdown-item">404 Error</a>
-                    <a href="/blank" class="dropdown-item">Blank Page</a>
+                    <a href="/blank" class="dropdown-item">Admin Profile</a>
+                    {{-- <a href="{{route('loginAdmin')}}" class="dropdown-item">Login In</a> --}}
+
+                    @if ($userAdmin->roll==1)
+
+
+
+                    <a href="{{route('signup')}}" class="dropdown-item">Add Admin</a>
+                    @endif
+                    <a href="{{route('logoutAdmin')}}" class="dropdown-item">Log Out</a>
+
                 </div>
             </div>
         </div>
