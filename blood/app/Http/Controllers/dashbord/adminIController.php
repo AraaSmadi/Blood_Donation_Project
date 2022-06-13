@@ -49,7 +49,7 @@ class adminIController extends Controller
 
                 $mes = contact::orderBy('updated_at', 'desc')->paginate(4);
 
-                $todo = toDo::orderBy('updated_at', 'desc')->paginate(4);;
+                $todo = toDo::orderBy('updated_at', 'desc')->paginate(4);
                 $s = blood_doner_needed::all()->count();
                 $a = admin::all()->where('roll', '1')->count();
                 // $userAdmin = admin::findorFail(Session::get('userId'));

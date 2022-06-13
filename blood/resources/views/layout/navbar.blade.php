@@ -62,7 +62,7 @@
 
                 @if (!Session::has('user_email'))
                     {{-- <a href="{{route('doner')}}" class="nav-item nav-link">Login</a> --}}
-                    <a href="/login" class="nav-item nav-link ">Login</a>
+
 
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Register</a>
@@ -72,7 +72,7 @@
                             <a href="{{ route('patient.create') }}" class="dropdown-item">Patient Register</a>
                         </div>
                     </div>
-
+                    <a href="/login" class="nav-item nav-link ">Login</a>
                 @else
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Profile</a>
