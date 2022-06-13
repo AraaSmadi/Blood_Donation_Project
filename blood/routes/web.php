@@ -5,6 +5,7 @@ use App\Http\Controllers\BloodDonerController;
 use App\Http\Controllers\BloodDonerNeededController;
 use App\Http\Controllers\BloodTypeController;
 use App\Http\Controllers\ContactController;
+<<<<<<< HEAD
 
 
 
@@ -22,22 +23,35 @@ use App\Http\Controllers\ContactController;
 
 use App\Http\Controllers\logindoner;
 
+=======
+use App\Http\Controllers\logindoner;
+
+
+
+/**********************  doner routs ************************ */
+
+>>>>>>> 7bff31465e996f6150b6c43155aa6ec355ea4036
 Route::resource('doner', BloodDonerController::class);
-Route::get('login',[BloodDonerController::class, 'login']);
+Route::get('donerlogin',[BloodDonerController::class, 'login']);
+Route::get('doneredit',[BloodDonerController::class, 'editprofile']);
 Route::post('check',[BloodDonerController::class, 'check']);
 
+/**********************  doner routs ************************ */
 
 
 
 Route::resource('patient', BloodDonerNeededController::class);
 
 
+<<<<<<< HEAD
 
 
 
 
 
 
+=======
+>>>>>>> 7bff31465e996f6150b6c43155aa6ec355ea4036
 Route::resource('doner', BloodDonerController::class);
 Route::resource('patient', BloodDonerNeededController::class);
 
@@ -45,6 +59,8 @@ Route::resource('patient', BloodDonerNeededController::class);
 
 
 Route::get('patient2', [BloodTypeController::class, 'show']);
+Route::view('login','registration_patient.login');
+
 
 
 
@@ -54,6 +70,7 @@ Route::get('patient2', [BloodTypeController::class, 'show']);
 
 
 //Route::view('login','registration_patient.login');
+
 Route::post('login', [BloodDonerNeededController::class, 'Login']);
 // Route::get('/logout', function () {
 //     if(session()->has('user')){
@@ -61,6 +78,8 @@ Route::post('login', [BloodDonerNeededController::class, 'Login']);
 //     }
 //     return redirect('login');
 // });
+
+
 Route::view('reg2','registration_patient.register2');
 Route::post('user', [BloodDonerNeededController::class, 'userLogin']);
 
@@ -68,12 +87,10 @@ Route::post('user', [BloodDonerNeededController::class, 'userLogin']);
 
 
 
-Route::get('/', function () {
-    return view('index');
-});
-Route::get('/', function () {
-    return view('login');
-});
+Route::get('/', [BloodDonerController::class , 'alldoner']);
+
+
+
 Route::get('/feature', function () {
     return view('feature');
 });
