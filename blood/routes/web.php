@@ -35,7 +35,7 @@ Route::view('profile','registration_patient.profile_patient');
 
 
 //***************** blood donor needed ********************** */
-
+Route::get('patiantedit',[BloodDonerNeededController::class, 'edit']);
 Route::view('reg2','registration_patient.register2');
 Route::post('user', [BloodDonerNeededController::class, 'userLogin']);
 

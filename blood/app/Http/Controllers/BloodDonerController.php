@@ -18,8 +18,8 @@ class BloodDonerController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    
-  
+
+
 
 
     public function editprofile()
@@ -158,7 +158,7 @@ class BloodDonerController extends Controller
      */
     public function edit()
     {
-        
+
         return redirect("doneredit");
     }
 

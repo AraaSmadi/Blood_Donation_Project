@@ -32,7 +32,8 @@ class BloodDonerNeededController extends Controller
             if(isset($user)){
                $doner = blood_doner::all();
                $blood = blood_type::all();
-                 return view('registration_patient.profile_patient' , compact('user','doner' , 'blood'));
+               $i=1;
+                 return view('registration_patient.profile_patient' , compact('user','doner' , 'blood', 'i'));
             }
             else{
                 $user = blood_doner::where('b_d_email' , Session::get('user_email'))->first();
@@ -132,7 +133,8 @@ class BloodDonerNeededController extends Controller
      */
     public function edit(blood_doner_needed $blood_doner_needed)
     {
-        //
+            return redirect("patiantedit");
+
     }
 
     /**
@@ -144,7 +146,26 @@ class BloodDonerNeededController extends Controller
      */
     public function update(Updateblood_doner_neededRequest $request, blood_doner_needed $blood_doner_needed)
     {
-        //
+
+        $input =Validator::make($request->all(), [
+            'b_d_n_name'=>'required|max:255',
+            'b_d_n_gender'=>'required|max:255',
+            'b_d_n_phone'=>'required|max:255|unique:blood_doner_neededs',
+            'b_d_n_address'=>'required|max:255',
+            'b_d_n_email'=>'required|max:255|unique:blood_doner_neededs',
+            'b_d_n_password'=>'min:6|required_with:password_confirmation|same:password_confirmation',
+            'password_confirmation' => 'min:6',
+            'b_d_n_age'=>'required|max:255',
+            'b_d_blood_type'=>'required|max:255'
+         ])->validate();
+
+
+            $input['b_d_n_password'] = Hash::make($request->input('b_d_n_password'));
+            $user = blood_doner_needed::where('b_d_n_email' , Session::get('user_email'))->first();
+
+            blood_doner_needed::where('b_d_email' ,Session::get('user_email') )->update($input);
+            return redirect('doneredit')->with('user' ,$user );
+
     }
 
     /**
