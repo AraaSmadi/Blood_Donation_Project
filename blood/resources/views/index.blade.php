@@ -117,8 +117,10 @@
                         <div class="position-relative">
                             <img class="img-fluid" src="img/2.png" alt="">
                             <div class="team-social text-center">
-                             <h1 style="color: #ee3d32 "> {{$a}}</h1>
+                                <img class="img-fluid" src="img/blood-donation.png" alt="" width="30%"><br>
+ <h1 style="color: #ee3d32 ;  "> {{$a}}</h1>
                             </div>
+
                         </div>
                         <div class="bg-light text-center p-4">
                             <h5 class="mt-2">A</h5>
@@ -131,6 +133,7 @@
                         <div class="position-relative">
                             <img class="img-fluid" src="img/3.png" alt="">
                             <div class="team-social text-center">
+                                <img class="img-fluid" src="img/blood-donation.png" alt="" width="30%">
                               <h1 style="color: #ee3d32 ">{{$b}}</h1>
                             </div>
                         </div>
@@ -145,6 +148,7 @@
                         <div class="position-relative">
                             <img class="img-fluid" src="img/4.png" alt="">
                             <div class="team-social text-center">
+                                <img class="img-fluid" src="img/blood-donation.png" alt="" width="30%">
                              <h1 style="color: #ee3d32 ">{{$ab}}</h1>
                             </div>
                         </div>
@@ -159,6 +163,7 @@
                         <div class="position-relative">
                             <img class="img-fluid" src="img/5.png" alt="">
                             <div class="team-social text-center">
+                                <img class="img-fluid" src="img/blood-donation.png" alt="" width="30%">
                              <h1 style="color: #ee3d32 ">{{$o}}</h1>
                             </div>
                         </div>

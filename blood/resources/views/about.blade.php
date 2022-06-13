@@ -1,6 +1,6 @@
 @extends('layout.main')
 @section('title')
-    title of the page 
+    title of the page
 @endsection
 @section('content')
 
@@ -20,55 +20,47 @@
     <!-- Page Header End -->
 
 
-    <!-- About Start -->
-    <div class="container-xxl py-6">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="position-relative overflow-hidden ps-5 pt-5 h-100" style="min-height: 400px;">
-                        <img class="position-absolute w-100 h-100" src="img/about-1.jpg" alt="" style="object-fit: cover;">
-                        <img class="position-absolute top-0 start-0 bg-white pe-3 pb-3" src="img/about-2.jpg" alt="" style="width: 200px; height: 200px;">
-                    </div>
+   <!-- About Start -->
+   <div class="container-xxl py-6">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="position-relative overflow-hidden ps-5 pt-5 h-100" style="min-height: 400px;">
+                    <img class="position-absolute w-100 h-100" src="img/b1.jpg" alt="" style="object-fit: cover;">
+                    <img class="position-absolute top-0 start-0 bg-white pe-3 pb-3" src="img/blood-donation-icon.png " alt=""
+                        style="width: 200px; height: 200px;">
                 </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="h-100">
-                        <h6 class="text-primary text-uppercase mb-2">About Us</h6>
-                        <h1 class="display-6 mb-4">We Help Students To Pass Test & Get A License On The First Try</h1>
-                        <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                        <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                        <div class="row g-2 mb-4 pb-2">
-                            <div class="col-sm-6">
-                                <i class="fa fa-check text-primary me-2"></i>Fully Licensed
-                            </div>
-                            <div class="col-sm-6">
-                                <i class="fa fa-check text-primary me-2"></i>Online Tracking
-                            </div>
-                            <div class="col-sm-6">
-                                <i class="fa fa-check text-primary me-2"></i>Afordable Fee
-                            </div>
-                            <div class="col-sm-6">
-                                <i class="fa fa-check text-primary me-2"></i>Best Trainers
-                            </div>
+            </div>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="h-100">
+                    <h1 class="display-6 mb-4">We Help Patient To Save Thier Life</h1>
+                    <p>Because of You, Life Doesn’t Stop
+                        Every 2 seconds, someone in many studies. needs blood.
+                        This constant need for blood can only be met by generous donors like you, and when you give
+                        blood, you could save the life of a cancer patient or someone needing open-heart surgery.
+                    </p>
+                    <p class="mb-4"> Remember, it’s the blood on the shelves hospitals turn to in emergency
+                        situations. Make
+                        blood donations a part of your routine, and schedule your next appointment to give blood
+                        today. Or learn how you can host a blood drive virtually or in person.
+
+                    </p>
+                    <p class="mb-4">Thank you for everything you do for patients.</p>
+                    <div class="row g-2 mb-4 pb-2">
+                        <div class="col-sm-6">
+                            <i class="fa fa-check text-primary me-2"></i>Find donor
                         </div>
-                        <div class="row g-4">
-                            <div class="col-sm-6">
-                                <a class="btn btn-primary py-3 px-5" href="">Read More</a>
-                            </div>
-                            <div class="col-sm-6">
-                                <a class="d-inline-flex align-items-center btn btn-outline-primary border-2 p-2" href="tel:+0123456789">
-                                    <span class="flex-shrink-0 btn-square bg-primary">
-                                        <i class="fa fa-phone-alt text-white"></i>
-                                    </span>
-                                    <span class="px-3">+012 345 6789</span>
-                                </a>
-                            </div>
+                        <div class="col-sm-6">
+                            <i class="fa fa-check text-primary me-2"></i>Contact with donor
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- About End -->
+</div>
+</div>
+<!-- About End -->
 
 
     <!-- Team Start -->
@@ -83,11 +75,7 @@
                     <div class="team-item position-relative">
                         <div class="position-relative">
                             <img class="img-fluid" src="img/team-1.jpg" alt="">
-                            <div class="team-social text-center">
-                                <a class="btn btn-square btn-outline-primary border-2 m-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-outline-primary border-2 m-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-outline-primary border-2 m-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
+
                         </div>
                         <div class="bg-light text-center p-4">
                             <h5 class="mt-2">Full Name</h5>
@@ -99,11 +87,7 @@
                     <div class="team-item position-relative">
                         <div class="position-relative">
                             <img class="img-fluid" src="img/team-2.jpg" alt="">
-                            <div class="team-social text-center">
-                                <a class="btn btn-square btn-outline-primary border-2 m-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-outline-primary border-2 m-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-outline-primary border-2 m-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
+
                         </div>
                         <div class="bg-light text-center p-4">
                             <h5 class="mt-2">Full Name</h5>
@@ -115,11 +99,7 @@
                     <div class="team-item position-relative">
                         <div class="position-relative">
                             <img class="img-fluid" src="img/team-3.jpg" alt="">
-                            <div class="team-social text-center">
-                                <a class="btn btn-square btn-outline-primary border-2 m-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-outline-primary border-2 m-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-outline-primary border-2 m-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
+
                         </div>
                         <div class="bg-light text-center p-4">
                             <h5 class="mt-2">Full Name</h5>
@@ -131,11 +111,7 @@
                     <div class="team-item position-relative">
                         <div class="position-relative">
                             <img class="img-fluid" src="img/team-4.jpg" alt="">
-                            <div class="team-social text-center">
-                                <a class="btn btn-square btn-outline-primary border-2 m-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-outline-primary border-2 m-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-outline-primary border-2 m-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
+
                         </div>
                         <div class="bg-light text-center p-4">
                             <h5 class="mt-2">Full Name</h5>
@@ -146,7 +122,7 @@
             </div>
         </div>
     </div>
-    <!-- Team End -->    
+    <!-- Team End -->
 @endsection
 
 
