@@ -1,6 +1,6 @@
 @extends('layout.main')
 @section('title')
-    title of the page 
+    title of the page
 @endsection
 
 @section('content')
@@ -25,7 +25,7 @@
       </div><br />
 @endif
 <form action="check" method="POST" enctype="multipart/form-data">
-@csrf  
+@csrf
     <!-- Text input -->
     <div class="form-outline mb-4">
       <label class="form-label" for="form6Example3">Email </label>
@@ -40,7 +40,7 @@
 
 
 
-    
+
     <button type="submit" class="btn btn-primary btn-block mb-4">Regester Now </button>
   </form>
 

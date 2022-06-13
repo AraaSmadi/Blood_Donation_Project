@@ -52,7 +52,7 @@ Route::resource('patient', BloodDonerNeededController::class);
 
 Route::get('patient2', [BloodTypeController::class, 'show']);
 Route::view('login','registration_patient.login');
-
+Route::view('profile','registration_patient.profile_patient');
 
 
 
@@ -74,7 +74,6 @@ Route::post('login', [BloodDonerNeededController::class, 'Login']);
 
 Route::view('reg2','registration_patient.register2');
 Route::post('user', [BloodDonerNeededController::class, 'userLogin']);
-
 
 
 
