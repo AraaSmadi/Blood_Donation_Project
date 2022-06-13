@@ -8,18 +8,17 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
     <style>
         body {
-            font-family: "Inter", sans-serif;
-        }
+            font-family: "Inter", sans-serif;}
     </style>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
 </head>
 
-<body class="min-h-screen bg-gray-100 text-gray-900 flex justify-center">
+<body class="min-h-screen bg-gra8y-100 text-gray-900 flex justify-center">
     <div class="max-w-screen-xl m-0 sm:m-20 bg-white shadow sm:rounded-lg flex justify-center flex-1">
         <div class="lg:w-1/2 xl:w-5/12 p-6 sm:p-12">
             <div class="mt-12 flex flex-col items-center">
                 <h1 class="text-2xl xl:text-3xl font-extrabold">
-                   Login </h1>
+                    Login </h1>
                 <div class="w-full flex-1 mt-8">
                     <div class="my-12 border-b text-center">
                     <div class="mx-auto max-w-xs">
@@ -53,7 +52,7 @@
                                 <path d="M20 8v6M23 11h-6" />
                             </svg>
                             <span class="ml-3">
-                               Login
+                                Login
                             </span>
                         </button>
                     </div>

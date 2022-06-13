@@ -17,10 +17,22 @@ class login extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {if(Session::has('user_email'))
+    {
+
+        if(Session::has('user_email'))
         {
-            
-         return redirect()->route('patient.index');
+            $user = blood_doner_needed::where('b_d_n_email' , Session::get('user_email'))->first();
+            if(isset($user)){
+               $doner = blood_doner::all();
+               $blood = blood_type::all();
+                 return view('registration_patient.profile_patient' , compact('user','doner' , 'blood'));
+            }
+            else{
+                $user = blood_doner::where('b_d_email' , Session::get('user_email'))->first();
+                $doner = blood_doner::all();
+                $blood = blood_type::all();
+                return view('blood_doner.profile' , compact('user','doner' , 'blood'));
+            }
         }
         return view('login');
     }

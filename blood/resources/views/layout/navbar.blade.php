@@ -29,7 +29,11 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
+<<<<<<< HEAD
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+=======
+    <link href="{{asset('css/style.css')}}" rel="stylesheet">
+>>>>>>> a0bc2e304838cf7ab6ad7e90c375aeab3aae009c
 
     {{-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> --}}
     @yield('style')
@@ -55,7 +59,11 @@
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="/" class="nav-item nav-link ">Home</a>
                 <a href="/about" class="nav-item nav-link">About</a>
+<<<<<<< HEAD
                 {{-- <a href="/courses" class="nav-item nav-link">Courses</a> --}}
+=======
+
+>>>>>>> a0bc2e304838cf7ab6ad7e90c375aeab3aae009c
 
 
                 {{-- ---------login _register_Profile_logout------ --}}
@@ -71,6 +79,7 @@
                             {{-- <a href="{{route('doneredit')}}" class="dropdown-item">Account</a> --}}
                             <a href="#" class="dropdown-item">Account</a>
 
+<<<<<<< HEAD
                             <form action="check" method="post">
                                 @csrf
                                 <input type="hidden" value="1" name="logout">
@@ -79,11 +88,23 @@
                             {{-- <a href="/feature" class="dropdown-item">Logout</a> --}}
                         </div>
                     </div>
+=======
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Profile</a>
+                    <div class="dropdown-menu bg-light m-0">
+                        {{-- <a href="{{route('doneredit')}}" class="dropdown-item">Account</a> --}}
+                        <a href="{{route('login.index')}}" class="dropdown-item">Account</a>
+                        <a href="{{route('login.create')}}" class="dropdown-item">Logout</a>
+                    </div>
+                </div>
+
+>>>>>>> a0bc2e304838cf7ab6ad7e90c375aeab3aae009c
                 @endif
                 {{-- end ---------login _register_Profile_logout------ --}}
 
 
 
+<<<<<<< HEAD
                 {{-- <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu bg-light m-0">
@@ -98,6 +119,12 @@
             </div>
             <a href="/" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Get Started<i
                     class="fa fa-arrow-right ms-3"></i></a>
+=======
+
+                <a href="/contact" class="nav-item nav-link">Contact</a>
+            </div>
+            <a href="/login" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Get Started<i class="fa fa-arrow-right ms-3"></i></a>
+>>>>>>> a0bc2e304838cf7ab6ad7e90c375aeab3aae009c
         </div>
     </nav>
     <!-- Navbar End -->

@@ -1,16 +1,11 @@
 @extends('layout.main')
 @section('title')
-<<<<<<< HEAD
-    title of the page
-=======
     Login
->>>>>>> e71f9e7054bb6c758e2288b5d60b661fc9b095e1
 @endsection
 
 @section('content')
 
-<<<<<<< HEAD
-     <div class="container mt-5" style="margin-top: 50px ;">
+<div class="container mt-5" style="margin-top: 50px ;">
 @if (isset($m) )
 
 <div class="alert alert-primary" role="alert">
@@ -41,11 +36,6 @@
       <input type="password" id="form6Example3" class="form-control"  name="password"/>
     </div>
 
-
-
-
-
-
     <button type="submit" class="btn btn-primary btn-block mb-4">Regester Now </button>
   </form>
 
@@ -55,13 +45,13 @@
 =======
     <div class="container mt-5" style="margin-top: 50px ;">
       @if (isset($m) )
-      
+
       <div class="alert alert-primary" role="alert">
       @php
          echo $m;
       @endphp
       </div>
-      
+
       @endif
       @if ($errors->any())
             <div class="alert alert-danger">
@@ -73,7 +63,7 @@
             </div><br />
       @endif
       <form action="check" method="POST" enctype="multipart/form-data">
-      @csrf  
+      @csrf
           <!-- Text input -->
           <div class="form-outline mb-4">
             <label class="form-label" for="form6Example3">Email </label>
@@ -84,21 +74,21 @@
             <input type="password" id="form6Example3" class="form-control"  name="password"/>
           </div>
           <p>No account yet? <a href="/doner" style="btn btn-primary btn-block mb-4">Sign up!</a></p>
-      
-      
-      
-      
-      
-          
+
+
+
+
+
+
           <button type="submit" class="btn btn-primary btn-block mb-4">Regester Now </button>
         </form>
-  
-    
 
 
-   
+
+
+
 
      </div></div>
-    
+
 @endsection
->>>>>>> e71f9e7054bb6c758e2288b5d60b661fc9b095e1
+

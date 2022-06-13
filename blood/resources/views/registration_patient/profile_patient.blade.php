@@ -3,12 +3,8 @@
     title of the page
 @endsection
 @section('content')
-<h1>list of doner</h1>
-@foreach ($doner as $d)
-      @if($d->b_d_address == $user->b_d_n_address) 
-        <h2>{{$d->b_d_name}} </h2>
-      @endif
-@endforeach
+
+
 <h1 class="btn btn-danger"><a href="{{route('login.create')}}">logout</a></h1>
 <section class="section about-section gray-bg" id="about" style="margin-top:100px;">
     <div class="container">
@@ -16,12 +12,11 @@
             <div class="col-lg-6">
                 <div class="about-text go-to">
                     <h3 class="dark-color">About Me</h3>
-                    <h6 class="theme-color lead">A Lead UX &amp; UI designer based in Canada</h6>
-                    <p>I <mark>design and develop</mark> services for customers of all sizes, specializing in creating stylish, modern websites, web services and online stores. My passion is to design digital user experiences through the bold interface and meaningful interactions.</p>
+
                     <div class="row about-list">
                         <div class="col-md-6">
                             <div class="media">
-                                <label>Birthday</label>
+                                <label>Name</label>
                                 <p>4th april 1998</p>
                             </div>
                             <div class="media">
@@ -60,7 +55,7 @@
             </div>
             <div class="col-lg-6">
                 <div class="about-avatar">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" title="" alt="">
+                    <img src="img/donor (1).png" title="" alt="" width="30%" border-radius: 50px>
                 </div>
             </div>
         </div>
@@ -93,6 +88,36 @@
             </div>
         </div>
     </div>
+    <div class="container">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Blood type</th>
+            <th scope="col">Phone number</th>
+            <th scope="col">Email</th>
+            <th scope="col">Address</th>
+          </tr>
+        </thead>
+        <tbody>
+            @foreach ($doner as $d)
+      @if($d->b_d_address == $user->b_d_n_address && $d->b_d_blood_type == $user->b_d_blood_type && $d->status == 1 )
+        <tr>
+            <th scope="row">1</th>
+            <td>{{$d->b_d_blood_type}}</td>
+            <td>{{$d->b_d_phone}}</td>
+            <td>{{$d->b_d_email}}</td>
+            <td>{{$d->b_d_address}}</td>
+          </tr>
+
+      @endif
+@endforeach
+
+
+        </tbody>
+      </table>
+    </div>
 </section>
 <a href="" class="btn btn-primary py-sm-3 px-sm-5 ms-3">Update</a>
 @endsection
+
