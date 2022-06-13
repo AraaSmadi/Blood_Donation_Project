@@ -1,6 +1,6 @@
 @extends('dashbord.indexDD')
-@section('title','chart')
-@section('active','active')
+@section('title','To Do')
+@section('tableee','active')
 
 @section('loading')
 @include('dashbord.layout.loading')
@@ -14,7 +14,7 @@
 @include('dashbord.layout.nav')
 @endsection
 @section('table')
-@include('dashbord.layout.table_')
+@include('dashbord.layout.todotable')
 @endsection
 
 @section('copyright')

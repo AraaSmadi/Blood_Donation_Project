@@ -50,7 +50,7 @@ session([$bds => 'value'])}} --}}
 
 
 
-                                      <a class="btn btn-sm btn-primary" href="{{route('destroy',['id'=>$item->id])}}">Reject</a>
+                                      <a class="btn btn-sm btn-primary" href="{{route('dest',['id'=>$item->id])}}">Reject</a>
                                       <a class="btn btn-sm btn-success" href="{{route('editform',['id'=>$item->id])}}">Accept</a>
                                   </td>
                                  @endif

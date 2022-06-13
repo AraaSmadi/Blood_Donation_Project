@@ -5,11 +5,31 @@ use App\Http\Controllers\BloodDonerController;
 use App\Http\Controllers\BloodDonerNeededController;
 use App\Http\Controllers\BloodTypeController;
 use App\Http\Controllers\ContactController;
-use App\Http\Controllers\logindoner;
+
+
+
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+
+
+
+
+
+
 
 
 
 /**********************  doner routs ************************ */
+
 
 Route::resource('doner', BloodDonerController::class);
 Route::get('donerlogin',[BloodDonerController::class, 'login']);
@@ -21,6 +41,7 @@ Route::post('check',[BloodDonerController::class, 'check']);
 
 
 Route::resource('patient', BloodDonerNeededController::class);
+
 
 
 Route::resource('doner', BloodDonerController::class);
