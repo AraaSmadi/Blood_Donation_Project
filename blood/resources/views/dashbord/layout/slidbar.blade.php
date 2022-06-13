@@ -25,20 +25,11 @@
         <div class="navbar-nav w-100">
             <a href="/admin" class="nav-item nav-link @yield('admin')"><i
                     class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
-            <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i
-                        class="fa fa-laptop me-2"></i>Elements</a>
-                <div class="dropdown-menu bg-transparent border-0">
-                    <a href="/button" class="dropdown-item">Buttons</a>
-                    <a href="/typography" class="dropdown-item">Typography</a>
-                    <a href="/element" class="dropdown-item">Other Elements</a>
-                </div>
-            </div>
-            <a href="/widget" class="nav-item nav-link @yield('widget')"><i class="fa fa-th me-2"></i>Widgets</a>
-            <a href="/form" class="nav-item nav-link @yield('widget')"><i class="fa fa-keyboard me-2"></i>Messages</a>
-            <a href="/table" class="nav-item nav-link @yield('widget')"><i class="fa fa-table me-2"></i>Tables</a>
-            <a href="/admindoners" class="nav-item nav-link @yield('admindoners')"><i class="fa fa-chart-bar me-2"></i>Doners</a>
-            <a href="/adminneeded" class="nav-item nav-link @yield('adminneeded')"><i class="fa fa-chart-bar me-2"></i>Doner Needed</a>
+
+            <a href="/messages" class="nav-item nav-link @yield('messages')"><i class="fa fa-comment me-2"></i>Feedbacks</a>
+            <a href="/todotable" class="nav-item nav-link @yield('tableee')"><i class="fa  fa-clipboard me-2"></i>To Do Table</a>
+            <a href="/admindoners" class="nav-item nav-link @yield('admindoners')"><i class="fa fa-hand-holding-heart me-2"></i>Doners</a>
+            <a href="/adminneeded" class="nav-item nav-link @yield('adminneeded')"><i class="fa fa-users me-2"></i>Doner Needed</a>
             <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i
                         class="far fa-file-alt me-2"></i>Pages</a>
