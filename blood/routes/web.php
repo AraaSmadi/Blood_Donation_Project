@@ -82,6 +82,7 @@ Route::get('/', [BloodDonerController::class , 'alldoner']);
 
 
 
+
 Route::get('/feature', function () {
     return view('feature');
 });
