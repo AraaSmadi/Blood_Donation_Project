@@ -42,7 +42,7 @@ class BloodDonerNeededController extends Controller
             }
         }
      return redirect('login');
-       
+
     }
 
     /**
@@ -94,7 +94,7 @@ class BloodDonerNeededController extends Controller
                 return view('blood_doner.profile' , compact('user','doner' , 'blood'));
             }
         }
-        
+
          $input =Validator::make($req->all(), [
             'b_d_n_name'=>'required|max:255',
             'b_d_n_gender'=>'required|max:255',
@@ -106,13 +106,13 @@ class BloodDonerNeededController extends Controller
             'b_d_n_age'=>'required|max:255',
             'b_d_blood_type'=>'required|max:255'
          ])->validate();
-         
+
          $input['b_d_n_password'] = Hash::make($input['b_d_n_password']);
-        
+
         blood_doner_needed::create($input);
         return redirect('patient');
     }
-   
+
     /**
      * Display the specified resource.
      *

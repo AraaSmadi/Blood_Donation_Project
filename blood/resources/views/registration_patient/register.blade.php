@@ -44,7 +44,7 @@
                     @error('b_d_n_phone')
                         <div class="alert alert-danger mt-1 mb-1" style="color:crimson">{{ $message }}</div>
                     @enderror
-                    <select class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5" name="b_d_n_gender">
+                    <select class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5" name="b_d_n_address">
                         <option value="">Address</option>
                         <option value="Irbid">Irbid</option>
                     <option value="Amman">Amman</option>
@@ -69,7 +69,7 @@
                                 <option value="{{ $value->id }}">{{ $value->name }}</option>
                             @endforeach
                         </select>
-                        <select class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5" name="b_d_n_address">
+                        <select class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5" name="b_d_n_gender">
                           <option value="Male">Male</option>
                             <option value="Female">Female</option>
                         </select>
