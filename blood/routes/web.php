@@ -5,7 +5,7 @@ use App\Http\Controllers\BloodDonerController;
 use App\Http\Controllers\BloodDonerNeededController;
 use App\Http\Controllers\BloodTypeController;
 use App\Http\Controllers\ContactController;
-<<<<<<< HEAD
+
 
 
 
@@ -21,16 +21,16 @@ use App\Http\Controllers\ContactController;
 */
 
 
-use App\Http\Controllers\logindoner;
 
-=======
-use App\Http\Controllers\logindoner;
+
+
+
 
 
 
 /**********************  doner routs ************************ */
 
->>>>>>> 7bff31465e996f6150b6c43155aa6ec355ea4036
+
 Route::resource('doner', BloodDonerController::class);
 Route::get('donerlogin',[BloodDonerController::class, 'login']);
 Route::get('doneredit',[BloodDonerController::class, 'editprofile']);
@@ -43,15 +43,7 @@ Route::post('check',[BloodDonerController::class, 'check']);
 Route::resource('patient', BloodDonerNeededController::class);
 
 
-<<<<<<< HEAD
 
-
-
-
-
-
-=======
->>>>>>> 7bff31465e996f6150b6c43155aa6ec355ea4036
 Route::resource('doner', BloodDonerController::class);
 Route::resource('patient', BloodDonerNeededController::class);
 
