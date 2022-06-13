@@ -1,9 +1,9 @@
 @extends('layout.main')
 @section('title')
-    title of the page 
+    title of the page
 @endsection
 @section('content')
-  
+
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-6 my-6 mt-0 wow fadeIn" data-wow-delay="0.1s">
         <div class="container text-center">
@@ -33,33 +33,52 @@
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+
+                    @if (session('status'))
+                    <div class="alert alert-success">
+                        {{ session('status') }}
+                    </div>
+                @endif
                     <h6 class="text-primary text-uppercase mb-2">Contact Us</h6>
                     <h1 class="display-6 mb-4">If You Have Any Query, Please Contact Us</h1>
                     <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
-                    <form>
+                    <form  action="{{ route('add-store') }}" method="post">
+                        @csrf
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control border-0 bg-light" id="name" placeholder="Your Name">
+                                    <input type="text" class="form-control border-0 bg-light" name="name" placeholder="Your Name">
                                     <label for="name">Your Name</label>
+                                    @error('name')
+                                    <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                                @enderror
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control border-0 bg-light" id="email" placeholder="Your Email">
+                                    <input type="email" class="form-control border-0 bg-light" name="email" placeholder="Your Email">
                                     <label for="email">Your Email</label>
+                                    @error('email')
+                                    <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                                @enderror
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control border-0 bg-light" id="subject" placeholder="Subject">
+                                    <input type="text" class="form-control border-0 bg-light" name="subject" placeholder="Subject">
                                     <label for="subject">Subject</label>
+                                    @error('subject')
+                                    <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                                @enderror
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control border-0 bg-light" placeholder="Leave a message here" id="message" style="height: 150px"></textarea>
+                                    <textarea class="form-control border-0 bg-light" placeholder="Leave a message here" name="message" style="height: 150px"></textarea>
                                     <label for="message">Message</label>
+                                    @error('message')
+                                    <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                                @enderror
                                 </div>
                             </div>
                             <div class="col-12">
@@ -73,6 +92,6 @@
     </div>
     <!-- Contact End -->
 
-  
+
 @endsection
 

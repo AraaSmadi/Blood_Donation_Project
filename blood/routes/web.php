@@ -4,18 +4,23 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BloodDonerController;
 use App\Http\Controllers\BloodDonerNeededController;
 use App\Http\Controllers\BloodTypeController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\logindoner;
 
 
+
+/**********************  doner routs ************************ */
+
 Route::resource('doner', BloodDonerController::class);
-Route::get('login',[BloodDonerController::class, 'login']);
+Route::get('donerlogin',[BloodDonerController::class, 'login']);
+Route::get('doneredit',[BloodDonerController::class, 'editprofile']);
 Route::post('check',[BloodDonerController::class, 'check']);
 
+/**********************  doner routs ************************ */
 
 
 
 Route::resource('patient', BloodDonerNeededController::class);
-
 
 
 Route::resource('doner', BloodDonerController::class);
@@ -25,7 +30,19 @@ Route::resource('patient', BloodDonerNeededController::class);
 
 
 Route::get('patient2', [BloodTypeController::class, 'show']);
+<<<<<<< HEAD
 Route::view('login','registration_patient.login');
+=======
+
+
+
+
+
+
+
+
+//Route::view('login','registration_patient.login');
+>>>>>>> 7af83249434c4e04c34eb6274f2ff93b204fbef1
 Route::post('login', [BloodDonerNeededController::class, 'Login']);
 // Route::get('/logout', function () {
 //     if(session()->has('user')){
@@ -33,15 +50,24 @@ Route::post('login', [BloodDonerNeededController::class, 'Login']);
 //     }
 //     return redirect('login');
 // });
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7af83249434c4e04c34eb6274f2ff93b204fbef1
 Route::view('reg2','registration_patient.register2');
 Route::post('user', [BloodDonerNeededController::class, 'userLogin']);
 
 
+<<<<<<< HEAD
 
 
 Route::get('/', [BloodDonerController::class , 'alldoner']);
 
+=======
+Route::get('/', function () {
+    return view('index');
+});
+>>>>>>> 7af83249434c4e04c34eb6274f2ff93b204fbef1
 Route::get('/feature', function () {
     return view('feature');
 });
@@ -56,9 +82,9 @@ Route::get('/testimonial', function () {
 Route::get('/courses', function () {
     return view('courses');
 });
-Route::get('/contact', function () {
-    return view('contact');
-});
+// Route::get('/contact', function () {
+//     return view('contact');
+// });
 
 Route::get('/appointment', function () {
     return view('appointment');
@@ -71,3 +97,10 @@ Route::get('/about', function () {
 Route::get('/404', function () {
     return view('404');
 });
+
+
+//*************** contact ********************** */
+Route::get('/contact',[ContactController::class,'create']);
+Route::post('/contact',[ContactController::class,'store'])->name('add-store');
+//*************** contact ********************** */
+

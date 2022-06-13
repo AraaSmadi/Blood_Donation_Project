@@ -4,6 +4,7 @@ namespace App\Http\Controllers\dashbord;
 use App\Models\blood_type;
 use App\Models\blood_doner;
 use App\Models\admin;
+use App\Models\contact;
 // use Illuminate\Support\Facades\DB;
 use App\Models\blood_doner_needed;
 use App\Http\Controllers\Controller;
@@ -80,21 +81,33 @@ class adminIController extends Controller
 
         $u = blood_doner::all()->count();
         $d=blood_doner::all();
-        $data=session('d');
+        // $data=session('d');
         $s=blood_doner_needed::all()->count();
         $a=admin::all()->where('roll', '1')->count();
-        return view('dashbord.index',compact('u','s','a','name','data'));
+        return view('dashbord.index',compact('u','s','a','name'));
 
     }
-    // public function show2(blood_doner_needed $user)
-    // {$name = admin::all()->where('roll', '1');
-    //     $u = blood_doner::all()->count();
-    //     $d=blood_doner::all();
-    //     $s=blood_doner_needed::all()->count();
-    //     $a=admin::all()->where('roll', '1')->count();
-    //     return view('dashbord.layout.nav',compact('d'));
 
-    // }
+
+
+
+
+    public function show2(blood_doner_needed $user)
+    {$name = admin::all()->where('roll', '1');
+        $u = blood_doner::all()->count();
+        $d=blood_doner::all();
+        $s=blood_doner_needed::all()->count();
+        $a=admin::all()->where('roll', '1')->count();
+        return view('dashbord.index',compact('d'));
+
+    }
+
+    public function message()
+    {  $message=contact::all();
+
+        return view('dashbord.form',compact('message'));
+
+    }
 
 
     /**

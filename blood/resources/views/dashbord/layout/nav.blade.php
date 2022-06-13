@@ -61,7 +61,7 @@
 
 
 
-            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+            <a href="/n" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                 <i class="fa fa-bell me-lg-2">
 
 
@@ -70,7 +70,7 @@
                 <span class="d-none d-lg-inline-flex">Notificatin</span>
             </a>
 
-
+{{-- {{$d}} --}}
                <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
           {{-- {{dd(session($bds))}} --}}
                 {{-- @foreach ($bds as $item) --}}
