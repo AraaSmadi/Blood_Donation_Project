@@ -30,7 +30,9 @@ class BloodDonerNeededController extends Controller
         {
             $user = blood_doner_needed::where('b_d_n_email' , Session::get('user_email'))->first();
             if(isset($user)){
-                 return view('registration_patient.profile_patient' , compact('user'));
+               $doner = blood_doner::all();
+               $blood = blood_type::all();
+                 return view('registration_patient.profile_patient' , compact('user','doner' , 'blood'));
             }
             else{
                 $user = blood_doner::where('b_d_email' , Session::get('user_email'))->first();

@@ -55,7 +55,7 @@ class login extends Controller
             if(Hash::check($password,$user->b_d_password )){
                 $request->session()->put( 'user_email' , $user-> b_d_email );
                
-                return redirect()->route('patient.index');
+                return redirect()->route('patient.index')->with('c' , 's');
             }
              else{
                 return 'password incorrect ';

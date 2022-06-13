@@ -60,7 +60,7 @@
 
                 @if (!Session::has('user_email'))
                 {{-- <a href="{{route('doner')}}" class="nav-item nav-link">Login</a> --}}
-                <a href="/donerlogin" class="nav-item nav-link ">Login</a>
+                <a href="/login" class="nav-item nav-link ">Login</a>
                 <a href="/doner" class="nav-item nav-link">Register</a>
                 @else
 
