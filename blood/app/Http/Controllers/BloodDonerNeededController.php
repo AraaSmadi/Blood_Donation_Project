@@ -5,9 +5,12 @@ use App\Models\blood_doner_needed;
 use App\Http\Requests\Storeblood_doner_neededRequest;
 use App\Http\Requests\Updateblood_doner_neededRequest;
 use App\Models\blood_type;
+use App\Models\blood_doner;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Validator;
+use Session ;
 use Illuminate\Support\Facades\Hash;
 use Symfony\Component\Console\Input\Input;
 
@@ -21,11 +24,21 @@ class BloodDonerNeededController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function index()
+    public function index(Request $request)
     {
-
-        
-        return view('registration_patient.profile_patient');
+        if(Session::has('user_email'))
+        {
+            $user = blood_doner_needed::where('b_d_n_email' , Session::get('user_email'))->first();
+            if(isset($user)){
+                 return view('registration_patient.profile_patient' , compact('user'));
+            }
+            else{
+                $user = blood_doner::where('b_d_email' , Session::get('user_email'))->first();
+                return view('blood_doner.profile' , compact('user'));
+            }
+        }
+     return redirect('login');
+       
     }
 
     /**

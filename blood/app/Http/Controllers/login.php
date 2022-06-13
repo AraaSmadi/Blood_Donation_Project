@@ -46,7 +46,7 @@ class login extends Controller
     {if(Session::has('user_email'))
         {
             
-            return 'you are all ready logged in ';
+            return redirect()->route('patient.index');
         }
         $email = $request->input('email');
         $password = $request->input('password');
@@ -54,7 +54,8 @@ class login extends Controller
         if(isset($user)){
             if(Hash::check($password,$user->b_d_password )){
                 $request->session()->put( 'user_email' , $user-> b_d_email );
-                return 'you logged in ';
+               
+                return redirect()->route('patient.index');
             }
              else{
                 return 'password incorrect ';
@@ -65,7 +66,7 @@ class login extends Controller
              if(isset($user)){
                 if(Hash::check($password , $user->b_d_n_password )){
                     $request->session()->put( 'user_email' , $user-> b_d_n_email );
-                    return 'you logged in ';
+                    return redirect()->route('patient.index');;
                 }
                 else{
                     return 'password incorrect ';
