@@ -23,9 +23,9 @@ class BloodDonerNeededController extends Controller
 
     public function index()
     {
-        $type = blood_type::all();
-        return view('registration_patient.register' , compact('type'));
 
+        
+        return view('registration_patient.profile_patient');
     }
 
     /**
@@ -35,7 +35,8 @@ class BloodDonerNeededController extends Controller
      */
     public function create()
     {
-        return view('registration_patient.register');
+        $type = blood_type::all();
+        return view('registration_patient.register' , compact('type'));
     }
 
     /**
@@ -58,12 +59,9 @@ class BloodDonerNeededController extends Controller
             'b_d_n_age'=>'required|max:255',
             'b_d_blood_type'=>'required|max:255'
          ])->validate();
-        //  $m = new blood_doner_needed;
-
-        // $m->b_d_n_password=$req->b_d_n_password ;
-        // $pass = $req->b_d_n_password;
-        // $hashed = Hash::make($pass);
-        // $input->b_d_n_password =$hashed;
+         
+         $input['b_d_n_password'] = Hash::make($input['b_d_n_password']);
+        
         blood_doner_needed::create($input);
         return redirect('patient');
     }

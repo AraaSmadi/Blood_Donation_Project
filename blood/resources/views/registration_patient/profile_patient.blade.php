@@ -3,7 +3,7 @@
     title of the page
 @endsection
 @section('content')
-
+<h1 class="btn btn-danger"><a href="{{route('login.create')}}">logout</a></h1>
 <section class="section about-section gray-bg" id="about" style="margin-top:100px;">
     <div class="container">
         <div class="row align-items-center flex-row-reverse">
