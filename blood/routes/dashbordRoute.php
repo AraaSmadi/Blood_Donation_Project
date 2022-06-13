@@ -5,31 +5,44 @@ use App\Http\Controllers\dashbord\adminIController;
 use App\Http\Controllers\dashbord\adminContror;
 use Illuminate\Routing\Route as RoutingRoute;
 
-Route::get('/test', function () {
-    return view('dashbord.layout.header');
+Route::get('/test2', function () {
+    return view('dashbord.signup');
+});
+Route::get('/test22', function () {
+    return view('dashbord.signin');
 });
 
 Route::get('/admin',[adminIController::class,'index']);
 Route::get('/admin',[adminIController::class,'show1']);
-Route::get('/n',[adminIController::class,'show2']);
+// Route::get('/n',[adminIController::class,'show2']);
 //
 // Route::get('/chart',[adminIController::class,'show']);
 Route::get('/admindoners',[adminIController::class,'show']);
 Route::get('/adminneeded',[adminIController::class,'show0']);
 
 Route::get('admindoners/{id}',[adminIController::class,'edit'])->name('editform');
-Route::get('admindoner/{id}',[adminIController::class,'edit1'])->name('destroy');
+Route::get('admindoner/{id}',[adminIController::class,'edit1'])->name('dest');
 
-Route::get('/form',[adminIController::class,'message']);
+Route::get('/messages',[adminIController::class,'message']);
+// ******************/*To Do*/ ********************
+// Route::get('/admin',[adminIController::class,'create']);
+Route::post('/insert',[adminIController::class,'store'])->name('add-todo');
+Route::get('delete/{id}',[adminIController::class,'destroy'])->name('destroy');
+// ******************/To Do /********************
+Route::get('/test1', function () {
+    return view('dashbord.widget');
+});
 
 
 
-Route::get('/widget',[adminIController::class,'']);
+Route::get('/todotable',[adminIController::class,'show4']);
+
+
 // Route::get('/form',[adminIController::class,'']);
-Route::get('/button',[adminIController::class,'']);
-Route::get('/blank',[adminIController::class,'']);
-Route::get('/typography',[adminIController::class,'']);
-Route::get('/table',[adminIController::class,'']);
+// Route::get('/button',[adminIController::class,'']);
+// Route::get('/blank',[adminIController::class,'']);
+// Route::get('/typography',[adminIController::class,'']);
+// Route::get('/table',[adminIController::class,'']);
 
 
 

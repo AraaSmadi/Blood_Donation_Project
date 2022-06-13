@@ -4,11 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BloodDonerController;
 use App\Http\Controllers\BloodDonerNeededController;
 use App\Http\Controllers\BloodTypeController;
-<<<<<<< HEAD
 use App\Http\Controllers\ContactController;
-=======
 
->>>>>>> edcc9688f2e7f31a9800e92edd14822b93fb1db9
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,11 +19,9 @@ use App\Http\Controllers\ContactController;
 |
 */
 
-<<<<<<< HEAD
-=======
+
 use App\Http\Controllers\logindoner;
 
->>>>>>> edcc9688f2e7f31a9800e92edd14822b93fb1db9
 Route::resource('doner', BloodDonerController::class);
 Route::get('login',[BloodDonerController::class, 'login']);
 Route::post('check',[BloodDonerController::class, 'check']);
@@ -35,12 +32,11 @@ Route::post('check',[BloodDonerController::class, 'check']);
 Route::resource('patient', BloodDonerNeededController::class);
 
 
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> edcc9688f2e7f31a9800e92edd14822b93fb1db9
+
+
 
 Route::resource('doner', BloodDonerController::class);
 Route::resource('patient', BloodDonerNeededController::class);

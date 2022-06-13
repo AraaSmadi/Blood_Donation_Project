@@ -73,24 +73,25 @@
 {{-- {{$d}} --}}
                <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
           {{-- {{dd(session($bds))}} --}}
-                {{-- @foreach ($bds as $item) --}}
+                @foreach ($d as $item)
 
-            {{-- @if ($item->status ==0 ) --}}
+            @if ($item->status ==0 )
 
                 <a href="#" class="dropdown-item">
                     <h6 class="fw-normal mb-0">Request from </h6>
                     <small></small>
                 </a>
-                {{-- @endif {{$item->b_d_name}}{{$item->updated_at}}--}}
-                {{-- @if ($item->status ==1||$item->status ==2 ) --}}
+                @endif {{$item->b_d_name}}{{$item->updated_at}}
+                
+                @if ($item->status ==1||$item->status ==2 )
                 <a href="#" class="dropdown-item">
                     <h6 class="fw-normal mb-0">No Notificatin</h6>
 
                 </a>
 
-                 {{-- @break
-                @endif --}}
-{{-- @endforeach --}}
+                 @break
+                @endif
+@endforeach
 
                 <hr class="dropdown-divider">
                 <a href="#" class="dropdown-item text-center">See all notifications</a>

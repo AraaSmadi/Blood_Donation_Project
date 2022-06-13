@@ -5,6 +5,7 @@
 @yield('navbar')
 @yield('statistics')
 @yield('tables')
+@yield('table')
 @yield('widgets')
 @yield('copyright')
 @include('dashbord.layout.footer')
