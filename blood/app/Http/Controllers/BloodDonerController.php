@@ -6,6 +6,7 @@ use App\Models\blood_doner;
 use App\Http\Requests\Storeblood_donerRequest;
 use App\Http\Requests\Updateblood_donerRequest;
 use App\Models\blood_type;
+use App\Models\blood_doner_needed;
 use Illuminate\Http\Request;
 use Validator;
 use Session ;
@@ -17,36 +18,8 @@ class BloodDonerController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function login(Request $request){
-        if(Session::has('user_email'))
-        {
-            $user = blood_doner::where('b_d_email' , Session::get('user_email'))->first();
-            return view('blood_doner.profile' , compact('user'));
-        }
-        return view('blood_doner.login');
-    }
-    public function check(Request $request){
-
-        if($request->input('logout')){
-            $request->session()->flush();
-            return view('blood_doner.login');
-        }
-
-        $user = blood_doner::where('b_d_email' , $request->input('Email'))->first();
-        if(isset($user)){
-            if(Hash::check($request->input('password'), $user->b_d_password)){
-                $request->session()->put( 'user_email' , $user-> b_d_email );
-                return view('blood_doner.profile' , compact('user'));
-            }
-            else{
-                return 'email or password not correct ';
-            }
-        }
-        else{
-            return 'email not exiset';
-        }
-
-    }
+    
+  
 
 
     public function editprofile()
@@ -58,15 +31,22 @@ class BloodDonerController extends Controller
     }
     public function index()
     {
-        $blood = blood_type::all();
         if(Session::has('user_email'))
         {
-            $user = blood_doner::where('b_d_email' , Session::get('user_email'))->first();
-            return view('blood_doner.profile' , compact('user'));
-        }else{
-            return redirect('login');
- 
+            $user = blood_doner_needed::where('b_d_n_email' , Session::get('user_email'))->first();
+            if(isset($user)){
+               $doner = blood_doner::all();
+               $blood = blood_type::all();
+                 return view('registration_patient.profile_patient' , compact('user','doner' , 'blood'));
+            }
+            else{
+                $user = blood_doner::where('b_d_email' , Session::get('user_email'))->first();
+                $doner = blood_doner::all();
+                $blood = blood_type::all();
+                return view('blood_doner.profile' , compact('user','doner' , 'blood'));
+            }
         }
+            return redirect('login');
     }
 
     /**
@@ -76,7 +56,21 @@ class BloodDonerController extends Controller
      */
     public function create()
    {
-
+    if(Session::has('user_email'))
+    {
+        $user = blood_doner_needed::where('b_d_n_email' , Session::get('user_email'))->first();
+        if(isset($user)){
+           $doner = blood_doner::all();
+           $blood = blood_type::all();
+             return view('registration_patient.profile_patient' , compact('user','doner' , 'blood'));
+        }
+        else{
+            $user = blood_doner::where('b_d_email' , Session::get('user_email'))->first();
+            $doner = blood_doner::all();
+            $blood = blood_type::all();
+            return view('blood_doner.profile' , compact('user','doner' , 'blood'));
+        }
+    }
 
         $blood = blood_type::all();
         return view('blood_doner.create' )->with('blood' , $blood);
@@ -127,7 +121,21 @@ class BloodDonerController extends Controller
      */
     public function show(blood_doner $blood_doner)
     {
-
+        if(Session::has('user_email'))
+        {
+            $user = blood_doner_needed::where('b_d_n_email' , Session::get('user_email'))->first();
+            if(isset($user)){
+               $doner = blood_doner::all();
+               $blood = blood_type::all();
+                 return view('registration_patient.profile_patient' , compact('user','doner' , 'blood'));
+            }
+            else{
+                $user = blood_doner::where('b_d_email' , Session::get('user_email'))->first();
+                $doner = blood_doner::all();
+                $blood = blood_type::all();
+                return view('blood_doner.profile' , compact('user','doner' , 'blood'));
+            }
+        }
     }
     public function alldoner(blood_doner $blood_doner)
     {
@@ -150,6 +158,7 @@ class BloodDonerController extends Controller
      */
     public function edit()
     {
+        
         return redirect("doneredit");
     }
 
