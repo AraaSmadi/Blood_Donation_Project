@@ -8,7 +8,7 @@
         <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="w-100" src="img/V1.PNG " alt="Image" style="height: 650px">
+                    <img class="w-100" src="img/V1.PNG " alt="Image" style="height: 730px">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-left">
@@ -23,7 +23,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100" src="img/V3.PNG" alt="Image" height="650px">
+                    <img class="w-100" src="img/V3.PNG" alt="Image" height="730px">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-left">
@@ -37,7 +37,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100" src="img/V2.PNG" alt="Image" height="650px">
+                    <img class="w-100" src="img/V2.PNG" alt="Image" height="730px">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-center">
