@@ -62,7 +62,20 @@
                           <option value="Male">Male</option>
                             <option value="Female">Female</option>
                         </select>
-
+                        <select class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5" name="b_d_n_gender">
+                            <option value="Irbid">Irbid</option>
+                        <option value="Amman">Amman</option>
+                        <option value="Jarsh">Jarsh</option>
+                        <option value="Blqa">Blqa</option>
+                        <option value="Karak">Karak</option>
+                        <option value="Zarqa">Zarqa</option>
+                        <option value="Maan">Maan</option>
+                        <option value="Mafraq">Mafraq</option>
+                        <option value="Tafelah">Tafelah</option>
+                        <option value="Madaba">Madaba</option>
+                        <option value="Ajloun">Ajloun </option>
+                        <option value="Ajloun">Aqaba </option>
+                          </select>
                         <input type="text" class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5" name="b_d_n_email" placeholder="Email" >
                         @error('b_d_n_email')
                             <div class="alert alert-danger mt-1 mb-1" style="color:crimson">{{ $message }}</div>
