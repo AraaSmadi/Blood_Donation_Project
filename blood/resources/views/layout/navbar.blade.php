@@ -9,7 +9,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/LOGcut.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,11 +21,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="{{asset('lib/animate/animate.min.css" rel="stylesheet')}}">
-    <link href="{{asset('lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+    <link href="{{ asset('lib/animate/animate.min.css" rel="stylesheet') }}">
+    <link href="{{ asset('lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet"> <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
@@ -36,15 +37,16 @@
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" role="status"></div>
     </div>
     <!-- Spinner End -->
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
-        <a href="index.html" class="navbar-brand d-flex align-items-center border-end px-4 px-lg-5">
-            <img src="logo.png" alt="">
+        <a href="/" class="navbar-brand d-flex align-items-center border-end px-4 px-lg-5">
+            <img src="img/LOGcut.png" alt="" width="100px">
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -55,14 +57,18 @@
                 <a href="/about" class="nav-item nav-link">About</a>
 
 
-
                 {{-- ---------login _register_Profile_logout------ --}}
 
                 @if (!Session::has('user_email'))
-                {{-- <a href="{{route('doner')}}" class="nav-item nav-link">Login</a> --}}
-                <a href="/login" class="nav-item nav-link ">Login</a>
-                <a href="/doner" class="nav-item nav-link">Register</a>
+                    {{-- <a href="{{route('doner')}}" class="nav-item nav-link">Login</a> --}}
+                    <a href="/login" class="nav-item nav-link ">Login</a>
+                    <a href="/doner" class="nav-item nav-link">Register</a>
                 @else
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Profile</a>
+                        <div class="dropdown-menu bg-light m-0">
+                            {{-- <a href="{{route('doneredit')}}" class="dropdown-item">Account</a> --}}
+                            <a href="#" class="dropdown-item">Account</a>
 
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Profile</a>
@@ -85,5 +91,3 @@
         </div>
     </nav>
     <!-- Navbar End -->
-
-
