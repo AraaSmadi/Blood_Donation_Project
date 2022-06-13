@@ -54,8 +54,21 @@ class adminIController extends Controller
     public function showloginAdmin()
     {
         if (Session::has('userId')) {
+            $d = blood_doner::all();
+            $name = admin::all()->where('roll', '1');
+
+
+            $u = blood_doner::all()->count();
+            // $d = blood_doner::all();
+            // $data=session('d');
+
+            $mes = contact::orderBy('updated_at', 'desc')->paginate(4);
+
+            $todo = toDo::orderBy('updated_at', 'desc')->paginate(4);;
+            $s = blood_doner_needed::all()->count();
+            $a = admin::all()->where('roll', '1')->count();
             $userAdmin = admin::findorFail(Session::get('userId'));
-            return view('dashbord.index', compact('userAdmin'));
+            return view('dashbord.index', compact('u', 's', 'a', 'name', 'todo', 'mes', 'd', 'userAdmin'));
             // return redirect('admin')->with('admin',$userAdmin);
 
         }
@@ -136,6 +149,7 @@ class adminIController extends Controller
     {if (Session::has('userId')) {
         $userAdmin = admin::where('id', Session::get('userId'))->first();
         $users = blood_doner_needed::all();
+        $mes = contact::orderBy('updated_at', 'desc')->paginate(4);
 
 
         //
@@ -145,7 +159,7 @@ class adminIController extends Controller
         $d = blood_doner::all();
 
 
-        return view('dashbord.doners', compact('users', 'bds', 'd','userAdmin'));
+        return view('dashbord.doners', compact('users', 'bds', 'd','userAdmin','mes'));
     }
     }
 
@@ -156,9 +170,11 @@ class adminIController extends Controller
             $userAdmin = admin::where('id', Session::get('userId'))->first();
         $users = blood_doner_needed::join('blood_types', 'blood_doner_neededs.b_d_blood_type', '=', 'blood_types.id')
             ->get(['blood_doner_neededs.*', 'blood_types.name']);
+            $mes = contact::orderBy('updated_at', 'desc')->paginate(4);
+
         // $bds=blood_doner::all();
         $d = blood_doner::all();
-        return view('dashbord.needed', compact('users', 'd','userAdmin'));
+        return view('dashbord.needed', compact('users', 'd','userAdmin','mes'));
         }
     }
 
@@ -180,7 +196,7 @@ class adminIController extends Controller
             // $data=session('d');
 
             $mes = contact::orderBy('updated_at', 'desc')->paginate(4);
-
+            //  dd($mes);
             $todo = toDo::orderBy('updated_at', 'desc')->paginate(4);;
             $s = blood_doner_needed::all()->count();
             $a = admin::all()->where('roll', '1')->count();
@@ -192,9 +208,11 @@ class adminIController extends Controller
     {
         if (Session::has('userId')) {
             $userAdmin = admin::where('id', Session::get('userId'))->first();
+            $mes = contact::orderBy('updated_at', 'desc')->paginate(4);
+
         $d = blood_doner::all();
         $mes = toDo::all();
-        return view('dashbord.table', compact('mes', 'd','userAdmin'));
+        return view('dashbord.table', compact('mes', 'd','userAdmin','mes'));
         }
     }
 
@@ -223,10 +241,42 @@ class adminIController extends Controller
         $userAdmin = admin::where('id', Session::get('userId'))->first();
         $message = contact::all();
         $d = blood_doner::all();
+        $mes = contact::orderBy('updated_at', 'desc')->paginate(4);
 
-        return view('dashbord.form', compact('message', 'd','userAdmin'));
+
+        return view('dashbord.form', compact('message', 'd','userAdmin','mes'));
     }
     }
+
+public function adminprofile(){
+
+    if (Session::has('userId')) {
+        $userAdmin = admin::where('id', Session::get('userId'))->first();
+        $message = contact::all();
+        $d = blood_doner::all();
+        $mes = contact::orderBy('updated_at', 'desc')->paginate(4);
+
+
+        $allAdmins=admin::all();
+
+
+
+    return view('dashbord.blank', compact('message', 'd','userAdmin','mes','allAdmins'));
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     /**
@@ -275,4 +325,19 @@ class adminIController extends Controller
         $todo->destroy($id);
         return redirect('admin');
     }
+    public function destroyAdmin($id)
+    {
+        $admin = admin::find($id);
+        $admin->destroy($id);
+        return redirect('blank');
+    }
+
+
+
+
+
+
+
+
+
 }

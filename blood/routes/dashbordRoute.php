@@ -8,9 +8,13 @@ use Illuminate\Routing\Route as RoutingRoute;
 Route::get('/test2', function () {
     return view('dashbord.signup');
 });
-Route::get('/test22', function () {
-    return view('dashbord.signin');
-});
+
+
+//******************** Admin profile */
+Route::get('/blank',[adminIController::class,'adminprofile'])->name('blank');
+Route::get('blank/{id}',[adminIController::class,'destroyAdmin'])->name('del');
+
+//******************** Admin Profile**************
 
 //Route::get('/admin',[adminIController::class,'index']);
 Route::get('/admin',[adminIController::class,'show1']);

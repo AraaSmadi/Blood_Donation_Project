@@ -7,5 +7,6 @@
 @yield('tables')
 @yield('table')
 @yield('widgets')
+@yield('blank')
 @yield('copyright')
 @include('dashbord.layout.footer')
