@@ -29,6 +29,7 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    
     {{-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> --}}
     @yield('style')
 </head>
@@ -53,6 +54,36 @@
                 <a href="/" class="nav-item nav-link ">Home</a>
                 <a href="/about" class="nav-item nav-link">About</a>
                 <a href="/courses" class="nav-item nav-link">Courses</a>
+
+
+                {{-- ---------login _register_Profile_logout------ --}}
+
+                @if (!Session::has('user_email'))
+                {{-- <a href="{{route('doner')}}" class="nav-item nav-link">Login</a> --}}
+                <a href="/donerlogin" class="nav-item nav-link ">Login</a>
+                <a href="/doner" class="nav-item nav-link">Register</a>
+                @else
+
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Profile</a>
+                    <div class="dropdown-menu bg-light m-0">
+                        {{-- <a href="{{route('doneredit')}}" class="dropdown-item">Account</a> --}}
+                        <a href="#" class="dropdown-item">Account</a>
+
+                        <form action="check" method="post" >
+                            @csrf
+                            <input type="hidden" value="1" name="logout">
+                            <input type="submit" class="dropdown-item"   value="logout">
+                        </form> 
+                        {{-- <a href="/feature" class="dropdown-item">Logout</a> --}}
+                    </div>
+                </div>
+                    
+                @endif
+                {{-- end ---------login _register_Profile_logout------ --}}
+
+
+
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu bg-light m-0">
