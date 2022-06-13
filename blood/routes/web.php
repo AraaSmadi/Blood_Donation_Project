@@ -30,9 +30,8 @@ Route::resource('patient', BloodDonerNeededController::class);
 
 
 Route::get('patient2', [BloodTypeController::class, 'show']);
-<<<<<<< HEAD
 Route::view('login','registration_patient.login');
-=======
+
 
 
 
@@ -42,7 +41,7 @@ Route::view('login','registration_patient.login');
 
 
 //Route::view('login','registration_patient.login');
->>>>>>> 7af83249434c4e04c34eb6274f2ff93b204fbef1
+
 Route::post('login', [BloodDonerNeededController::class, 'Login']);
 // Route::get('/logout', function () {
 //     if(session()->has('user')){
@@ -50,24 +49,19 @@ Route::post('login', [BloodDonerNeededController::class, 'Login']);
 //     }
 //     return redirect('login');
 // });
-<<<<<<< HEAD
 
-=======
->>>>>>> 7af83249434c4e04c34eb6274f2ff93b204fbef1
+
 Route::view('reg2','registration_patient.register2');
 Route::post('user', [BloodDonerNeededController::class, 'userLogin']);
 
 
-<<<<<<< HEAD
+
 
 
 Route::get('/', [BloodDonerController::class , 'alldoner']);
 
-=======
-Route::get('/', function () {
-    return view('index');
-});
->>>>>>> 7af83249434c4e04c34eb6274f2ff93b204fbef1
+
+
 Route::get('/feature', function () {
     return view('feature');
 });

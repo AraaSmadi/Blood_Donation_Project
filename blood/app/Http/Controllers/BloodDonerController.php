@@ -8,7 +8,7 @@ use App\Http\Requests\Updateblood_donerRequest;
 use App\Models\blood_type;
 use Illuminate\Http\Request;
 use Validator;
-use Session ; 
+use Session ;
  use Illuminate\Support\Facades\Hash;
 class BloodDonerController extends Controller
 {
@@ -26,10 +26,10 @@ class BloodDonerController extends Controller
         return view('blood_doner.login');
     }
     public function check(Request $request){
-        
+
         if($request->input('logout')){
             $request->session()->flush();
-            return view('blood_doner.login'); 
+            return view('blood_doner.login');
         }
 
         $user = blood_doner::where('b_d_email' , $request->input('Email'))->first();
@@ -52,7 +52,7 @@ class BloodDonerController extends Controller
     public function editprofile()
     {
         $blood = blood_type::all();
-       
+
         $user = blood_doner::where('b_d_email' , Session::get('user_email'))->first();
         return view('blood_doner.update', compact('user','blood') );
     }
@@ -68,12 +68,9 @@ class BloodDonerController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-<<<<<<< HEAD
-    {
-=======
-    { 
-         
->>>>>>> 7af83249434c4e04c34eb6274f2ff93b204fbef1
+   {
+
+
         $blood = blood_type::all();
         return view('blood_doner.create' )->with('blood' , $blood);
     }
@@ -106,13 +103,11 @@ class BloodDonerController extends Controller
             $input['b_d_reprt'] = "$filename";
         }
 
-<<<<<<< HEAD
         blood_doner::create($input);
         return redirect('doner');
-=======
-        blood_doner::create($input);    
+     blood_doner::create($input);
         return redirect('login');
->>>>>>> 7af83249434c4e04c34eb6274f2ff93b204fbef1
+
 }
 
 
@@ -125,7 +120,7 @@ class BloodDonerController extends Controller
      */
     public function show(blood_doner $blood_doner)
     {
-        
+
     }
     public function alldoner(blood_doner $blood_doner)
     {
@@ -178,10 +173,10 @@ class BloodDonerController extends Controller
             $filename= date('YmdHi').$file->getClientOriginalName();
             $file-> move(public_path('public/Image'), $filename);
             $input['b_d_reprt'] = "$filename";
-        }  
+        }
         $user = blood_doner::where('b_d_email' , Session::get('user_email'))->first();
 
-        blood_doner::where('b_d_email' ,Session::get('user_email') )->update($input); 
+        blood_doner::where('b_d_email' ,Session::get('user_email') )->update($input);
         return redirect('login')->with('user' ,$user );
     }
 
