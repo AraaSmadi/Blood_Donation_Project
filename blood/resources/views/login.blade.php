@@ -22,7 +22,7 @@
                 <div class="w-full flex-1 mt-8">
                     <div class="my-12 border-b text-center">
                     <div class="mx-auto max-w-xs">
-                        <form action="" method="POST">
+                        <form action="{{route('login.store')}}" method="POST">
                             @csrf
 
                             @if ($message = Session::get('success'))
@@ -36,11 +36,11 @@
                             @endif
 
 
-                        <input type="text" class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5" name="b_d_n_email" placeholder="Email" >
+                        <input type="text" class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5" name="email" placeholder="Email" >
                         @error('b_d_n_email')
                             <div class="alert alert-danger mt-1 mb-1" style="color:crimson">{{ $message }}</div>
                         @enderror
-                        <input type="password" class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5" name="b_d_n_password" placeholder="Password">
+                        <input type="password" class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5" name="password" placeholder="Password">
                     @error('b_d_n_password')
                         <div class="alert alert-danger mt-1 mb-1" style="color:crimson">{{ $message }}</div>
                     @enderror

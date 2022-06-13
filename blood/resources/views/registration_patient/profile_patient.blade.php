@@ -3,7 +3,13 @@
     title of the page
 @endsection
 @section('content')
-
+<h1>list of doner</h1>
+@foreach ($doner as $d)
+      @if($d->b_d_address == $user->b_d_n_address) 
+        <h2>{{$d->b_d_name}} </h2>
+      @endif
+@endforeach
+<h1 class="btn btn-danger"><a href="{{route('login.create')}}">logout</a></h1>
 <section class="section about-section gray-bg" id="about" style="margin-top:100px;">
     <div class="container">
         <div class="row align-items-center flex-row-reverse">

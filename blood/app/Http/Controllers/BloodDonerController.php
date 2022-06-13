@@ -59,7 +59,14 @@ class BloodDonerController extends Controller
     public function index()
     {
         $blood = blood_type::all();
-        return view('blood_doner.create' )->with('blood' , $blood);
+        if(Session::has('user_email'))
+        {
+            $user = blood_doner::where('b_d_email' , Session::get('user_email'))->first();
+            return view('blood_doner.profile' , compact('user'));
+        }else{
+            return redirect('login');
+ 
+        }
     }
 
     /**

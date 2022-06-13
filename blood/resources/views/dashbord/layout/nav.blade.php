@@ -20,39 +20,24 @@
                 <span class="d-none d-lg-inline-flex">Message</span>
             </a>
             <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
-                <a href="#" class="dropdown-item">
-                    <div class="d-flex align-items-center">
-                        <img class="rounded-circle" src="img/user.jpg" alt=""
-                            style="width: 40px; height: 40px;">
-                        <div class="ms-2">
-                            <h6 class="fw-normal mb-0">Jhon send you a message</h6>
-                            <small>15 minutes ago</small>
-                        </div>
-                    </div>
-                </a>
+
+@foreach ($mes as $item)
+
+
                 <hr class="dropdown-divider">
                 <a href="#" class="dropdown-item">
                     <div class="d-flex align-items-center">
-                        <img class="rounded-circle" src="img/user.jpg" alt=""
-                            style="width: 40px; height: 40px;">
+
                         <div class="ms-2">
-                            <h6 class="fw-normal mb-0">Jhon send you a message</h6>
-                            <small>15 minutes ago</small>
+                            <h6 class="fw-normal mb-0">{{$item->name}} send you a Feedback</h6>
+                            <small>{{$item->created_at}}</small>
                         </div>
                     </div>
                 </a>
+@endforeach
                 <hr class="dropdown-divider">
-                <a href="#" class="dropdown-item">
-                    <div class="d-flex align-items-center">
-                        <img class="rounded-circle" src="img/user.jpg" alt=""
-                            style="width: 40px; height: 40px;">
-                        <div class="ms-2">
-                            <h6 class="fw-normal mb-0">Jhon send you a message</h6>
-                            <small>15 minutes ago</small>
-                        </div>
-                    </div>
-                </a>
-                <hr class="dropdown-divider">
+
+
                 <a href="#" class="dropdown-item text-center">See all message</a>
             </div>
         </div>
@@ -78,10 +63,11 @@
             @if ($item->status ==0 )
 
                 <a href="#" class="dropdown-item">
-                    <h6 class="fw-normal mb-0">Request from </h6>
-                    <small></small>
+                    <h6 class="fw-normal mb-0">Request from:{{$item->b_d_name}} </h6>
+                    <small>In: {{$item->updated_at}}</small>
                 </a>
-                @endif {{$item->b_d_name}}{{$item->updated_at}}
+                @endif
+
 
                 @if ($item->status ==1||$item->status ==2 )
                 <a href="#" class="dropdown-item">
@@ -94,14 +80,14 @@
 @endforeach
 
                 <hr class="dropdown-divider">
-                <a href="#" class="dropdown-item text-center">See all notifications</a>
+                <a href="admindoners" class="dropdown-item text-center">See all Request</a>
             </div>
         </div>
         <div class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                 <img class="rounded-circle me-lg-2" src="img/user.jpg" alt=""
                     style="width: 40px; height: 40px;">
-                <span class="d-none d-lg-inline-flex">{{$userAdmin->email}}</span>
+                <span class="d-none d-lg-inline-flex">{{$userAdmin->name}}</span>
             </a>
             <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
                 <a href="#" class="dropdown-item">My Profile</a>

@@ -102,7 +102,7 @@
             </div>
         </div>
         <div class="flex-1 bg-indigo-100 text-center hidden lg:flex">
-            <div class="m-12 xl:m-16 w-full bg-contain bg-center bg-no-repeat" style="background-image: url('img/group.png') ;"></div>
+            <div class="m-12 xl:m-16 w-full bg-contain bg-center bg-no-repeat" style="background-image: url('{{asset('img/group.png')}}') ;"></div>
         </div>
     </div>
     <div class="REMOVE-THIS-ELEMENT-IF-YOU-ARE-USING-THIS-PAGE hidden treact-popup fixed inset-0 flex items-center justify-center" style="background-color: rgba(0,0,0,0.3);">
