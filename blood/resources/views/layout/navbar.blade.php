@@ -68,14 +68,8 @@
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Profile</a>
                     <div class="dropdown-menu bg-light m-0">
                         {{-- <a href="{{route('doneredit')}}" class="dropdown-item">Account</a> --}}
-                        <a href="#" class="dropdown-item">Account</a>
-
-                        <form action="check" method="post" >
-                            @csrf
-                            <input type="hidden" value="1" name="logout">
-                            <input type="submit" class="dropdown-item"   value="logout">
-                        </form> 
-                        {{-- <a href="/feature" class="dropdown-item">Logout</a> --}}
+                        <a href="{{route('login.index')}}" class="dropdown-item">Account</a>
+                        <a href="{{route('login.create')}}" class="dropdown-item">Logout</a>
                     </div>
                 </div>
                     

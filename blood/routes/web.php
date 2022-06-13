@@ -10,14 +10,9 @@ use App\Http\Controllers\login;
 
 
 /**********************  doner routs ************************ */
-
-
 Route::resource('login', login::class);
 Route::resource('doner', BloodDonerController::class);
-Route::get('donerlogin',[BloodDonerController::class, 'login']);
 Route::get('doneredit',[BloodDonerController::class, 'editprofile']);
-Route::post('check',[BloodDonerController::class, 'check']);
-
 /**********************  doner routs ************************ */
 
 
