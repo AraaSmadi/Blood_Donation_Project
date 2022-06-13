@@ -32,7 +32,7 @@ class BloodDonerController extends Controller
         else{
             return 'email not exiset';
         }
-        
+
     }
 
 
@@ -48,7 +48,7 @@ class BloodDonerController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    { 
+    {
         $blood = blood_type::all();
         return view('blood_doner.create' )->with('blood' , $blood);
     }
@@ -79,9 +79,9 @@ class BloodDonerController extends Controller
             $filename= date('YmdHi').$file->getClientOriginalName();
             $file-> move(public_path('public/Image'), $filename);
             $input['b_d_reprt'] = "$filename";
-        }  
+        }
 
-        blood_doner::create($input);    
+        blood_doner::create($input);
         return redirect('doner');
 }
 
@@ -96,6 +96,18 @@ class BloodDonerController extends Controller
     public function show(blood_doner $blood_doner)
     {
         //
+    }
+    public function alldoner(blood_doner $blood_doner)
+    {
+        $a= blood_doner::where('b_d_blood_type','1')->count();
+        $a+= blood_doner::where('b_d_blood_type','2')->count();
+        $b= blood_doner::where('b_d_blood_type','3')->count();
+        $b+= blood_doner::where('b_d_blood_type','4')->count();
+        $ab= blood_doner::where('b_d_blood_type','5')->count();
+        $ab+= blood_doner::where('b_d_blood_type','6')->count();
+        $o= blood_doner::where('b_d_blood_type','7')->count();
+        $o+= blood_doner::where('b_d_blood_type','8')->count();
+    return view('index',compact('a','b' ,'ab', 'o'));
     }
 
     /**
