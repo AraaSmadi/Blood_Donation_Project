@@ -1,6 +1,6 @@
 @extends('layout.main')
 @section('title')
-    title of the page 
+    profile
 @endsection
 
 @section('content')

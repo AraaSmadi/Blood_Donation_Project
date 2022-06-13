@@ -4,7 +4,9 @@
 @endsection
 
 @section('content')
-
+@php
+    $arr=["A+","A-","B-","B+","AB-","AB+","O-","O+"]
+@endphp
 
 
 <div class="conainer" style="margin-top: 100px">
@@ -92,7 +94,7 @@
                                             <label>Blood Type</label>
                                         </div>
                                         <div class="col-md-6">
-                                            <p>{{$user->b_d_blood_type}}</p>
+                                            <p>{{$arr[$user->b_d_blood_type -1]}}</p>
                                         </div>
                                     </div>
                                     <div class="row">
