@@ -13,7 +13,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="profile-img">
-                        <img src="{{url('public/Image/'.$user->b_d_reprt)}}" alt=""/>
+                        <img src="{{url('public/Image/'.$user->b_d_reprt)}}" alt="" width="300px"  />
                         {{-- <div class="file btn btn-lg btn-primary">
                             Change Photo
                             <input type="file" name="file"/>
