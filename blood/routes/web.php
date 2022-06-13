@@ -5,32 +5,14 @@ use App\Http\Controllers\BloodDonerController;
 use App\Http\Controllers\BloodDonerNeededController;
 use App\Http\Controllers\BloodTypeController;
 use App\Http\Controllers\ContactController;
-
-
-
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-
-
-
-
-
+use App\Http\Controllers\login;
 
 
 
 /**********************  doner routs ************************ */
 
 
+Route::resource('login', login::class);
 Route::resource('doner', BloodDonerController::class);
 Route::get('donerlogin',[BloodDonerController::class, 'login']);
 Route::get('doneredit',[BloodDonerController::class, 'editprofile']);
@@ -42,16 +24,9 @@ Route::post('check',[BloodDonerController::class, 'check']);
 
 Route::resource('patient', BloodDonerNeededController::class);
 
-
-
 Route::resource('doner', BloodDonerController::class);
 Route::resource('patient', BloodDonerNeededController::class);
 
-
-
-
-Route::get('patient2', [BloodTypeController::class, 'show']);
-Route::view('login','registration_patient.login');
 Route::view('profile','registration_patient.profile_patient');
 
 
@@ -61,25 +36,24 @@ Route::view('profile','registration_patient.profile_patient');
 
 
 
-//Route::view('login','registration_patient.login');
 
-Route::post('login', [BloodDonerNeededController::class, 'Login']);
-// Route::get('/logout', function () {
-//     if(session()->has('user')){
-//         session()->pull('user');
-//     }
-//     return redirect('login');
-// });
 
+
+//***************** blood donor needed ********************** */
 
 Route::view('reg2','registration_patient.register2');
 Route::post('user', [BloodDonerNeededController::class, 'userLogin']);
 
+//***************** blood donor needed ********************** */
 
 
 
-Route::get('/', [BloodDonerController::class , 'alldoner']);
 
+//***************** home page ********************** */
+
+Route::get('/', [BloodDonerController::class , 'alldoner'])->name('index');
+
+//***************** home page ********************** */
 
 
 Route::get('/feature', function () {
