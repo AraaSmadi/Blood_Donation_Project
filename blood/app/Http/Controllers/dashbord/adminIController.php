@@ -36,10 +36,42 @@ class adminIController extends Controller
     //  *************** Add Admin ***  *********************
     public function createAdmin()
     {
-        return view('dashbord.signup');
+
+            $userAdmin = admin::findorFail(Session::get('userId'));
+            if ($userAdmin->roll == 1) {
+                $d = blood_doner::all();
+                $name = admin::all()->where('roll', '1');
+
+
+                $u = blood_doner::all()->count();
+                // $d = blood_doner::all();
+                // $data=session('d');
+
+                $mes = contact::orderBy('updated_at', 'desc')->paginate(4);
+
+                $todo = toDo::orderBy('updated_at', 'desc')->paginate(4);;
+                $s = blood_doner_needed::all()->count();
+                $a = admin::all()->where('roll', '1')->count();
+                // $userAdmin = admin::findorFail(Session::get('userId'));
+                return view('dashbord.signup',compact('u', 's', 'a', 'name', 'todo', 'mes', 'd', 'userAdmin'));
+            }
+            else{
+                return view('dashbord.loginAdmin');
+            }
+
     }
     public function storeAdmin(Request $request)
     {
+
+        // $this->validate($request,[
+        //     'name' => 'required',
+        //     'email' => 'required|email|unique:admins|max:255',
+        //     'phonr'=>'required|unique:admins|max:10|min:10',
+        //     'password' => 'required',
+        // ]);
+
+
+
         $input = $request->all();
         $input['password'] = Hash::make($input['password']);
         admin::create($input);
@@ -146,21 +178,22 @@ class adminIController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(blood_doner_needed $user)
-    {if (Session::has('userId')) {
-        $userAdmin = admin::where('id', Session::get('userId'))->first();
-        $users = blood_doner_needed::all();
-        $mes = contact::orderBy('updated_at', 'desc')->paginate(4);
+    {
+        if (Session::has('userId')) {
+            $userAdmin = admin::where('id', Session::get('userId'))->first();
+            $users = blood_doner_needed::all();
+            $mes = contact::orderBy('updated_at', 'desc')->paginate(4);
 
 
-        //
-        $bds = blood_doner::join('blood_types', 'blood_doners.b_d_blood_type', '=', 'blood_types.id')
-            ->get(['blood_doners.*', 'blood_types.name']);
+            //
+            $bds = blood_doner::join('blood_types', 'blood_doners.b_d_blood_type', '=', 'blood_types.id')
+                ->get(['blood_doners.*', 'blood_types.name']);
 
-        $d = blood_doner::all();
+            $d = blood_doner::all();
 
 
-        return view('dashbord.doners', compact('users', 'bds', 'd','userAdmin','mes'));
-    }
+            return view('dashbord.doners', compact('users', 'bds', 'd', 'userAdmin', 'mes'));
+        }
     }
 
 
@@ -168,13 +201,13 @@ class adminIController extends Controller
     {
         if (Session::has('userId')) {
             $userAdmin = admin::where('id', Session::get('userId'))->first();
-        $users = blood_doner_needed::join('blood_types', 'blood_doner_neededs.b_d_blood_type', '=', 'blood_types.id')
-            ->get(['blood_doner_neededs.*', 'blood_types.name']);
+            $users = blood_doner_needed::join('blood_types', 'blood_doner_neededs.b_d_blood_type', '=', 'blood_types.id')
+                ->get(['blood_doner_neededs.*', 'blood_types.name']);
             $mes = contact::orderBy('updated_at', 'desc')->paginate(4);
 
-        // $bds=blood_doner::all();
-        $d = blood_doner::all();
-        return view('dashbord.needed', compact('users', 'd','userAdmin','mes'));
+            // $bds=blood_doner::all();
+            $d = blood_doner::all();
+            return view('dashbord.needed', compact('users', 'd', 'userAdmin', 'mes'));
         }
     }
 
@@ -201,6 +234,8 @@ class adminIController extends Controller
             $s = blood_doner_needed::all()->count();
             $a = admin::all()->where('roll', '1')->count();
             return view('dashbord.index', compact('u', 's', 'a', 'name', 'todo', 'mes', 'd', 'userAdmin'));
+        } else {
+            return redirect('loginAdmin');
         }
     }
 
@@ -210,9 +245,9 @@ class adminIController extends Controller
             $userAdmin = admin::where('id', Session::get('userId'))->first();
             $mes = contact::orderBy('updated_at', 'desc')->paginate(4);
 
-        $d = blood_doner::all();
-        $mes = toDo::all();
-        return view('dashbord.table', compact('mes', 'd','userAdmin','mes'));
+            $d = blood_doner::all();
+            $mes = toDo::all();
+            return view('dashbord.table', compact('mes', 'd', 'userAdmin', 'mes'));
         }
     }
 
@@ -237,33 +272,35 @@ class adminIController extends Controller
     // }
 
     public function message()
-    {if (Session::has('userId')) {
-        $userAdmin = admin::where('id', Session::get('userId'))->first();
-        $message = contact::all();
-        $d = blood_doner::all();
-        $mes = contact::orderBy('updated_at', 'desc')->paginate(4);
+    {
+        if (Session::has('userId')) {
+            $userAdmin = admin::where('id', Session::get('userId'))->first();
+            $message = contact::all();
+            $d = blood_doner::all();
+            $mes = contact::orderBy('updated_at', 'desc')->paginate(4);
 
 
-        return view('dashbord.form', compact('message', 'd','userAdmin','mes'));
+            return view('dashbord.form', compact('message', 'd', 'userAdmin', 'mes'));
+        }
     }
+
+    public function adminprofile()
+    {
+
+        if (Session::has('userId')) {
+            $userAdmin = admin::where('id', Session::get('userId'))->first();
+            $message = contact::all();
+            $d = blood_doner::all();
+            $mes = contact::orderBy('updated_at', 'desc')->paginate(4);
+
+
+            $allAdmins = admin::all();
+
+
+
+            return view('dashbord.blank', compact('message', 'd', 'userAdmin', 'mes', 'allAdmins'));
+        }
     }
-
-public function adminprofile(){
-
-    if (Session::has('userId')) {
-        $userAdmin = admin::where('id', Session::get('userId'))->first();
-        $message = contact::all();
-        $d = blood_doner::all();
-        $mes = contact::orderBy('updated_at', 'desc')->paginate(4);
-
-
-        $allAdmins=admin::all();
-
-
-
-    return view('dashbord.blank', compact('message', 'd','userAdmin','mes','allAdmins'));
-    }
-}
 
 
 
@@ -332,12 +369,10 @@ public function adminprofile(){
         return redirect('blank');
     }
 
+    public function logoutAdmin(Request $request)
+    {
 
-
-
-
-
-
-
-
+        $request->session()->flush();
+        return redirect('loginAdmin');
+    }
 }
