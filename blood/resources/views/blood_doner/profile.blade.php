@@ -4,6 +4,7 @@
 @endsection
 
 @section('content')
+
 @php
     $arr=["A+","A-","B-","B+","AB-","AB+","O-","O+"];
 @endphp

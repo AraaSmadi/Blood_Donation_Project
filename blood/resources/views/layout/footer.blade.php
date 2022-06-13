@@ -4,7 +4,7 @@
         <div class="row g-5">
             <div class="col-lg-3 col-md-6">
                 <h4 class="text-white mb-4">Get In Touch</h4>
-                <h2 class="text-primary mb-4">LIFE</h2>
+                <h2 class="text-primary mb-4"><img src="/img/LOGcut.png" alt="" width="100px">  LIFE</h2>
                 <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i> AMMAN, IRBID, JORDAN </p>
                 <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+962 779 080543</p>
                 <p class="mb-2"><i class="fa fa-envelope me-3"></i>life@pexel.org</p>
