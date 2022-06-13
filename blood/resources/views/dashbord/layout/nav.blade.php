@@ -82,7 +82,7 @@
                     <small></small>
                 </a>
                 @endif {{$item->b_d_name}}{{$item->updated_at}}
-                
+
                 @if ($item->status ==1||$item->status ==2 )
                 <a href="#" class="dropdown-item">
                     <h6 class="fw-normal mb-0">No Notificatin</h6>
@@ -101,7 +101,7 @@
             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                 <img class="rounded-circle me-lg-2" src="img/user.jpg" alt=""
                     style="width: 40px; height: 40px;">
-                <span class="d-none d-lg-inline-flex">John Doe</span>
+                <span class="d-none d-lg-inline-flex">{{$userAdmin->email}}</span>
             </a>
             <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
                 <a href="#" class="dropdown-item">My Profile</a>

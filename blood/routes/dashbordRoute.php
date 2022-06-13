@@ -12,7 +12,7 @@ Route::get('/test22', function () {
     return view('dashbord.signin');
 });
 
-Route::get('/admin',[adminIController::class,'index']);
+//Route::get('/admin',[adminIController::class,'index']);
 Route::get('/admin',[adminIController::class,'show1']);
 // Route::get('/n',[adminIController::class,'show2']);
 //
@@ -36,6 +36,29 @@ Route::get('/test1', function () {
 
 
 Route::get('/todotable',[adminIController::class,'show4']);
+
+
+
+// *************************** sign up ***************************
+Route::get('/signup',[adminIController::class,'createadmin'])->name('signup');
+Route::post('/addAdmin',[adminIController::class,'storeAdmin'])->name('storeAdmin');
+// ***************************// sign up ***************************
+
+
+// *************************** LOGIN ***************************
+Route::get('/loginAdmin',[adminIController::class,'showloginAdmin'])->name('loginAdmin');
+Route::post('/checkAdmin',[adminIController::class,'loginAdmin'])->name('checkAdmin');
+// ***************************// LOGIN ***************************
+
+
+
+
+
+
+
+
+
+
 
 
 // Route::get('/form',[adminIController::class,'']);
