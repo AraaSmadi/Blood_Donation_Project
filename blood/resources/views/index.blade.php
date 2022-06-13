@@ -179,7 +179,7 @@
     <!-- Type End -->
 
     <div id="trailer" class="section d-flex justify-content-center embed-responsive embed-responsive-4by3">
-        <video class="embed-responsive-item" autoplay muted>
+        <video class="embed-responsive-item" autoplay loop muted>
             <source src="img/videoplayback .mov" type="video/mp4">
             Your browser does not support the video tag.
         </video>

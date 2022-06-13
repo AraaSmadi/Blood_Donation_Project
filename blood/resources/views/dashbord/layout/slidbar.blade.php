@@ -30,12 +30,13 @@
             <a href="/todotable" class="nav-item nav-link @yield('tableee')"><i class="fa  fa-clipboard me-2"></i>To Do Table</a>
             <a href="/admindoners" class="nav-item nav-link @yield('admindoners')"><i class="fa fa-hand-holding-heart me-2"></i>Doners</a>
             <a href="/adminneeded" class="nav-item nav-link @yield('adminneeded')"><i class="fa fa-users me-2"></i>Doner Needed</a>
+            
             <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i
                         class="far fa-file-alt me-2"></i>Pages</a>
                 <div class="dropdown-menu bg-transparent border-0">
-                    <a href="/signin" class="dropdown-item">Sign In</a>
-                    <a href="/signup" class="dropdown-item">Sign Up</a>
+                    <a href="{{route('loginAdmin')}}" class="dropdown-item">Login In</a>
+                    <a href="{{route('signup')}}" class="dropdown-item">Sign Up</a>
                     <a href="/404" class="dropdown-item">404 Error</a>
                     <a href="/blank" class="dropdown-item">Blank Page</a>
                 </div>
