@@ -102,23 +102,13 @@
         
             
           
-            <!-- report input -->
-            <div class="form-outline mb-4">
-              <label class="form-label" for="customFile"> No sick reports  </label>
-              <input type="file" class="form-control" id="customFile" name="b_d_reprt" value="{{$user->b_d_reprt}}"/>
-            </div>
-            <!-- Email input -->
-            <div class="form-outline mb-4">
-              <input type="email" id="form6Example5" class="form-control" name="b_d_email" value="{{$user->b_d_email}}"/>
-              <label class="form-label" for="form6Example5">Email</label>
-            </div>
-            
-            <!-- password input -->
-            <div class="form-outline mb-4">
-              <input type="password" id="form6Example5" class="form-control" name="b_d_password" value="{{$user->b_d_password}}"/>
-              <label class="form-label" for="form6Example5">Password</label>
-            </div>
-            <input type="hidden" id="form6Example5" class="form-control" name="status"  value="{{$user->status}}"/>
+          
+     
+              {{-- <input type="hidden"  name="b_d_reprt" value="{{$user->b_d_reprt}}"/>
+
+              <input type="hidden"  id="form6Example5" class="form-control" name="b_d_email" value="{{$user->b_d_email}}"/>
+            <input type="hidden"  name="b_d_password" value="{{$user->b_d_password}}"/>
+            <input type="hidden"  name="status"  value="{{$user->status}}"/> --}}
         
             <!-- password-confirm  input -->
             {{-- <div class="form-outline mb-4">
