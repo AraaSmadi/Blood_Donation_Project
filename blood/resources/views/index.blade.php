@@ -8,7 +8,7 @@
         <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="w-100" src="img/V1.PNG " alt="Image" style="height: 730px">
+                    <img class="w-100" src="img/slider8.png" alt="Image" >
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-left">
@@ -23,7 +23,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100" src="img/V3.PNG" alt="Image" height="730px">
+                    <img class="w-100" src="img/V3.PNG" alt="Image" >
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-left">
@@ -37,7 +37,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100" src="img/V2.PNG" alt="Image" height="730px">
+                    <img class="w-100" src="img/slider6.png " alt="Image">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-center">
@@ -65,7 +65,7 @@
             </button>
         </div>
     </div>
-
+    <br><br><br>
     <!--v and m -->
      <div class=" py-4 container  d-flex justify-content-center align-items-center">
         <div class="row">
@@ -81,14 +81,9 @@
                         <h6 style="color: white">The prevents and alleviates human suffering in the face of emergencies by mobilizing the
                             power of volunteers and the generosity of donors.​
                         </h6>
-
-
                     </div>
-
-
                 </div>
             </div>
-
             <div class="col-md-6">
                 <div class="card2  mt-3 p-3 g-2">
                     <div class="d-flex align-items-center">
@@ -106,15 +101,12 @@
                             </h6>
                         </div>
                     </div>
-
-
-
                 </div>
             </div>
         </div>
 
     </div>
-
+<BR><br><br><br>
     <!-- Type Start -->
     <div class="container-xxl py-6">
         <div class="container">
@@ -191,7 +183,7 @@
             Your browser does not support the video tag.
         </video>
     </div>
-
+    <br><br><br>
     <!-- About Start -->
     <div class="container-xxl py-6">
         <div class="container">
@@ -233,12 +225,7 @@
     </div>
     </div>
     <!-- About End -->
-
-
-
-
-
-
+<br><br><br>
     <!-- Testimonial Start -->
     <div class="container-xxl py-6">
         <div class="container">
