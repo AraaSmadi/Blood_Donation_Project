@@ -1,18 +1,18 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\blood_doner_needed;
+
 use App\Http\Requests\Storeblood_doner_neededRequest;
 use App\Http\Requests\Updateblood_doner_neededRequest;
+use Symfony\Component\Console\Input\Input;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Hash;
+use App\Models\blood_doner_needed;
 use App\Models\blood_type;
 use App\Models\blood_doner;
-
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Redirect;
 use Validator;
-use Session ;
-use Illuminate\Support\Facades\Hash;
-use Symfony\Component\Console\Input\Input;
+use Session;
 
 class BloodDonerNeededController extends Controller
 {
@@ -32,8 +32,8 @@ class BloodDonerNeededController extends Controller
             if(isset($user)){
                $doner = blood_doner::all();
                $blood = blood_type::all();
-               $i=1;
-                 return view('registration_patient.profile_patient' , compact('user','doner' , 'blood', 'i'));
+               
+                 return view('registration_patient.profile_patient' , compact('user','doner' , 'blood'));
             }
             else{
                 $user = blood_doner::where('b_d_email' , Session::get('user_email'))->first();

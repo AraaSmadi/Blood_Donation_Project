@@ -107,16 +107,18 @@
                     </thead>
                     <tbody>
 
-                        @foreach ($doner as $d)
-                  @if($d->b_d_address == $user->b_d_n_address && $d->b_d_blood_type == $user->b_d_blood_type && $d->status == 1 )
+                        @foreach ($doner as $i=> $d)
+                 @if ($d->status)
+                     
+                
                     <tr>
-                        <th scope="row">{{$i++;}}</th>
-                        <td>{{$arr[$user->b_d_blood_type -1]}}</td>
+                        <th scope="row">{{$i+1;}}</th>
+                        <td>{{$arr[$d->b_d_blood_type-1]}}</td>
                         <td>{{$d->b_d_phone}}</td>
                         <td>{{$d->b_d_email}}</td>
                         <td>{{$d->b_d_address}}</td>
                       </tr>
-                  @endif
+                 @endif
             @endforeach
                     </tbody>
                   </table>
