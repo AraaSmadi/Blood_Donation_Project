@@ -45,10 +45,10 @@ Route::post('user', [BloodDonerNeededController::class, 'userLogin']);
 //***************** blood donor needed end  ********************** */
 
 //***************** catogry********************** */
-Route::get('catogryA',[catogryController::class, 'dataA']);
-Route::get('catogryAB',[catogryController::class, 'dataAB']);
-Route::get('catogryB',[catogryController::class, 'dataB']);
-Route::get('catogryO',[catogryController::class, 'dataO']);
+Route::get('/catogryA',[catogryController::class, 'dataA']);
+Route::get('/catogryAB',[catogryController::class, 'dataAB']);
+Route::get('/catogryB',[catogryController::class, 'dataB']);
+Route::get('/catogryO',[catogryController::class, 'dataO']);
 
 //***************** catogry end ********************** */
 
