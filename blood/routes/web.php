@@ -6,6 +6,7 @@ use App\Http\Controllers\BloodDonerNeededController;
 use App\Http\Controllers\BloodTypeController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\login;
+use App\Http\Controllers\RequestDonerController;
 
 
 
@@ -13,6 +14,7 @@ use App\Http\Controllers\login;
 Route::resource('login', login::class);
 Route::resource('doner', BloodDonerController::class);
 Route::get('doneredit',[BloodDonerController::class, 'editprofile']);
+Route::resource('request',RequestDonerController::class);
 /**********************  doner routs ************************ */
 
 

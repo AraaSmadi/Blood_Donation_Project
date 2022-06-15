@@ -16,7 +16,7 @@ class blood_doner_needed extends Model
     'b_d_n_email',
     'b_d_n_password',
     'b_d_n_age',
-    'b_d_blood_type'
+    'b_d_n_blood_type'
  ];
 
 }
