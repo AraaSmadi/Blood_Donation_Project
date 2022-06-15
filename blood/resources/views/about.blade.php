@@ -68,10 +68,10 @@
                 <h1 class="display-6 mb-4">Meet The Team</h1>
             </div>
             <div class="row g-0 team-items">
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item position-relative">
                         <div class="position-relative">
-                            <img class="img-fluid" src="img/team-2.jpg" alt="">
+                            <img class="img-fluid rounded mx-auto d-block" src="img/profile.png" alt=""  width="40%">
 
                         </div>
                         <div class="bg-light text-center p-4">
@@ -80,10 +80,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item position-relative">
                         <div class="position-relative">
-                            <img class="img-fluid" src="img/team-3.jpg" alt="">
+                            <img class="img-fluid rounded mx-auto d-block" src="img/profile1.png" alt="" width="40%">
                         </div>
                         <div class="bg-light text-center p-4">
                             <h5 class="mt-2">Ayman Alshraideh</h5>
@@ -91,10 +91,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="team-item position-relative">
                         <div class="position-relative">
-                            <img class="img-fluid" src="img/team-2.jpg" alt="">
+                            <img class="img-fluid rounded mx-auto d-block" src="img/profile.png" alt=""  width="40%">
 
                         </div>
                         <div class="bg-light text-center p-4">
@@ -103,23 +103,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+
+
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                     <div class="team-item position-relative">
                         <div class="position-relative">
-                            <img class="img-fluid" src="img/team-4.jpg" alt="">
-
-                        </div>
-                        <div class="bg-light text-center p-4">
-                            <h5 class="mt-2">Abd-Khashashneh</h5>
-                            <span>Full Stack Web Devloper</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item position-relative">
-                        <div class="position-relative">
-                            <img class="img-fluid" src="img/team-1.jpg" alt="">
+                            <img class="img-fluid rounded mx-auto d-block" src="img/profile1.png" alt=""  width="40%">
                         </div>
                         <div class="bg-light text-center p-4">
                             <h5 class="mt-2">Mohammad Al-Amarnih</h5>
@@ -127,10 +116,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                     <div class="team-item position-relative">
                         <div class="position-relative">
-                            <img class="img-fluid" src="img/team-2.jpg" alt="">
+                            <img class="img-fluid rounded mx-auto d-block " src="img/profile.png" alt=""  width="40%">
 
                         </div>
                         <div class="bg-light text-center p-4">
@@ -139,7 +128,18 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="team-item position-relative">
+                        <div class="position-relative">
+                            <img class="img-fluid rounded mx-auto d-block" src="img/profile1.png" alt=""  width="40%">
 
+                        </div>
+                        <div class="bg-light text-center p-4">
+                            <h5 class="mt-2">Abd-Khashashneh</h5>
+                            <span>Full Stack Web Devloper</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

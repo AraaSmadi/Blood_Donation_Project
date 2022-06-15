@@ -70,7 +70,7 @@
     <!-- Type Start -->
     <div class="container-xxl py-6">
         <div class="container">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px">
                 <h1 class="text-primary text-uppercase mb-2">Blood type</h1>
 
             </div>
@@ -79,56 +79,42 @@
                     <div class="team-item position-relative">
                         <div class="position-relative">
                             <img class="img-fluid" src="img/2.png" alt="">
-                            <div class="team-social text-center">
-                             <h1 style="color: #ee3d32 "> {{$a}}</h1>
-                            </div>
-                        </div>
-                        <div class="bg-light text-center p-4">
-                            <h5 class="mt-2">A</h5>
 
                         </div>
+                        <a href="{{ route('doner.create') }}" class="btn  py-sm-3 px-sm-5 mt-2" style="width: 301PX; background-color:#efefef;">A</a>
+
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item position-relative">
                         <div class="position-relative">
                             <img class="img-fluid" src="img/3.png" alt="">
-                            <div class="team-social text-center">
-                              <h1 style="color: #ee3d32 ">{{$b}}</h1>
-                            </div>
-                        </div>
-                        <div class="bg-light text-center p-4">
-                            <h5 class="mt-2">B</h5>
 
                         </div>
+
+
+                            <a href="{{ route('doner.create') }}" class="btn  py-sm-3 px-sm-5 mt-2" style="width: 301PX; background-color:#efefef;">B</a>
+
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="team-item position-relative">
                         <div class="position-relative">
                             <img class="img-fluid" src="img/4.png" alt="">
-                            <div class="team-social text-center">
-                             <h1 style="color: #ee3d32 ">{{$ab}}</h1>
-                            </div>
-                        </div>
-                        <div class="bg-light text-center p-4">
-                            <h5 class="mt-2">AB</h5>
 
                         </div>
+                        <a href="{{ route('doner.create') }}" class="btn  py-sm-3 px-sm-5 mt-2" style="width: 301PX; background-color:#efefef;">AB</a>
+
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                     <div class="team-item position-relative">
                         <div class="position-relative">
                             <img class="img-fluid" src="img/5.png" alt="">
-                            <div class="team-social text-center">
-                             <h1 style="color: #ee3d32 ">{{$o}}</h1>
-                            </div>
-                        </div>
-                        <div class="bg-light text-center p-4">
-                            <h5 class="mt-2">O</h5>
 
                         </div>
+                        <a href="{{ route('doner.create') }}" class="btn  py-sm-3 px-sm-5 mt-2" style="width: 301PX ; background-color:#efefef;">O</a>
+
                     </div>
                 </div>
             </div>
@@ -136,54 +122,80 @@
     </div>
     <!-- Type End -->
 
-    <div id="trailer" class="section d-flex justify-content-center embed-responsive embed-responsive-4by3">
-        <video class="embed-responsive-item" autoplay loop muted>
-            <source src="img/videoplayback .mov" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
-    <br><br><br>
-    <!-- About Start -->
-    <div class="container-xxl py-6">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="position-relative overflow-hidden ps-5 pt-5 h-100" style="min-height: 400px;">
-                        <img class="position-absolute w-100 h-100" src="img/b1.jpg" alt="" style="object-fit: cover;">
-                        <img class="position-absolute top-0 start-0 bg-white pe-3 pb-3" src="img/blood-donation-icon.png " alt=""
-                            style="width: 200px; height: 200px;">
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="h-100">
-                        <h1 class="display-6 mb-4">We Help Patient To Save Thier Life</h1>
-                        <p>Because of You, Life Doesn’t Stop
-                            Every 2 seconds, someone in many studies. needs blood.
-                            This constant need for blood can only be met by generous donors like you, and when you give
-                            blood, you could save the life of a cancer patient or someone needing open-heart surgery.
-                        </p>
-                        <p class="mb-4"> Remember, it’s the blood on the shelves hospitals turn to in emergency
-                            situations. Make
-                            blood donations a part of your routine, and schedule your next appointment to give blood
-                            today. Or learn how you can host a blood drive virtually or in person.
+<!-- video-->
+<div class="container-xxl py-6">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-5 wow fadeInUp pt-5" data-wow-delay="0.1s">
+                <div class="h-100">
+                    <h1 class="display-6 mb-4">Blood Types and Transfusion</h1>
+                    <p> There are very specific ways in which blood types must be matched for a safe transfusion. The right blood transfusion can mean the difference between life and death. Use the interactive graphic below to learn more about matching blood types for transfusions.
+                    </p>
+                    <p class="mb-4"> Also, Rh-negative blood is given to Rh-negative patients, and Rh-positive or Rh-negative blood may be given to Rh-positive patients. The rules for plasma are the reverse.<br>
+                        The typical donation is one pint of whole blood, but special equipment allows us to collect parts of your blood separately (a process called apheresis). The information below shows how these individual blood components often help specific patients.
 
-                        </p>
-                        <p class="mb-4">Thank you for everything you do for patients.</p>
-                        <div class="row g-2 mb-4 pb-2">
-                            <div class="col-sm-6">
-                                <i class="fa fa-check text-primary me-2"></i>Find donor
-                            </div>
-                            <div class="col-sm-6">
-                                <i class="fa fa-check text-primary me-2"></i>Contact with donor
-                            </div>
+You can make the greatest impact by giving the recommended donation based on your blood type. Patients in need will be grateful for whatever type of donation you make!
+                    </p>
+
+
+                </div>
+
+            </div>
+            <div class="col-lg-7  wow fadeInUp" data-wow-delay="0.5s">
+                <div class="position-relative overflow-hidden   " >
+                    <video class="embed-responsive-item" autoplay loop muted >
+                        <source src="img/videoplayback .mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+ <!-- end video-->
+  <!-- About Start -->
+  <div class="container-xxl py-6">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="position-relative overflow-hidden ps-5 pt-5 h-100" style="min-height: 400px;">
+                    <img class="position-absolute w-100 h-100" src="img/slider8.png" alt="" style="object-fit: cover;">
+
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="h-100">
+                    <h1 class="display-6 mb-4">We Help Patient To Save Thier Life</h1>
+                    <p>Because of You, Life Doesn’t Stop
+                        Every 2 seconds, someone in many studies. needs blood.
+                        This constant need for blood can only be met by generous donors like you, and when you give
+                        blood, you could save the life of a cancer patient or someone needing open-heart surgery.
+                    </p>
+                    <p class="mb-4"> Remember, it’s the blood on the shelves hospitals turn to in emergency
+                        situations. Make
+                        blood donations a part of your routine, and schedule your next appointment to give blood
+                        today. Or learn how you can host a blood drive virtually or in person.
+
+                    </p>
+                    <p class="mb-4">Thank you for everything you do for patients.</p>
+                    <div class="row g-2 mb-4 pb-2">
+                        <div class="col-sm-6">
+                            <i class="fa fa-check text-primary me-2"></i>Find donor
+                        </div>
+                        <div class="col-sm-6">
+                            <i class="fa fa-check text-primary me-2"></i>Contact with donor
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    </div>
-    <!-- About End -->
+</div>
+</div>
+<!-- About End -->
+
+
 <br><br><br>
  <!--v and m -->
  <div class=" py-4 container  d-flex justify-content-center align-items-center">
@@ -250,7 +262,7 @@
 
                             </p>
                             <hr class="w-25 mx-auto">
-                            <h5>Sadie</h5>
+                            <h5>Ahlam</h5>
 
                         </div>
                         <div class="testimonial-item text-center">
@@ -264,10 +276,37 @@
                             <p class="fs-4">I have Leukemia cancer of the blood. I remember my first time getting blood. At first, it creeped me out seeing a bag of blood and knowing it would all go into me, but then I thought of how many people get pricked to get that blood I also realized that you did it for me and other kids with a lot worse stuff than me so then I whispered in my head, thank you.
                             </p>
                             <hr class="w-25 mx-auto">
-                            <h5>Daniel</h5>
+                            <h5>Hasan</h5>
 
                         </div>
+                        <div class="testimonial-item text-center">
+                            <div class="position-relative mb-5">
+                                <img class="img-fluid rounded-circle mx-auto" src="img/testimonial-2.jpg" alt="">
+                                <div class="position-absolute top-100 start-50 translate-middle d-flex align-items-center justify-content-center bg-white rounded-circle"
+                                    style="width: 60px; height: 60px;">
+                                    <i class="fa fa-quote-left fa-2x text-primary"></i>
+                                </div>
+                            </div>
+                            <p class="fs-4">I have Leukemia cancer of the blood. I remember my first time getting blood. At first, it creeped me out seeing a bag of blood and knowing it would all go into me, but then I thought of how many people get pricked to get that blood I also realized that you did it for me and other kids with a lot worse stuff than me so then I whispered in my head, thank you.
+                            </p>
+                            <hr class="w-25 mx-auto">
+                            <h5>Hasan</h5>
 
+                        </div>
+                        <div class="testimonial-item text-center">
+                            <div class="position-relative mb-5">
+                                <img class="img-fluid rounded-circle mx-auto" src="img/testimonial-2.jpg" alt="">
+                                <div class="position-absolute top-100 start-50 translate-middle d-flex align-items-center justify-content-center bg-white rounded-circle"
+                                    style="width: 60px; height: 60px;">
+                                    <i class="fa fa-quote-left fa-2x text-primary"></i>
+                                </div>
+                            </div>
+                            <p class="fs-4">I have Leukemia cancer of the blood. I remember my first time getting blood. At first, it creeped me out seeing a bag of blood and knowing it would all go into me, but then I thought of how many people get pricked to get that blood I also realized that you did it for me and other kids with a lot worse stuff than me so then I whispered in my head, thank you.
+                            </p>
+                            <hr class="w-25 mx-auto">
+                            <h5>Hasan</h5>
+
+                        </div>
                     </div>
                 </div>
             </div>
