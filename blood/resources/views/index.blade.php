@@ -66,47 +66,7 @@
         </div>
     </div>
     <br><br><br>
-    <!--v and m -->
-     <div class=" py-4 container  d-flex justify-content-center align-items-center">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="card1  mt-3 p-3 g-2">
-                    <div class="d-flex align-items-center">
-                        <small class="first"></small>
-                    </div>
-                    <div class="mt-3">
-                        <h2 class="text1">Mission</h2>
-                    </div>
-                    <div class="detail mt-5">
-                        <h6 style="color: white">The prevents and alleviates human suffering in the face of emergencies by mobilizing the
-                            power of volunteers and the generosity of donors.​
-                        </h6>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card2  mt-3 p-3 g-2">
-                    <div class="d-flex align-items-center">
-                        <small class="second"></small>
-                    </div>
-                    <div class="mt-3">
-                        <h2 class="text2">Vision</h2>
-                    </div>
-                    <div class="detail mt-5">
-                        <div class="px-1">
 
-                            <h6> We aspire to turn compassion into action so that , all people affected by disaster in
-                                jordan receive care, shelter and hope ,everyone in our country has access to safe,
-                                lifesaving blood and blood products.
-                            </h6>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-<BR><br><br><br>
     <!-- Type Start -->
     <div class="container-xxl py-6">
         <div class="container">
@@ -120,9 +80,8 @@
                         <div class="position-relative">
                             <img class="img-fluid" src="img/2.png" alt="">
                             <div class="team-social text-center">
-
+                             <h1 style="color: #ee3d32 "> {{$a}}</h1>
                             </div>
-
                         </div>
                         <div class="bg-light text-center p-4">
                             <h5 class="mt-2">A</h5>
@@ -135,7 +94,7 @@
                         <div class="position-relative">
                             <img class="img-fluid" src="img/3.png" alt="">
                             <div class="team-social text-center">
-
+                              <h1 style="color: #ee3d32 ">{{$b}}</h1>
                             </div>
                         </div>
                         <div class="bg-light text-center p-4">
@@ -149,7 +108,7 @@
                         <div class="position-relative">
                             <img class="img-fluid" src="img/4.png" alt="">
                             <div class="team-social text-center">
-
+                             <h1 style="color: #ee3d32 ">{{$ab}}</h1>
                             </div>
                         </div>
                         <div class="bg-light text-center p-4">
@@ -163,7 +122,7 @@
                         <div class="position-relative">
                             <img class="img-fluid" src="img/5.png" alt="">
                             <div class="team-social text-center">
-
+                             <h1 style="color: #ee3d32 ">{{$o}}</h1>
                             </div>
                         </div>
                         <div class="bg-light text-center p-4">
@@ -226,6 +185,47 @@
     </div>
     <!-- About End -->
 <br><br><br>
+ <!--v and m -->
+ <div class=" py-4 container  d-flex justify-content-center align-items-center">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card1  mt-3 p-3 g-2">
+                <div class="d-flex align-items-center">
+                    <small class="first"></small>
+                </div>
+                <div class="mt-3">
+                    <h2 class="text1">Mission</h2>
+                </div>
+                <div class="detail mt-5">
+                    <h6 style="color: white">The prevents and alleviates human suffering in the face of emergencies by mobilizing the
+                        power of volunteers and the generosity of donors.​
+                    </h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card2  mt-3 p-3 g-2">
+                <div class="d-flex align-items-center">
+                    <small class="second"></small>
+                </div>
+                <div class="mt-3">
+                    <h2 class="text2">Vision</h2>
+                </div>
+                <div class="detail mt-5">
+                    <div class="px-1">
+
+                        <h6> We aspire to turn compassion into action so that , all people affected by disaster in
+                            jordan receive care, shelter and hope ,everyone in our country has access to safe,
+                            lifesaving blood and blood products.
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<BR><br><br><br>
     <!-- Testimonial Start -->
     <div class="container-xxl py-6">
         <div class="container">

@@ -95,7 +95,7 @@
                                               @elseif($item->status ==1)
                                               <td>Accepted</td>
                                               @elseif($item->status ==2)
-                                              <td>Not Accepted</td>
+                                              <td>Rejected</td>
                                               @endif
                                          @if ($item->status ==0 )
                                             <td>

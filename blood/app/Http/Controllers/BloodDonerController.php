@@ -178,9 +178,9 @@ class BloodDonerController extends Controller
         'b_d_age' =>'required|max:255',
         'b_d_blood_type'=>'required|max:255'])->validate();
 
-      
 
-      
+
+
         $user = blood_doner::where('b_d_email' , Session::get('user_email'))->first();
 
         blood_doner::where('b_d_email' ,Session::get('user_email') )->update($input);
