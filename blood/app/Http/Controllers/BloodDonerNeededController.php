@@ -33,6 +33,11 @@ class BloodDonerNeededController extends Controller
             if(isset($user)){
                $doner = blood_doner::all();
                $blood = blood_type::all();
+<<<<<<< HEAD
+               $req = request_doner::all();
+                 return view('registration_patient.profile_patient' , compact('user','doner' , 'blood' , 'req'));
+=======
+>>>>>>> 78c94d99dd3ad6043df0f175bb32e6636bd50ace
 
                  return view('registration_patient.profile_patient' , compact('user','doner' , 'blood'));
             }
