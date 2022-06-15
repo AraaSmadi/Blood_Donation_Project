@@ -11,7 +11,7 @@
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb justify-content-center mb-0">
                     <li class="breadcrumb-item"><a class="text-white" href="/">Home</a></li>
-                    
+
                     <li class="breadcrumb-item text-primary active" aria-current="page">Contact</li>
                 </ol>
             </nav>
@@ -40,8 +40,8 @@
                     </div>
                 @endif
                     <h6 class="text-primary text-uppercase mb-2">Contact Us</h6>
-                    <h1 class="display-6 mb-4">If You Have Any Query, Please Contact Us</h1>
-                    <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
+                    <h1 class="display-6 mb-4"> Contact Us Whether you have a question</h1>
+                    <p class="mb-4">  are not sure about whether you can give blood or just want to say hello, we’re happy to hear from you.
                     <form  action="{{ route('add-store') }}" method="post">
                         @csrf
                         <div class="row g-3">

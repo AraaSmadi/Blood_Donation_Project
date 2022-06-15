@@ -46,7 +46,7 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
         <a href="/" class="navbar-brand d-flex align-items-center border-end px-4 px-lg-5">
-            <img src="img/LOGcut.png" alt="" width="100px" >
+            <img src="img/logo.png" alt="" width="100px" >
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -78,10 +78,10 @@
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Profile</a>
                         <div class="dropdown-menu bg-light m-0">
                             {{-- <a href="{{route('doneredit')}}" class="dropdown-item">Account</a> --}}
-                           
+
 
                 <div class="nav-item dropdown">
-                 
+
                     <div class="dropdown-menu bg-light m-0">
                         {{-- <a href="{{route('doneredit')}}" class="dropdown-item">Account</a> --}}
                         <a href="{{route('login.index')}}" class="dropdown-item">Account</a>

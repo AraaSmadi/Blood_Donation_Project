@@ -34,7 +34,7 @@ session([$bds => 'value'])}} --}}
                               <td>{{ $item->b_d_email }}</td>
                               <td>{{ $item->b_d_gender }}</td>
                               <td>{{ $item->b_d_phone }}</td>
-                              <td>{{ $item->b_d_reprt }}</td>
+                              <td><img src="{{url('public/Image/'.$item->b_d_reprt )}}" alt="" width="20%"></td>
                               <td>{{ $item->b_d_age }}</td>
                               <td>{{ $item->name }}</td>
                               @if ($item->status ==0 )
@@ -43,7 +43,7 @@ session([$bds => 'value'])}} --}}
                                     @elseif($item->status ==1)
                                     <td>Accepted</td>
                                     @elseif($item->status ==2)
-                                    <td>Not Accepted</td>
+                                    <td>Rejected</td>
                                     @endif
                                @if ($item->status ==0 )
                                   <td>
@@ -102,7 +102,7 @@ session([$bds => 'value'])}} --}}
                                 <td>{{ $item->b_d_email }}</td>
                                 <td>{{ $item->b_d_gender }}</td>
                                 <td>{{ $item->b_d_phone }}</td>
-                                <td>{{ $item->b_d_reprt }}</td>
+                                <td><img src="{{url('public/Image/'.$item->b_d_reprt )}}" alt="" width="20%"></td>
                                 <td>{{ $item->b_d_age }}</td>
                                 <td>{{ $item->name }}</td>
 
@@ -110,7 +110,7 @@ session([$bds => 'value'])}} --}}
                                       @if($item->status ==1)
                                       <td>Accepted</td>
                                       @elseif($item->status ==2)
-                                      <td>Not Accepted</td>
+                                      <td>Rejected</td>
                                       @endif
                                  @if ($item->status ==0 )
                                     <td>
@@ -142,7 +142,7 @@ session([$bds => 'value'])}} --}}
     <div class="container-fluid pt-4 px-4">
         <div class="bg-secondary text-center rounded p-4">
             <div class="d-flex align-items-center justify-content-between mb-4">
-                <h6 class="mb-0">Blood Doners Not Accepted</h6>
+                <h6 class="mb-0">Blood Doners Rejected</h6>
                 <a href="">Show All</a>
             </div>
             <div class="table-responsive">
@@ -171,7 +171,7 @@ session([$bds => 'value'])}} --}}
                                 <td>{{ $item->b_d_email }}</td>
                                 <td>{{ $item->b_d_gender }}</td>
                                 <td>{{ $item->b_d_phone }}</td>
-                                <td>{{ $item->b_d_reprt }}</td>
+                                <td><img src="{{url('public/Image/'.$item->b_d_reprt )}}" alt="" width="20%"></td>
                                 <td>{{ $item->b_d_age }}</td>
                                 <td>{{ $item->name }}</td>
 
@@ -179,7 +179,7 @@ session([$bds => 'value'])}} --}}
                                       @if($item->status ==1)
                                       <td>Accepted</td>
                                       @elseif($item->status ==2)
-                                      <td>Not Accepted</td>
+                                      <td></td>
                                       @endif
                                  @if ($item->status ==0 )
                                     <td>
