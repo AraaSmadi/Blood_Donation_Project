@@ -82,7 +82,7 @@
 
                 <div class="nav-item dropdown">
 
-                    <div class="dropdown-menu bg-light m-0">
+                    <div class="dropdown-menu bg-light m-0 ">
                         {{-- <a href="{{route('doneredit')}}" class="dropdown-item">Account</a> --}}
                         <a href="{{route('login.index')}}" class="dropdown-item">Account</a>
                         <a href="{{route('login.create')}}" class="dropdown-item">Logout</a>
