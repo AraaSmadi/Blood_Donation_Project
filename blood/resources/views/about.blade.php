@@ -1,6 +1,6 @@
 @extends('layout.main')
 @section('title')
-    Conatct
+    About
 @endsection
 @section('content')
     <!-- Page Header Start -->
