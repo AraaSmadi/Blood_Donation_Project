@@ -6,18 +6,39 @@
 @php
     $arr=["A+","A-","B-","B+","AB-","AB+","O-","O+"]
 @endphp
-<div class="container">
+
+{{-- <div class=content>
+    <div class="wrapper-1">
+      <div class="wrapper-2">
+        <h1>Thank you !</h1>
+        <p>Ahyaha sent to new donor thank you letter to  donor who had just givea blood.
+            We are thrilled to have your support. Through your donation we have been able to accomplish goal and continue working towards purpose of organization. You truly make the difference for us, and we are extremely grateful!
+
+           Today your donation is going toward problem. If you have specific questions about how your gift is being used or our organization as whole, please don’t hesitate to contact to us through .
+
+           Sincerely,
+             </p>
+
+        <button class="go-home">
+        go home
+        </button>
+      </div>
+      <div class="footer-like">
+        <p>Email not received?
+         <a href="#">Click here to send again</a>
+        </p>
+      </div>
+  </div>
+  </div>
+
+
+
+  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Source+Sans+Pro" rel="stylesheet"> --}}
+<!-- Page Header End -->
+ <div class="container">
     <div class="main-body">
 
-          <!-- Breadcrumb -->
-          <nav aria-label="breadcrumb" class="main-breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-              <li class="breadcrumb-item"><a href="javascript:void(0)">User</a></li>
-              <li class="breadcrumb-item active" aria-current="page">User Profile</li>
-            </ol>
-          </nav>
-          <!-- /Breadcrumb -->
+
 
           <div class="row gutters-sm">
             <div class="col-md-4 mb-3">
@@ -119,23 +140,23 @@
                         <td>{{$d->b_d_address}}</td>
                         <td><form action="{{route('request.store')}}" method="post">
                           @csrf
-                        <input type="hidden"  value="{{$d->id}}"  name="b_d_id"> 
-                        <input type="hidden"  value="{{$user->id}}"  name="b_d_n_id"> 
-                        <input type="hidden"  value="0" name="status">  
-                        <input type="hidden"  value="@php echo date("F j, Y, g:i a");  @endphp" name="request_date">  
-                        <input type="submit" class="btn btn-success"   value="request doner"> 
+                        <input type="hidden"  value="{{$d->id}}"  name="b_d_id">
+                        <input type="hidden"  value="{{$user->id}}"  name="b_d_n_id">
+                        <input type="hidden"  value="0" name="status">
+                        <input type="hidden"  value="@php echo date("F j, Y, g:i a");  @endphp" name="request_date">
+                        <input type="submit" class="btn btn-success"   value="request doner">
                         </form></td>
                       </tr>
-                      
-                       
+
+
                  @endif
                  @php
-                      
+
                        $op =true;
-                     
+
                  @endphp
             @endforeach
-           
+
                     </tbody>
                   </table>
                 </div>
@@ -147,7 +168,6 @@
           </div>
 
         </div>
-    </div>
 
 
 

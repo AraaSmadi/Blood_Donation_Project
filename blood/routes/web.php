@@ -7,7 +7,7 @@ use App\Http\Controllers\BloodTypeController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\login;
 use App\Http\Controllers\RequestDonerController;
-
+use App\Http\Controllers\catogryController;
 
 
 /**********************  doner routs ************************ */
@@ -42,9 +42,15 @@ Route::view('reg2','registration_patient.register2');
 Route::post('user', [BloodDonerNeededController::class, 'userLogin']);
 
 
-//***************** blood donor needed ********************** */
+//***************** blood donor needed end  ********************** */
 
+//***************** catogry********************** */
+Route::get('/catogryA',[catogryController::class, 'dataA']);
+Route::get('/catogryAB',[catogryController::class, 'dataAB']);
+Route::get('/catogryB',[catogryController::class, 'dataB']);
+Route::get('/catogryO',[catogryController::class, 'dataO']);
 
+//***************** catogry end ********************** */
 
 
 //***************** home page ********************** */
