@@ -23,8 +23,8 @@
         <h6 class="mt-2">Donors Number :  {{$c}}</h6>
 
 </div>
-<table class="table">
-    <thead class="bg-light">
+<table class="table align-middle mb-0 bg-white">
+    <thead >
       <tr>
         <th scope="col">Name</th>
         <th scope="col">City</th>
