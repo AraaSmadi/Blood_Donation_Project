@@ -21,6 +21,10 @@ class CreateRequestDonersTable extends Migration
            ->constrained('blood_doner_neededs')
            ->onUpdate('cascade')
            ->onDelete('cascade');
+            $table->foreignId('b_d_id')
+           ->constrained('blood_doners')
+           ->onUpdate('cascade')
+           ->onDelete('cascade');
             
             $table->timestamps();
         });

@@ -22,14 +22,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="{{url('lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+    <link href="{{url(('lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css'))}}" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="dashbord/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{url('dashbord/css/bootstrap.min.css')}}" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="dashbord/css/style.css" rel="stylesheet">
+    <link href="{{url('dashbord/css/style.css')}}" rel="stylesheet">
+    <style>
+
+    </style>
 </head>
 
 <body>

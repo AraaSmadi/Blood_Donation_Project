@@ -7,7 +7,7 @@ use App\Models\blood_type;
 use App\Models\blood_doner_needed;
 use App\Models\blood_doner;
 use Session ;
-
+use App\Models\request_doner;
 
 class login extends Controller
 {
@@ -25,13 +25,15 @@ class login extends Controller
             if(isset($user)){
                $doner = blood_doner::all();
                $blood = blood_type::all();
-                 return view('registration_patient.profile_patient' , compact('user','doner' , 'blood'));
+               $req = request_doner::all();
+                 return view('registration_patient.profile_patient' , compact('user','doner' , 'blood' , 'req'));
             }
             else{
                 $user = blood_doner::where('b_d_email' , Session::get('user_email'))->first();
-                $doner = blood_doner::all();
+                $needed = blood_doner_needed::all();
                 $blood = blood_type::all();
-                return view('blood_doner.profile' , compact('user','doner' , 'blood'));
+                $req= request_doner::all();
+                return view('blood_doner.profile' , compact('user','needed' , 'blood', 'req'));
             }
         }
         return view('login');

@@ -36,7 +36,9 @@ class RequestDonerController extends Controller
      */
     public function store(Storerequest_donerRequest $request)
     {
-        //
+        $data = $request->all();
+        request_doner::create($data);
+        return redirect()->back();
     }
 
     /**
@@ -68,9 +70,13 @@ class RequestDonerController extends Controller
      * @param  \App\Models\request_doner  $request_doner
      * @return \Illuminate\Http\Response
      */
-    public function update(Updaterequest_donerRequest $request, request_doner $request_doner)
+    public function update(Updaterequest_donerRequest $request,  $id)
     {
-        //
+        $data = array('status'=> $request->input('status'));
+        request_doner::whereId($id)->update($data);
+        $r =  request_doner::where('id',$id)->first();
+        
+        return redirect()->back();
     }
 
     /**
