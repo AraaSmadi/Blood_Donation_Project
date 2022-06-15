@@ -401,4 +401,14 @@ class adminIController extends Controller
         $request->session()->flush();
         return redirect('loginAdmin');
     }
+
+
+//
+// deleteneed
+public function deleteneed($id)
+    {
+        $need = blood_doner_needed::find($id);
+        $need->destroy($id);
+        return redirect('adminneeded');
+    }
 }

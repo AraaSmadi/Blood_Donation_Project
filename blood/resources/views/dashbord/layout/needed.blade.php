@@ -13,7 +13,7 @@
             <thead>
                 <tr class="text-white">
                     {{-- <th scope="col"><input class="form-check-input" type="checkbox"></th> --}}
-                    <th scope="col">ID</th>
+                    
                             <th scope="col">Name</th>
                             <th scope="col">Email</th>
                             <th scope="col">Gender</th>
@@ -28,7 +28,7 @@
             <tbody>
                 @foreach ($users as $item)
                     <tr>
-                        <td>{{$item->id}}</td>
+
                         <td>{{$item->b_d_n_name}}</td>
                         <td>{{$item->b_d_n_email}}</td>
                         <td>{{$item->b_d_n_gender}}</td>
@@ -38,6 +38,7 @@
                         <td>{{$item->name}}</td>
 
                         <td>
+                            <a href="{{route('deleteneed',['id'=>$item->id])}}"> <button class="btn btn-sm"><i class="fa fa-times"></i></button></a>
                             {{-- <a class="btn btn-sm btn-primary" href="">Delete user</a>
                             <a class="btn btn-sm btn-success" href="">Make Admin</a> --}}
                         </td>

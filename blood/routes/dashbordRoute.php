@@ -102,6 +102,13 @@ Route::get('/button', function () {
 });
 
 Route::get('/singlereport/{id}',[adminIController::class,'showreport'])->name('showreport');
+
+Route::get('deleteneed/{id}',[adminIController::class,'deleteneed'])->name('deleteneed');
+
+
+
+
+// deleteneed
 // Route::get('/form', function () {
 //     return view('dashbord.form');
 // });
