@@ -86,9 +86,9 @@ class BloodDonerController extends Controller
     {
         $input = Validator::make($request->all(),['b_d_name'=>'required|max:255' ,
         'b_d_gender'=>'required|max:255' ,
-        'b_d_phone' =>'required|max:255' ,
+        'b_d_phone' =>'required|max:10' ,
         'b_d_address'=>'required|max:255' ,
-        'b_d_email'=>'required|unique:blood_doners' ,
+        'b_d_email'=>'required|regex:/(.+)@(.+)\.(.+)/i|unique:blood_doners' ,
         'b_d_password'=>'required|max:255' ,
         'b_d_reprt'=>'required|max:255' ,
         'b_d_age' =>'required|max:255',
