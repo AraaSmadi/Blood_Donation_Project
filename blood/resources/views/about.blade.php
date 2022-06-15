@@ -72,7 +72,7 @@
                         </div>
                         <div class="bg-light text-center p-4">
                             <h5 class="mt-2">Ara'a Smadi</h5>
-                            <span>Full Stack Web Devloper</span>
+                            <span>Chief Executive Officer</span>
                         </div>
                     </div>
                 </div>
@@ -95,7 +95,7 @@
                         </div>
                         <div class="bg-light text-center p-4">
                             <h5 class="mt-2">Safa' Alyaaqbeh</h5>
-                            <span>Full Stack Web Devloper</span>
+                            <span>Manager</span>
                         </div>
                     </div>
                 </div>
@@ -120,7 +120,7 @@
                         </div>
                         <div class="bg-light text-center p-4">
                             <h5 class="mt-2">Haneen Tanashat</h5>
-                            <span>Full Stack Web Devloper</span>
+                            <span>Manager</span>
                         </div>
                     </div>
                 </div>
