@@ -69,6 +69,7 @@
                             {{-- <a href="{{route('doneredit')}}" class="dropdown-item">Account</a> --}}
                             <a href="{{ route('doner.create') }}" class="dropdown-item">Donor Register</a>
                             <a href="{{ route('patient.create') }}" class="dropdown-item">Patient Register</a>
+                            <a href="/contact" class="nav-item nav-link">Contact</a>
                         </div>
                     </div>
                     <a href="/login" class="nav-item nav-link ">Login</a>
@@ -90,7 +91,7 @@
                         </div>
                     </div>
                 @endif
-                <a href="/contact" class="nav-item nav-link">Contact</a>
+
 
             </div>
         </div>
