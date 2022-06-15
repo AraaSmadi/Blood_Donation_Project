@@ -83,41 +83,76 @@
                   </div>
                 </div>
               </div>
-                <div class="container" style="margin-top:30px;">
+    </div>
+                <div class="container-fluid" style="margin-top:30px;">
                     <h1> Donors request </h1><br><br>
                 <table class="table">
                     <thead>
                       <tr>
                         <th scope="col">#</th>
+                        <th scope="col">Name</th>
                         <th scope="col">Blood type</th>
                         <th scope="col">Phone number</th>
                         <th scope="col">Email</th>
                         <th scope="col">Address</th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
                       </tr>
                     </thead>
                     <tbody>
 
-                        @foreach ($doner as $i => $d)
-                 
-                    <tr>
-                        <th scope="row">{{$i+1}}</th>
-                        <td>{{$arr[$user->b_d_blood_type -1]}}</td>
-                        <td>{{$d->b_d_phone}}</td>
-                        <td>{{$d->b_d_email}}</td>
-                        <td>{{$d->b_d_address}}</td>
-                      </tr>
-                
-            @endforeach
+                      @php
+                      $i=0;
+                      $op=false;
+                      @endphp
+                      @foreach ($needed as $b)
+                                @foreach ($req as $r)
+                                   @if ($r->b_d_n_id == $b->id && $user->id == $r->b_d_id )
+                                   @php
+                                   
+                                   $op=true ;
+                                   @endphp  
+                                   @endif 
+                                   @if ($op && !$r->status)
+                                <tr>
+                                  <th scope="row">{{++$i}}</th>
+                                  <td>{{$b->b_d_n_name}}</td>
+                                  <td>{{$blood[$b->b_d_n_blood_type]['name']}}</td>
+                                  <td>{{$b->b_d_n_phone}}</td>
+                                  <td>{{$b->b_d_n_email}}</td>
+                                  <td>{{$b->b_d_n_address}}</td>
+                                  <td><form action="{{route('request.update', $r->id)}}" method="post">
+                                    @csrf
+                                    @method('PUT')
+                                    <input type="hidden" name="status" value="1">  
+                                    <input type="submit" class="btn btn-success" value="acceapet">  
+                                  </form></td>
+                                            <td><form action="{{route('request.update', $r->id)}}" method="post">
+                                              @csrf
+                                              @method('PUT')
+                                            <input type="hidden" name="status" value="2">  
+                                            <input type="submit" class="btn btn-danger" value="reject">  
+                                          </form></td>
+                                          </tr>
+                                            @endif
+                                          @php
+                                   
+                                          $op=false ;
+                                          @endphp 
+                                          @endforeach
+
+                                          @endforeach
+                                          
                     </tbody>
                   </table>
                 </div>
               </div>
-
+              
 
 
             </div>
-          </div>
-
+            
+            
         </div>
     </div>
 
