@@ -81,7 +81,7 @@
                             <img class="img-fluid" src="img/2.png" alt="">
 
                         </div>
-                        <a href="{{ route('doner.create') }}" class="btn  py-sm-3 px-sm-5 mt-2" style="width: 301PX; background-color:#efefef;">A</a>
+                        <a href="catogryA/" class="btn  py-sm-3 px-sm-5 mt-2" style="width: 301PX; background-color:#efefef;">A</a>
 
                     </div>
                 </div>
@@ -93,7 +93,7 @@
                         </div>
 
 
-                            <a href="{{ route('doner.create') }}" class="btn  py-sm-3 px-sm-5 mt-2" style="width: 301PX; background-color:#efefef;">B</a>
+                            <a href="catogryB/" class="btn  py-sm-3 px-sm-5 mt-2" style="width: 301PX; background-color:#efefef;">B</a>
 
                     </div>
                 </div>
@@ -103,7 +103,7 @@
                             <img class="img-fluid" src="img/4.png" alt="">
 
                         </div>
-                        <a href="{{ route('doner.create') }}" class="btn  py-sm-3 px-sm-5 mt-2" style="width: 301PX; background-color:#efefef;">AB</a>
+                        <a href="catogryAB/" class="btn  py-sm-3 px-sm-5 mt-2" style="width: 301PX; background-color:#efefef;">AB</a>
 
                     </div>
                 </div>
@@ -113,7 +113,7 @@
                             <img class="img-fluid" src="img/5.png" alt="">
 
                         </div>
-                        <a href="{{ route('doner.create') }}" class="btn  py-sm-3 px-sm-5 mt-2" style="width: 301PX ; background-color:#efefef;">O</a>
+                        <a href="catogryO/" class="btn  py-sm-3 px-sm-5 mt-2" style="width: 301PX ; background-color:#efefef;">O</a>
 
                     </div>
                 </div>

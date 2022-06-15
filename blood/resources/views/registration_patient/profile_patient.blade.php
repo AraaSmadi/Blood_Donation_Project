@@ -87,7 +87,7 @@
                   <hr>
                   <div class="row">
                     <div class="col-sm-12">
-                      <a class="btn btn-outline-primary " target="__blank" href="href={{"edit/".$user>id}}">Edit</a>
+                      <a class="btn btn-outline-primary " target="__blank" href="">Edit</a>
 
                     </div>
                   </div>
@@ -106,36 +106,11 @@
                       </tr>
                     </thead>
                     <tbody>
-<<<<<<< HEAD
-@php
-    $i=0;
-    $op=true;
-@endphp
-                        @foreach ($doner as $d)
-                         @php
-                        foreach ($req as $r){
-                        
-                       
-                         if($r->b_d_n_id == $user->id){
-                          $op =false;
-                         }
-                        }
-                    @endphp
-                       
-                      
-                        
-                 @if ($d->status && $op)
-                    
-                         
-                     
-                
-=======
 
                         @foreach ($doner as $i=> $d)
                  @if ($d->status)
 
 
->>>>>>> 790d9143aff539f247afc7622d56f2327e46a6c5
                     <tr>
                         <th scope="row">{{++$i}}</th>
                         <td>{{$arr[$d->b_d_blood_type-1]}}</td>
@@ -144,23 +119,23 @@
                         <td>{{$d->b_d_address}}</td>
                         <td><form action="{{route('request.store')}}" method="post">
                           @csrf
-                        <input type="hidden"  value="{{$d->id}}"  name="b_d_id"> 
-                        <input type="hidden"  value="{{$user->id}}"  name="b_d_n_id"> 
-                        <input type="hidden"  value="0" name="status">  
-                        <input type="hidden"  value="@php echo date("F j, Y, g:i a");  @endphp" name="request_date">  
-                        <input type="submit" class="btn btn-success"   value="request doner"> 
+                        <input type="hidden"  value="{{$d->id}}"  name="b_d_id">
+                        <input type="hidden"  value="{{$user->id}}"  name="b_d_n_id">
+                        <input type="hidden"  value="0" name="status">
+                        <input type="hidden"  value="@php echo date("F j, Y, g:i a");  @endphp" name="request_date">
+                        <input type="submit" class="btn btn-success"   value="request doner">
                         </form></td>
                       </tr>
-                      
-                       
+
+
                  @endif
                  @php
-                      
+
                        $op =true;
-                     
+
                  @endphp
             @endforeach
-           
+
                     </tbody>
                   </table>
                 </div>
