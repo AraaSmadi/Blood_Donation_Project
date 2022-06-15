@@ -32,7 +32,7 @@ class BloodDonerNeededController extends Controller
             if(isset($user)){
                $doner = blood_doner::all();
                $blood = blood_type::all();
-               
+
                  return view('registration_patient.profile_patient' , compact('user','doner' , 'blood'));
             }
             else{

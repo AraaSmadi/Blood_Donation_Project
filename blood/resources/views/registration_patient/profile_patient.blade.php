@@ -30,7 +30,7 @@
                       <p class="text-secondary mb-1">Patient</p>
                       <p class="text-muted font-size-sm">{{$user->b_d_n_address}}</p>
 
-                    <button class="btn btn-outline-primary">Message</button>
+
                     </div>
                   </div>
                 </div>
@@ -87,7 +87,7 @@
                   <hr>
                   <div class="row">
                     <div class="col-sm-12">
-                      <a class="btn btn-outline-primary " target="__blank" href="{{route('patient.edit' , $user)}}">Edit</a>
+                      <a class="btn btn-outline-primary " target="__blank" href="href={{"edit/".$user>id}}">Edit</a>
 
                     </div>
                   </div>
@@ -109,8 +109,8 @@
 
                         @foreach ($doner as $i=> $d)
                  @if ($d->status)
-                     
-                
+
+
                     <tr>
                         <th scope="row">{{$i+1;}}</th>
                         <td>{{$arr[$d->b_d_blood_type-1]}}</td>
