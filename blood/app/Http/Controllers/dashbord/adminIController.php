@@ -13,7 +13,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Contracts\Session\Session as SessionSession;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
-use Session;
+use Illuminate\Support\Facades\Session;
 
 class adminIController extends Controller
 {
@@ -106,6 +106,32 @@ class adminIController extends Controller
         }
         return view('dashbord.signin');
     }
+
+
+    public function showreport($id)
+    {
+        if (Session::has('userId')) {
+            $d = blood_doner::all();
+            $name = admin::all()->where('roll', '1');
+
+
+            $u = blood_doner::all()->count();
+            // $d = blood_doner::all();
+            // $data=session('d');
+            $single=blood_doner::find($id);
+            $mes = contact::orderBy('updated_at', 'desc')->paginate(4);
+
+            $todo = toDo::orderBy('updated_at', 'desc')->paginate(4);;
+            $s = blood_doner_needed::all()->count();
+            // $a = admin::all()->where('roll', '1')->count();
+            $userAdmin = admin::findorFail(Session::get('userId'));
+            return view('dashbord.typography', compact('u', 's', 'a', 'name', 'todo', 'mes', 'd', 'userAdmin','single'));
+            // return redirect('admin')->with('admin',$userAdmin);
+
+        }
+        return view('dashbord.signin');
+    }
+
 
 
     public function loginAdmin(Request $request)
@@ -232,7 +258,7 @@ class adminIController extends Controller
             //  dd($mes);
             $todo = toDo::orderBy('updated_at', 'desc')->paginate(4);;
             $s = blood_doner_needed::all()->count();
-            $a = admin::all()->where('roll', '1')->count();
+            $a = admin::all()->count();
             return view('dashbord.index', compact('u', 's', 'a', 'name', 'todo', 'mes', 'd', 'userAdmin'));
         } else {
             return redirect('loginAdmin');
@@ -374,5 +400,15 @@ class adminIController extends Controller
 
         $request->session()->flush();
         return redirect('loginAdmin');
+    }
+
+
+//
+// deleteneed
+public function deleteneed($id)
+    {
+        $need = blood_doner_needed::find($id);
+        $need->destroy($id);
+        return redirect('adminneeded');
     }
 }

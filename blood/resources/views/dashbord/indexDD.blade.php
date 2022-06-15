@@ -6,6 +6,7 @@
 @yield('statistics')
 @yield('tables')
 @yield('table')
+@yield('typography')
 @yield('widgets')
 @yield('blank')
 @yield('copyright')

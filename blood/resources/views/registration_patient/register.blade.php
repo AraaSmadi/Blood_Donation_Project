@@ -68,7 +68,7 @@
                         @error('b_d_n_age')
                             <div class="alert alert-danger mt-1 mb-1" style="color:crimson">{{ $message }}</div>
                         @enderror
-                        <select class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5" name="b_d_blood_type" >
+                        <select class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5" name="b_d_n_blood_type" >
                             <option value="">select blood type</option>
                             @foreach ($type as $value)
                                 <option value="{{ $value->id }}">{{ $value->name }}</option>

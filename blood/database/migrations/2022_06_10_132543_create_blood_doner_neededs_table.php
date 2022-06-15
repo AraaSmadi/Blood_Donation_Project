@@ -22,7 +22,7 @@ class CreateBloodDonerNeededsTable extends Migration
             $table->string("b_d_n_email");  
             $table->string("b_d_n_password");  
             $table->biginteger("b_d_n_age"); 
-            $table->foreignId('b_d_blood_type')
+            $table->foreignId('b_d_n_blood_type')
            ->constrained('blood_types')
            ->onUpdate('cascade')
            ->onDelete('cascade');

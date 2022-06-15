@@ -34,8 +34,9 @@ session([$bds => 'value'])}} --}}
                               <td>{{ $item->b_d_email }}</td>
                               <td>{{ $item->b_d_gender }}</td>
                               <td>{{ $item->b_d_phone }}</td>
-                              <td><img src="{{url('public/Image/'.$item->b_d_reprt )}}" alt="" width="20%"></td>
+                              <td> <a href="{{route('showreport',['id'=>$item->id])}}"><img src="{{url('public/Image/'.$item->b_d_reprt )}}" alt="" width="20%" ></a> </td>
                               <td>{{ $item->b_d_age }}</td>
+
                               <td>{{ $item->name }}</td>
                               @if ($item->status ==0 )
                                     <td>Waiting</td>
@@ -50,8 +51,8 @@ session([$bds => 'value'])}} --}}
 
 
 
-                                      <a class="btn btn-sm btn-primary" href="{{route('dest',['id'=>$item->id])}}">Reject</a>
-                                      <a class="btn btn-sm btn-success" href="{{route('editform',['id'=>$item->id])}}">Accept</a>
+                                      <a class="btn btn-sm btn-primary"  href="{{route('dest',['id'=>$item->id])}}">Reject &nbsp;<i class="fa  fa-ban me-2"></i></a>
+                                      <a class="btn btn-sm btn-success" href="{{route('editform',['id'=>$item->id])}}">Accept <i class="fa  fa-check me-2"></i></a>
                                   </td>
                                  @endif
 
@@ -90,7 +91,7 @@ session([$bds => 'value'])}} --}}
                             <th scope="col">Age</th>
                             <th scope="col">Blood Type</th>
                             <th scope="col">Status</th>
-                            <th scope="col">Action</th>
+                            {{-- <th scope="col">Action</th> --}}
                         </tr>
                     </thead>
                     <tbody>
@@ -102,7 +103,8 @@ session([$bds => 'value'])}} --}}
                                 <td>{{ $item->b_d_email }}</td>
                                 <td>{{ $item->b_d_gender }}</td>
                                 <td>{{ $item->b_d_phone }}</td>
-                                <td><img src="{{url('public/Image/'.$item->b_d_reprt )}}" alt="" width="20%"></td>
+                                <td> <a href="{{route('showreport',['id'=>$item->id])}}"><img src="{{url('public/Image/'.$item->b_d_reprt )}}" alt="" width="20%" ></a> </td>
+
                                 <td>{{ $item->b_d_age }}</td>
                                 <td>{{ $item->name }}</td>
 
@@ -112,7 +114,7 @@ session([$bds => 'value'])}} --}}
                                       @elseif($item->status ==2)
                                       <td>Rejected</td>
                                       @endif
-                                 @if ($item->status ==0 )
+                                 {{-- @if ($item->status ==0 )
                                     <td>
 
 
@@ -120,7 +122,7 @@ session([$bds => 'value'])}} --}}
                                         <a class="btn btn-sm btn-primary" href="{{route('destroy',['id'=>$item->id])}}">Reject</a>
                                         <a class="btn btn-sm btn-success" href="{{route('editform',['id'=>$item->id])}}">Accept</a>
                                     </td>
-                                   @endif
+                                   @endif --}}
 
 
 
@@ -159,7 +161,7 @@ session([$bds => 'value'])}} --}}
                             <th scope="col">Age</th>
                             <th scope="col">Blood Type</th>
                             <th scope="col">Status</th>
-                            <th scope="col">Action</th>
+                            {{-- <th scope="col">Action</th> --}}
                         </tr>
                     </thead>
                     <tbody>
@@ -171,7 +173,7 @@ session([$bds => 'value'])}} --}}
                                 <td>{{ $item->b_d_email }}</td>
                                 <td>{{ $item->b_d_gender }}</td>
                                 <td>{{ $item->b_d_phone }}</td>
-                                <td><img src="{{url('public/Image/'.$item->b_d_reprt )}}" alt="" width="20%"></td>
+                                <td> <a href="{{route('showreport',['id'=>$item->id])}}"><img src="{{url('public/Image/'.$item->b_d_reprt )}}" alt="" width="20%" ></a> </td>
                                 <td>{{ $item->b_d_age }}</td>
                                 <td>{{ $item->name }}</td>
 
@@ -179,9 +181,9 @@ session([$bds => 'value'])}} --}}
                                       @if($item->status ==1)
                                       <td>Accepted</td>
                                       @elseif($item->status ==2)
-                                      <td></td>
+                                      <td>Rejected</td>
                                       @endif
-                                 @if ($item->status ==0 )
+                                 {{-- @if ($item->status ==0 )
                                     <td>
 
 
@@ -189,7 +191,7 @@ session([$bds => 'value'])}} --}}
                                         <a class="btn btn-sm btn-primary" href="{{route('destroy',['id'=>$item->id])}}">Reject</a>
                                         <a class="btn btn-sm btn-success" href="{{route('editform',['id'=>$item->id])}}">Accept</a>
                                     </td>
-                                   @endif
+                                   @endif --}}
 
 
 
