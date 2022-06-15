@@ -29,7 +29,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="{{asset('css/style.css')}}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
     {{-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> --}}
     @yield('style')
@@ -46,7 +46,7 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
         <a href="/" class="navbar-brand d-flex align-items-center border-end px-4 px-lg-5">
-            <img src="{{asset('img/logo.png')}}" alt="" width="100px" >
+            <img src="{{ asset('img/logo.png') }}" alt="" width="100px">
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -56,7 +56,6 @@
                 <a href="/" class="nav-item nav-link ">Home</a>
                 <a href="/about" class="nav-item nav-link">About</a>
 
-                <a href="/contact" class="nav-item nav-link">Contact</a>
 
                 {{-- ---------login _register_Profile_logout------ --}}
 
@@ -80,22 +79,27 @@
                             {{-- <a href="{{route('doneredit')}}" class="dropdown-item">Account</a> --}}
 
 
-                <div class="nav-item dropdown">
+                            <div class="nav-item dropdown">
 
-                    <div class="dropdown-menu bg-light m-0 ">
-                        {{-- <a href="{{route('doneredit')}}" class="dropdown-item">Account</a> --}}
-                        <a href="{{route('login.index')}}" class="dropdown-item">Account</a>
-                        <a href="{{route('login.create')}}" class="dropdown-item">Logout</a>
+                                <div class="dropdown-menu bg-light m-0 ">
+                                    {{-- <a href="{{route('doneredit')}}" class="dropdown-item">Account</a> --}}
+                                    <a href="{{ route('login.index') }}" class="dropdown-item">Account</a>
+                                    <a href="{{ route('login.create') }}" class="dropdown-item">Logout</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-
                 @endif
-                {{-- end ---------login _register_Profile_logout------ --}}
+                <a href="/contact" class="nav-item nav-link">Contact</a>
+
+            </div>
+        </div>
+        {{-- end ---------login _register_Profile_logout------ --}}
 
 
 
 
-            {{-- </div>
+        {{-- </div>
             <a href="/login" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Get Started<i class="fa fa-arrow-right ms-3"></i></a>
         </div> --}}
     </nav>

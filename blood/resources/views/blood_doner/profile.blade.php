@@ -6,6 +6,23 @@
 @php
     $arr=["A+","A-","B-","B+","AB-","AB+","O-","O+"]
 @endphp
+<div class="container">
+<div class="jumbotron text-center">
+    <h3 class="display-3">Thank You!</h3>
+    <p class="lead"><strong>Ahyaha sent to new donor thank you letter to  donor who had just givea blood.
+        We are thrilled to have your support. Through your donation we have been able to accomplish goal and continue working towards purpose of organization. You truly make the difference for us, and we are extremely grateful!
+
+       Today your donation is going toward problem. If you have specific questions about how your gift is being used or our organization as whole, please don’t hesitate to contact to us through .
+
+       Sincerely,<hr>
+    <p>
+      Having trouble? <a href="">Contact us</a>
+    </p>
+    <p class="lead">
+      <a class="btn btn-primary btn-sm" href="https://bootstrapcreative.com/" role="button">Continue to homepage</a>
+    </p>
+  </div>
+</div>
 <div class="container mt-5" >
     <div class="main-body">
 
@@ -109,10 +126,10 @@
                                 @foreach ($req as $r)
                                    @if ($r->b_d_n_id == $b->id && $user->id == $r->b_d_id )
                                    @php
-                                   
+
                                    $op=true ;
-                                   @endphp  
-                                   @endif 
+                                   @endphp
+                                   @endif
                                    @if ($op && !$r->status)
                                 <tr>
                                   <th scope="row">{{++$i}}</th>
@@ -124,35 +141,35 @@
                                   <td><form action="{{route('request.update', $r->id)}}" method="post">
                                     @csrf
                                     @method('PUT')
-                                    <input type="hidden" name="status" value="1">  
-                                    <input type="submit" class="btn btn-success" value="acceapet">  
+                                    <input type="hidden" name="status" value="1">
+                                    <input type="submit" class="btn btn-success" value="acceapet">
                                   </form></td>
                                             <td><form action="{{route('request.update', $r->id)}}" method="post">
                                               @csrf
                                               @method('PUT')
-                                            <input type="hidden" name="status" value="2">  
-                                            <input type="submit" class="btn btn-danger" value="reject">  
+                                            <input type="hidden" name="status" value="2">
+                                            <input type="submit" class="btn btn-danger" value="reject">
                                           </form></td>
                                           </tr>
                                             @endif
                                           @php
-                                   
+
                                           $op=false ;
-                                          @endphp 
+                                          @endphp
                                           @endforeach
 
                                           @endforeach
-                                          
+
                     </tbody>
                   </table>
                 </div>
               </div>
-              
+
 
 
             </div>
-            
-            
+
+
         </div>
     </div>
 
