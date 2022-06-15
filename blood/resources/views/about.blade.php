@@ -1,6 +1,6 @@
 @extends('layout.main')
 @section('title')
-    title of the page
+    Conatct
 @endsection
 @section('content')
     <!-- Page Header Start -->
@@ -71,7 +71,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item position-relative">
                         <div class="position-relative">
-                            <img class="img-fluid rounded mx-auto d-block" src="img/profile.png" alt=""  width="40%">
+                            <img class="img-fluid rounded mx-auto d-block" src="img/ar.jpg" alt=""  width="50%">
 
                         </div>
                         <div class="bg-light text-center p-4">
@@ -80,10 +80,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item position-relative">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s"  >
+                    <div class="team-item position-relative" >
                         <div class="position-relative">
-                            <img class="img-fluid rounded mx-auto d-block" src="img/profile1.png" alt="" width="40%">
+                            <img class="img-fluid rounded mx-auto d-block" src="img/ai.jpg" alt="" width="50%" >
                         </div>
                         <div class="bg-light text-center p-4">
                             <h5 class="mt-2">Ayman Alshraideh</h5>
@@ -94,7 +94,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="team-item position-relative">
                         <div class="position-relative">
-                            <img class="img-fluid rounded mx-auto d-block" src="img/profile.png" alt=""  width="40%">
+                            <img class="img-fluid rounded mx-auto d-block" src="img/sa.jpg" alt=""  width="50%">
 
                         </div>
                         <div class="bg-light text-center p-4">
@@ -108,7 +108,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                     <div class="team-item position-relative">
                         <div class="position-relative">
-                            <img class="img-fluid rounded mx-auto d-block" src="img/profile1.png" alt=""  width="40%">
+                            <img class="img-fluid rounded mx-auto d-block" src="img/mo.jpg" alt=""  width="50%">
                         </div>
                         <div class="bg-light text-center p-4">
                             <h5 class="mt-2">Mohammad Al-Amarnih</h5>
@@ -119,7 +119,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                     <div class="team-item position-relative">
                         <div class="position-relative">
-                            <img class="img-fluid rounded mx-auto d-block " src="img/profile.png" alt=""  width="40%">
+                            <img class="img-fluid rounded mx-auto d-block " src="img/ha.jpg" alt=""  width="50%" >
 
                         </div>
                         <div class="bg-light text-center p-4">
@@ -131,7 +131,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                     <div class="team-item position-relative">
                         <div class="position-relative">
-                            <img class="img-fluid rounded mx-auto d-block" src="img/profile1.png" alt=""  width="40%">
+                            <img class="img-fluid rounded mx-auto d-block" src="img/abood.jpg" alt=""  width="50%">
 
                         </div>
                         <div class="bg-light text-center p-4">
