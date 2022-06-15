@@ -33,9 +33,6 @@ Route::get('/messages',[adminIController::class,'message']);
 Route::post('/insert',[adminIController::class,'store'])->name('add-todo');
 Route::get('delete/{id}',[adminIController::class,'destroy'])->name('destroy');
 // ******************/To Do /********************
-Route::get('/test1', function () {
-    return view('dashbord.widget');
-});
 
 
 
@@ -59,6 +56,9 @@ Route::get('/logoutAdmin',[adminIController::class,'logoutAdmin'])->name('logout
 
 
 
+// Route::get('/test1', function () {
+//     return view('dashbord.typography');
+// });
 
 
 
@@ -101,3 +101,7 @@ Route::get('/button', function () {
     return view('dashbord.button');
 });
 
+Route::get('/singlereport/{id}',[adminIController::class,'showreport'])->name('showreport');
+// Route::get('/form', function () {
+//     return view('dashbord.form');
+// });
