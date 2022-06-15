@@ -2,7 +2,6 @@
 @section('title')
     profile
 @endsection
-
 @section('content')
 
 <div class="container">
