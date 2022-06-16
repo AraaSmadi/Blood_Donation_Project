@@ -123,9 +123,9 @@ class adminIController extends Controller
 
             $todo = toDo::orderBy('updated_at', 'desc')->paginate(4);;
             $s = blood_doner_needed::all()->count();
-            // $a = admin::all()->where('roll', '1')->count();
+
             $userAdmin = admin::findorFail(Session::get('userId'));
-            return view('dashbord.typography', compact('u', 's', 'a', 'name', 'todo', 'mes', 'd', 'userAdmin','single'));
+            return view('dashbord.typography', compact('u', 's',  'name', 'todo', 'mes', 'd', 'userAdmin','single'));
             // return redirect('admin')->with('admin',$userAdmin);
 
         }
@@ -227,7 +227,7 @@ class adminIController extends Controller
     {
         if (Session::has('userId')) {
             $userAdmin = admin::where('id', Session::get('userId'))->first();
-            $users = blood_doner_needed::join('blood_types', 'blood_doner_neededs.b_d_blood_type', '=', 'blood_types.id')
+            $users = blood_doner_needed::join('blood_types', 'blood_doner_neededs.b_d_n_blood_type', '=', 'blood_types.id')
                 ->get(['blood_doner_neededs.*', 'blood_types.name']);
             $mes = contact::orderBy('updated_at', 'desc')->paginate(4);
 

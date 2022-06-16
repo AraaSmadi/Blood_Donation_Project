@@ -18,7 +18,7 @@
 <div class="container-xxl py-6">
     <div class="container">
         <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-            <h1 class="display-6 mb-4">Donors information</h1>
+            <h1 class="display-6 mb-4">Donors information </h1>
         </div>
         <h6 class="mt-2">Donors Number :  {{$c}}</h6>
 

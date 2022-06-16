@@ -17,7 +17,7 @@
         <div class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                 <i class="fa fa-envelope me-lg-2"></i>
-                <span class="d-none d-lg-inline-flex">Message</span>
+                <span class="d-none d-lg-inline-flex">Feadback</span>
             </a>
             <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
 
@@ -29,7 +29,7 @@
                     <div class="d-flex align-items-center">
 
                         <div class="ms-2">
-                            <h6 class="fw-normal mb-0">{{$item->name}} send you a Feedback</h6>
+                            <h6 class="fw-normal mb-0">{{$item->name}} send you a Feadback</h6>
                             <small>{{$item->created_at}}</small>
                         </div>
                     </div>
@@ -38,7 +38,7 @@
                 <hr class="dropdown-divider">
 
 
-                <a href="#" class="dropdown-item text-center">See all message</a>
+                <a href="messages" class="dropdown-item text-center">See all feadback </a>
             </div>
         </div>
         <div class="nav-item dropdown">
@@ -69,14 +69,14 @@
                 @endif
 
 
-                @if ($item->status ==1||$item->status ==2 )
+                {{-- @if ($item->status ==1||$item->status ==2 )
                 <a href="#" class="dropdown-item">
                     <h6 class="fw-normal mb-0">No Notificatin</h6>
 
                 </a>
 
                  @break
-                @endif
+                @endif --}}
 @endforeach
 
                 <hr class="dropdown-divider">

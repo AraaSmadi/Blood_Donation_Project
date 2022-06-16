@@ -25,7 +25,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100" src="img/V3.PNG" alt="Image">
+                    <img class="w-100" src="img/V4.PNG" alt="Image">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-left">
