@@ -110,7 +110,7 @@
                   <hr>
                   <div class="row">
                     <div class="col-sm-12">
-                      <a class="btn btn-outline-primary " target="__blank" href="">Edit</a>
+                        <a class="btn btn-primary " target="__blank" href="doneredit">Edit</a>
 
                     </div>
                   </div>
