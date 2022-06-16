@@ -37,6 +37,7 @@
                 <tbody>
                     {{-- O+ --}}
                     @foreach ($O[0] as $value)
+                    @if (Session::has('user_email'))
                         <tr>
                             <td>
                                 {{ $value->b_d_name }}
@@ -52,9 +53,43 @@
                             </td>
 
                         </tr>
+                        @else
+          
+     
+      
+      
+      
+                        <tr>
+                          <td scope="row">
+                           xxxxxxx
+                          </td>
+                          <td scope="row">
+                            xxxxxxx
+                          </td>
+                          <td scope="row">
+                            xxxxxxx
+                          </td>
+                          <td scope="row">
+                            xxxxxxx
+                          </td>
+                          <td scope="row">
+                            <a class="btn btn-success" href="{{route('login.index')}}">login to show</a>
+                          </td>
+                  
+                        </tr>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        @endif
                     @endforeach
                     {{-- O- --}}
                     @foreach ($O[1] as $value)
+                    @if (Session::has('user_email'))
                         <tr>
                             <td>
                                 {{ $value->b_d_name }}
@@ -70,6 +105,39 @@
                             </td>
 
                         </tr>
+                        @else
+          
+     
+      
+      
+      
+                        <tr>
+                          <td scope="row">
+                           xxxxxxx
+                          </td>
+                          <td scope="row">
+                            xxxxxxx
+                          </td>
+                          <td scope="row">
+                            xxxxxxx
+                          </td>
+                          <td scope="row">
+                            xxxxxxx
+                          </td>
+                          <td scope="row">
+                            <a class="btn btn-success" href="{{route('login.index')}}">login to show</a>
+                          </td>
+                  
+                        </tr>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        @endif
                     @endforeach
                 </tbody>
             </table>
