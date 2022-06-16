@@ -3,6 +3,7 @@
     Home
 @endsection
 @section('content')
+
    <!-- Page Header Start -->
    <div class="container-fluid page-header py-6 my-6 mt-0 wow fadeIn" data-wow-delay="0.1s" />
     <div class="container text-center">
@@ -35,6 +36,9 @@
     <tbody>
         {{-- A+ --}}
         @foreach ($A[0] as $value)
+        @if (Session::has('user_email'))
+            
+        
       <tr>
         <td scope="row">
          {{$value->b_d_name}}
@@ -50,9 +54,37 @@
         </td>
 
       </tr>
+      @else
+          
+     
+      
+      
+      
+      <tr>
+        <td scope="row">
+         xxxxxxx
+        </td>
+        <td scope="row">
+          xxxxxxx
+        </td>
+        <td scope="row">
+          xxxxxxx
+        </td>
+        <td scope="row">
+          xxxxxxx
+        </td>
+        <td scope="row">
+          <a class="btn btn-success" href="{{route('login.index')}}">login to show</a>
+        </td>
+
+      </tr>
+      
+      @endif
+      
       @endforeach
       {{-- A- --}}
       @foreach ($A[1] as $value)
+      @if (Session::has('user_email'))
       <tr>
         <td scope="row">
          {{$value->b_d_name}}
@@ -68,6 +100,42 @@
         </td>
 
       </tr>
+      
+     
+          
+      @else
+          
+     
+      
+      
+      
+      <tr>
+        <td scope="row">
+         xxxxxxx
+        </td>
+        <td scope="row">
+          xxxxxxx
+        </td>
+        <td scope="row">
+          xxxxxxx
+        </td>
+        <td scope="row">
+          xxxxxxx
+        </td>
+        <td scope="row">
+          <a class="btn btn-success" href="{{route('login.index')}}">login to show</a>
+        </td>
+
+      </tr>
+      
+      
+      
+      
+      
+      
+      
+      
+      @endif
       @endforeach
     </tbody>
   </table>
