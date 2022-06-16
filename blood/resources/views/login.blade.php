@@ -1,19 +1,23 @@
-<!DOCTYPE html>
-<html>
-
-<head>
+@extends('layout.main')
+@section('title')
+    Ahyaha|Login
+@endsection
+@section('style')
+     <style>
+        .min-h-screen {
+            font-family: "Inter", sans-serif;
+        }
+    </style>
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
-    <style>
-        body {
-            font-family: "Inter", sans-serif;}
-    </style>
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
-</head>
 
-<body class="min-h-screen bg-gra8y-100 text-gray-900 flex justify-center">
+
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
+@endsection
+@section('content')
+    <div class="min-h-screen bg-gra8y-100 text-gray-900 flex justify-center mt-5">    
+   
     <div class="max-w-screen-xl m-0 sm:m-20 bg-white shadow sm:rounded-lg flex justify-center flex-1">
         <div class="lg:w-1/2 xl:w-5/12 p-6 sm:p-12">
             <div class="mt-12 flex flex-col items-center">
@@ -84,6 +88,8 @@
         </div>
     </div>
 </form>
-</body>
+</div>
+@endsection
 
-</html>
+
+
