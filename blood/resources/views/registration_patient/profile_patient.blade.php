@@ -13,7 +13,7 @@
         <div class="row g-5">
             <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="position-relative overflow-hidden ps-5 pt-5 h-100" style="min-height: 400px;">
-                    <img class="position-absolute w-100 h-100" src="img/patient2.png" alt="" style="object-fit: cover;">
+                    <img class="position-absolute w-100 h-100" src="img/thank1.jpeg" alt="" style="object-fit: cover;">
 
 
                 </div>
@@ -24,7 +24,7 @@
                     <h1 class="display-6 mb-4">Welcome   {{$user->b_d_n_name}} </h1>
                     <p>"Your blood is replaceable. A life is not.”
                     </p>
-                    <p class="mb-4"> Our passion is to show you all support  we can afford, Ahyaha lives in providing you all you need
+                    <p class="mb-4"> Our passion is to show you all support  we can afford, Ahyaha lives in providing you all you need.
 
 
                     </p>
